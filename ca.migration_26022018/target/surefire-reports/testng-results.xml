@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="9" total="10" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Migration Suite" duration-ms="42" started-at="2018-02-26T13:27:13Z" finished-at="2018-02-26T13:27:13Z">
+    <groups>
+      <group name="preUpgrade">
+        <method signature="MigrationFileModificationUtilTests.verify_ALM_preUpgrade_BaseCommentLine1DV_CurrentCommentLine2DV(java.lang.String)[pri:0, instance:nonXml.fileModification.testSuite.MigrationFileModificationUtilTests@5d624da6]" name="verify_ALM_preUpgrade_BaseCommentLine1DV_CurrentCommentLine2DV" class="nonXml.fileModification.testSuite.MigrationFileModificationUtilTests"/>
+      </group> <!-- preUpgrade -->
+    </groups>
+    <test name="Migration Window Test" duration-ms="42" started-at="2018-02-26T13:27:13Z" finished-at="2018-02-26T13:27:13Z">
+      <class name="nonXml.fileModification.testSuite.MigrationFileModificationUtilTests">
+        <test-method status="PASS" signature="verify_ALM_preUpgrade_BaseCommentLine1DV_CurrentCommentLine2DV(java.lang.String)[pri:0, instance:nonXml.fileModification.testSuite.MigrationFileModificationUtilTests@5d624da6]" name="verify_ALM_preUpgrade_BaseCommentLine1DV_CurrentCommentLine2DV" duration-ms="42" started-at="2018-02-26T18:57:13Z" description="ConfigUtility Merge feature - One property in base version is default property and above that add one commentline say comment1 and but in the current version above the same property property, add another comment say Comment2 after migration comment2 should be populdated above that property." finished-at="2018-02-26T18:57:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Windows]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_ALM_preUpgrade_BaseCommentLine1DV_CurrentCommentLine2DV -->
+      </class> <!-- nonXml.fileModification.testSuite.MigrationFileModificationUtilTests -->
+    </test> <!-- Migration Window Test -->
+  </suite> <!-- Migration Suite -->
+</testng-results>

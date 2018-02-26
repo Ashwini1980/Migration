@@ -1,0 +1,351 @@
+2018-02-26 12:48:35 INFO  MigrationUtilFileComTests:33 - Test Case execution started
+2018-02-26 12:48:35 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-26 12:48:35 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-26 12:48:35 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-26 12:48:35 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-26 12:48:35 INFO  MigrationUtilFileComTests:48 - Verify the file Catalyst.properties is present in the base EM home directory
+2018-02-26 12:48:35 INFO  MigrationUtilFileComTests:59 - File exists in the Base build, hence test case step Passed.
+2018-02-26 12:48:35 INFO  MigrationUtilFileComTests:60 - Verify the Catalyst.properties is present in the upgrade config path or not.
+2018-02-26 12:48:35 INFO  MigrationUtilFileComTests:72 - File exists in the upgraded build, hence going to compare the content...
+2018-02-26 12:48:35 INFO  PostUpgradeUtil:112 - Comparison result is : false
+2018-02-26 12:57:38 INFO  MigrationUtilFileComTests:33 - Test Case execution started
+2018-02-26 12:57:38 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-26 12:57:38 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-26 12:57:38 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-26 12:57:38 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-26 12:57:38 INFO  MigrationUtilFileComTests:48 - Verify the file Catalyst.properties is present in the base EM home directory
+2018-02-26 12:57:38 INFO  MigrationUtilFileComTests:59 - File exists in the Base build, hence test case step Passed.
+2018-02-26 12:57:38 INFO  MigrationUtilFileComTests:60 - Verify the Catalyst.properties is present in the upgrade config path or not.
+2018-02-26 12:57:38 INFO  MigrationUtilFileComTests:72 - File exists in the upgraded build, hence going to compare the content...
+2018-02-26 12:57:38 INFO  PostUpgradeUtil:111 - Comparison result is : false
+2018-02-26 13:09:05 INFO  MigrationUtilFileComTests:33 - Test Case execution started
+2018-02-26 13:09:05 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-26 13:09:05 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-26 13:09:05 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-26 13:09:05 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-26 13:09:05 INFO  MigrationUtilFileComTests:48 - Verify the file Catalyst.properties is present in the base EM home directory
+2018-02-26 13:09:05 INFO  MigrationUtilFileComTests:59 - File exists in the Base build, hence test case step Passed.
+2018-02-26 13:09:05 INFO  MigrationUtilFileComTests:60 - Verify the Catalyst.properties is present in the upgrade config path or not.
+2018-02-26 13:09:05 INFO  MigrationUtilFileComTests:72 - File exists in the upgraded build, hence going to compare the content...
+2018-02-26 13:09:05 INFO  PostUpgradeUtil:68 - Both files are not Same
+2018-02-26 13:09:05 INFO  PostUpgradeUtil:69 - =======================
+2018-02-26 13:09:05 INFO  PostUpgradeUtil:71 - content from C:\Users\patas07\Desktop\MyData\LearnAutomation\TestData\migrationTest\FileCompare\1519310131633_Introscope10.1.0.15\config\Catalyst.properties which is not there in C:\Users\patas07\Desktop\MyData\LearnAutomation\TestData\migrationTest\FileCompare\Introscope10.1.0.15\config\Catalyst.properties
+2018-02-26 13:09:05 INFO  PostUpgradeUtil:73 - # CA Wily Introscope(R) Version 10.1.0 Release 10.1.0.15
+2018-02-26 13:09:05 INFO  PostUpgradeUtil:73 - # Copyright (c) 2015 CA. All Rights Reserved.
+2018-02-26 13:09:05 INFO  PostUpgradeUtil:76 - content from C:\Users\patas07\Desktop\MyData\LearnAutomation\TestData\migrationTest\FileCompare\Introscope10.1.0.15\config\Catalyst.properties which is not there in C:\Users\patas07\Desktop\MyData\LearnAutomation\TestData\migrationTest\FileCompare\1519310131633_Introscope10.1.0.15\config\Catalyst.properties
+2018-02-26 13:09:05 INFO  PostUpgradeUtil:81 - # CA Wily Introscope(R) Version 10.7.0 Release 10.7.0.45
+2018-02-26 13:09:05 INFO  PostUpgradeUtil:81 - # Copyright &copy; 2018 CA. All Rights Reserved.
+2018-02-26 13:09:05 INFO  PostUpgradeUtil:108 - Comparison result is : false
+2018-02-26 16:19:05 INFO  MigrationUtilFileComTests:706 - Test Case execution started
+2018-02-26 16:19:05 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-26 16:19:05 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-26 16:19:05 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-26 16:19:05 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-26 16:19:05 INFO  MigrationUtilFileComTests:721 - Verify the file IntroscopeEnterpriseManager.properties is present in the base em home directory
+2018-02-26 16:19:05 INFO  MigrationUtilFileComTests:732 - File exists in the Base build, hence test case step Passed.
+2018-02-26 16:19:05 INFO  MigrationUtilFileComTests:733 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade config path or not.
+2018-02-26 16:19:05 INFO  MigrationUtilFileComTests:747 - File exists in the upgraded build, hence going to compare the content...
+2018-02-26 16:19:05 INFO  PostUpgradeUtil:598 - The line num is 1150
+2018-02-26 16:19:05 INFO  PostUpgradeUtil:600 - The comment line is introscope.public.restapi.enabled=false
+2018-02-26 16:19:05 INFO  PostUpgradeUtil:686 - The line num is 1282
+2018-02-26 16:19:05 INFO  PostUpgradeUtil:688 - The comment line is introscope.public.restapi.enabled=false
+2018-02-26 16:19:05 INFO  PostUpgradeUtil:686 - The line num is 1150
+2018-02-26 16:19:05 INFO  PostUpgradeUtil:688 - The comment line is introscope.public.restapi.enabled=false
+2018-02-26 16:19:05 INFO  PostUpgradeUtil:642 - The line num is 1296
+2018-02-26 16:19:05 INFO  PostUpgradeUtil:644 - The comment line is introscope.public.restapi.enabled=false
+2018-02-26 16:19:05 INFO  PostUpgradeUtil:322 - Comemnted Property Value result returned : true
+2018-02-26 16:19:05 INFO  MigrationUtilFileComTests:753 - The status result is:  true
+2018-02-26 16:22:41 INFO  MigrationUtilFileComTests:706 - Test Case execution started
+2018-02-26 16:22:41 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-26 16:22:41 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-26 16:22:41 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-26 16:22:41 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-26 16:22:41 INFO  MigrationUtilFileComTests:721 - Verify the file IntroscopeEnterpriseManager.properties is present in the base em home directory
+2018-02-26 16:22:41 INFO  MigrationUtilFileComTests:732 - File exists in the Base build, hence test case step Passed.
+2018-02-26 16:22:41 INFO  MigrationUtilFileComTests:733 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade config path or not.
+2018-02-26 16:22:41 INFO  MigrationUtilFileComTests:747 - File exists in the upgraded build, hence going to compare the content...
+2018-02-26 16:22:41 INFO  PostUpgradeUtil:598 - The line num is 1150
+2018-02-26 16:22:41 INFO  PostUpgradeUtil:600 - The comment line is # and only information message will be returned to the client in response.
+2018-02-26 16:22:41 INFO  PostUpgradeUtil:686 - The line num is 1282
+2018-02-26 16:22:41 INFO  PostUpgradeUtil:688 - The comment line is introscope.public.restapi.enabled=false
+2018-02-26 16:22:41 INFO  PostUpgradeUtil:686 - The line num is 1150
+2018-02-26 16:22:41 INFO  PostUpgradeUtil:688 - The comment line is introscope.public.restapi.enabled=false
+2018-02-26 16:22:41 INFO  PostUpgradeUtil:642 - The line num is 1296
+2018-02-26 16:22:41 INFO  PostUpgradeUtil:644 - The comment line is introscope.public.restapi.enabled=false
+2018-02-26 16:22:41 INFO  PostUpgradeUtil:322 - Commented Property Value result returned : true
+2018-02-26 16:22:41 INFO  MigrationUtilFileComTests:753 - The status result is:  true
+2018-02-26 16:24:05 INFO  MigrationUtilFileComTests:706 - Test Case execution started
+2018-02-26 16:24:05 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-26 16:24:05 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-26 16:24:05 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-26 16:24:05 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-26 16:24:05 INFO  MigrationUtilFileComTests:721 - Verify the file IntroscopeEnterpriseManager.properties is present in the base em home directory
+2018-02-26 16:24:05 INFO  MigrationUtilFileComTests:732 - File exists in the Base build, hence test case step Passed.
+2018-02-26 16:24:05 INFO  MigrationUtilFileComTests:733 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade config path or not.
+2018-02-26 16:24:05 INFO  MigrationUtilFileComTests:747 - File exists in the upgraded build, hence going to compare the content...
+2018-02-26 16:24:05 INFO  PostUpgradeUtil:598 - The line num is 1151
+2018-02-26 16:24:05 INFO  PostUpgradeUtil:600 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:24:05 INFO  PostUpgradeUtil:686 - The line num is 1283
+2018-02-26 16:24:05 INFO  PostUpgradeUtil:688 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:24:05 INFO  PostUpgradeUtil:686 - The line num is 1151
+2018-02-26 16:24:05 INFO  PostUpgradeUtil:688 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:24:05 INFO  PostUpgradeUtil:642 - The line num is 1297
+2018-02-26 16:24:05 INFO  PostUpgradeUtil:644 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:24:05 INFO  PostUpgradeUtil:322 - Commented Property Value result returned : true
+2018-02-26 16:24:05 INFO  MigrationUtilFileComTests:753 - The status result is:  true
+2018-02-26 16:25:26 INFO  MigrationUtilFileComTests:706 - Test Case execution started
+2018-02-26 16:25:26 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-26 16:25:26 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-26 16:25:26 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-26 16:25:26 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-26 16:25:26 INFO  MigrationUtilFileComTests:721 - Verify the file IntroscopeEnterpriseManager.properties is present in the base em home directory
+2018-02-26 16:25:26 INFO  MigrationUtilFileComTests:732 - File exists in the Base build, hence test case step Passed.
+2018-02-26 16:25:26 INFO  MigrationUtilFileComTests:733 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade config path or not.
+2018-02-26 16:25:26 INFO  MigrationUtilFileComTests:747 - File exists in the upgraded build, hence going to compare the content...
+2018-02-26 16:25:26 INFO  PostUpgradeUtil:598 - The line num is 1150
+2018-02-26 16:25:26 INFO  PostUpgradeUtil:600 - The comment line is introscope.public.restapi.enabled=false
+2018-02-26 16:25:26 INFO  PostUpgradeUtil:686 - The line num is 1283
+2018-02-26 16:25:26 INFO  PostUpgradeUtil:688 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:25:26 INFO  PostUpgradeUtil:686 - The line num is 1151
+2018-02-26 16:25:26 INFO  PostUpgradeUtil:688 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:25:26 INFO  PostUpgradeUtil:642 - The line num is 1297
+2018-02-26 16:25:26 INFO  PostUpgradeUtil:644 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:25:26 INFO  PostUpgradeUtil:322 - Commented Property Value result returned : true
+2018-02-26 16:25:26 INFO  MigrationUtilFileComTests:753 - The status result is:  true
+2018-02-26 16:26:31 INFO  MigrationUtilFileComTests:706 - Test Case execution started
+2018-02-26 16:26:31 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-26 16:26:31 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-26 16:26:31 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-26 16:26:31 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-26 16:26:31 INFO  MigrationUtilFileComTests:721 - Verify the file IntroscopeEnterpriseManager.properties is present in the base em home directory
+2018-02-26 16:26:31 INFO  MigrationUtilFileComTests:732 - File exists in the Base build, hence test case step Passed.
+2018-02-26 16:26:31 INFO  MigrationUtilFileComTests:733 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade config path or not.
+2018-02-26 16:26:31 INFO  MigrationUtilFileComTests:747 - File exists in the upgraded build, hence going to compare the content...
+2018-02-26 16:26:31 INFO  PostUpgradeUtil:598 - The line num is 1151
+2018-02-26 16:26:31 INFO  PostUpgradeUtil:600 - The comment line is introscope.public.restapi.maxMemoryCacheSizeForVertexInMBs=200
+2018-02-26 16:26:31 INFO  PostUpgradeUtil:686 - The line num is 1283
+2018-02-26 16:26:31 INFO  PostUpgradeUtil:688 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:26:31 INFO  PostUpgradeUtil:686 - The line num is 1151
+2018-02-26 16:26:31 INFO  PostUpgradeUtil:688 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:26:31 INFO  PostUpgradeUtil:642 - The line num is 1297
+2018-02-26 16:26:31 INFO  PostUpgradeUtil:644 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:26:31 INFO  PostUpgradeUtil:322 - Commented Property Value result returned : true
+2018-02-26 16:26:31 INFO  MigrationUtilFileComTests:753 - The status result is:  true
+2018-02-26 16:40:23 INFO  MigrationUtilFileComTests:706 - Test Case execution started
+2018-02-26 16:40:23 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-26 16:40:23 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-26 16:40:23 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-26 16:40:23 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-26 16:40:23 INFO  MigrationUtilFileComTests:721 - Verify the file IntroscopeEnterpriseManager.properties is present in the base em home directory
+2018-02-26 16:40:23 INFO  MigrationUtilFileComTests:732 - File exists in the Base build, hence test case step Passed.
+2018-02-26 16:40:23 INFO  MigrationUtilFileComTests:733 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade config path or not.
+2018-02-26 16:40:23 INFO  MigrationUtilFileComTests:747 - File exists in the upgraded build, hence going to compare the content...
+2018-02-26 16:40:23 INFO  PostUpgradeUtil:598 - The line num is 1150
+2018-02-26 16:40:23 INFO  PostUpgradeUtil:600 - The comment line is introscope.public.restapi.enabled=false
+2018-02-26 16:40:23 INFO  PostUpgradeUtil:686 - The line num is 1283
+2018-02-26 16:40:23 INFO  PostUpgradeUtil:688 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:40:23 INFO  PostUpgradeUtil:686 - The line num is 1151
+2018-02-26 16:40:23 INFO  PostUpgradeUtil:688 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:40:23 INFO  PostUpgradeUtil:642 - The line num is 1297
+2018-02-26 16:40:23 INFO  PostUpgradeUtil:644 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:40:23 INFO  PostUpgradeUtil:322 - Commented Property Value result returned : true
+2018-02-26 16:40:23 INFO  MigrationUtilFileComTests:753 - The status result is:  true
+2018-02-26 16:40:56 INFO  MigrationUtilFileComTests:706 - Test Case execution started
+2018-02-26 16:40:56 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-26 16:40:56 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-26 16:40:56 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-26 16:40:56 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-26 16:40:56 INFO  MigrationUtilFileComTests:721 - Verify the file IntroscopeEnterpriseManager.properties is present in the base em home directory
+2018-02-26 16:40:56 INFO  MigrationUtilFileComTests:732 - File exists in the Base build, hence test case step Passed.
+2018-02-26 16:40:56 INFO  MigrationUtilFileComTests:733 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade config path or not.
+2018-02-26 16:40:56 INFO  MigrationUtilFileComTests:747 - File exists in the upgraded build, hence going to compare the content...
+2018-02-26 16:40:56 INFO  PostUpgradeUtil:598 - The line num is 1150
+2018-02-26 16:40:56 INFO  PostUpgradeUtil:600 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:40:56 INFO  PostUpgradeUtil:686 - The line num is 1283
+2018-02-26 16:40:56 INFO  PostUpgradeUtil:688 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:40:56 INFO  PostUpgradeUtil:686 - The line num is 1151
+2018-02-26 16:40:56 INFO  PostUpgradeUtil:688 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:40:56 INFO  PostUpgradeUtil:642 - The line num is 1297
+2018-02-26 16:40:56 INFO  PostUpgradeUtil:644 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:40:56 INFO  PostUpgradeUtil:322 - Commented Property Value result returned : true
+2018-02-26 16:40:56 INFO  MigrationUtilFileComTests:753 - The status result is:  true
+2018-02-26 16:42:02 INFO  MigrationUtilFileComTests:706 - Test Case execution started
+2018-02-26 16:42:02 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-26 16:42:02 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-26 16:42:02 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-26 16:42:02 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-26 16:42:02 INFO  MigrationUtilFileComTests:721 - Verify the file IntroscopeEnterpriseManager.properties is present in the base em home directory
+2018-02-26 16:42:02 INFO  MigrationUtilFileComTests:732 - File exists in the Base build, hence test case step Passed.
+2018-02-26 16:42:02 INFO  MigrationUtilFileComTests:733 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade config path or not.
+2018-02-26 16:42:02 INFO  MigrationUtilFileComTests:747 - File exists in the upgraded build, hence going to compare the content...
+2018-02-26 16:42:02 INFO  PostUpgradeUtil:598 - The line num is 1151
+2018-02-26 16:42:02 INFO  PostUpgradeUtil:600 - The comment line is 
+2018-02-26 16:42:02 INFO  PostUpgradeUtil:686 - The line num is 1283
+2018-02-26 16:42:02 INFO  PostUpgradeUtil:688 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:42:02 INFO  PostUpgradeUtil:686 - The line num is 1151
+2018-02-26 16:42:02 INFO  PostUpgradeUtil:688 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:42:02 INFO  PostUpgradeUtil:642 - The line num is 1297
+2018-02-26 16:42:02 INFO  PostUpgradeUtil:644 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:42:02 INFO  PostUpgradeUtil:322 - Commented Property Value result returned : true
+2018-02-26 16:42:02 INFO  MigrationUtilFileComTests:753 - The status result is:  true
+2018-02-26 16:44:59 INFO  MigrationUtilFileComTests:706 - Test Case execution started
+2018-02-26 16:44:59 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-26 16:44:59 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-26 16:44:59 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-26 16:44:59 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-26 16:44:59 INFO  MigrationUtilFileComTests:721 - Verify the file IntroscopeEnterpriseManager.properties is present in the base em home directory
+2018-02-26 16:44:59 INFO  MigrationUtilFileComTests:732 - File exists in the Base build, hence test case step Passed.
+2018-02-26 16:44:59 INFO  MigrationUtilFileComTests:733 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade config path or not.
+2018-02-26 16:44:59 INFO  MigrationUtilFileComTests:747 - File exists in the upgraded build, hence going to compare the content...
+2018-02-26 16:44:59 INFO  PostUpgradeUtil:598 - The line num is 1150
+2018-02-26 16:44:59 INFO  PostUpgradeUtil:600 - The comment line is # and only information message will be returned to the client in response.
+2018-02-26 16:44:59 INFO  PostUpgradeUtil:686 - The line num is 1283
+2018-02-26 16:44:59 INFO  PostUpgradeUtil:688 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:44:59 INFO  PostUpgradeUtil:686 - The line num is 1151
+2018-02-26 16:44:59 INFO  PostUpgradeUtil:688 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:44:59 INFO  PostUpgradeUtil:642 - The line num is 1297
+2018-02-26 16:44:59 INFO  PostUpgradeUtil:644 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:44:59 INFO  PostUpgradeUtil:322 - Commented Property Value result returned : true
+2018-02-26 16:44:59 INFO  MigrationUtilFileComTests:753 - The status result is:  true
+2018-02-26 16:46:40 INFO  MigrationUtilFileComTests:706 - Test Case execution started
+2018-02-26 16:46:40 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-26 16:46:40 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-26 16:46:40 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-26 16:46:40 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-26 16:46:40 INFO  MigrationUtilFileComTests:721 - Verify the file IntroscopeEnterpriseManager.properties is present in the base em home directory
+2018-02-26 16:46:40 INFO  MigrationUtilFileComTests:732 - File exists in the Base build, hence test case step Passed.
+2018-02-26 16:46:40 INFO  MigrationUtilFileComTests:733 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade config path or not.
+2018-02-26 16:46:40 INFO  MigrationUtilFileComTests:747 - File exists in the upgraded build, hence going to compare the content...
+2018-02-26 16:46:40 INFO  PostUpgradeUtil:598 - The line num is 1150
+2018-02-26 16:46:40 INFO  PostUpgradeUtil:600 - The comment line is # and only information message will be returned to the client in response.
+2018-02-26 16:46:40 INFO  PostUpgradeUtil:686 - The line num is 1282
+2018-02-26 16:46:40 INFO  PostUpgradeUtil:688 - The comment line is # and only information message will be returned to the client in response.
+2018-02-26 16:46:40 INFO  PostUpgradeUtil:686 - The line num is 1150
+2018-02-26 16:46:40 INFO  PostUpgradeUtil:688 - The comment line is # and only information message will be returned to the client in response.
+2018-02-26 16:46:40 INFO  PostUpgradeUtil:642 - The line num is 1296
+2018-02-26 16:46:40 INFO  PostUpgradeUtil:644 - The comment line is # and only information message will be returned to the client in response.
+2018-02-26 16:46:40 INFO  PostUpgradeUtil:322 - Commented Property Value result returned : true
+2018-02-26 16:46:40 INFO  MigrationUtilFileComTests:753 - The status result is:  true
+2018-02-26 16:47:43 INFO  MigrationUtilFileComTests:706 - Test Case execution started
+2018-02-26 16:47:43 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-26 16:47:43 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-26 16:47:43 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-26 16:47:43 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-26 16:47:43 INFO  MigrationUtilFileComTests:721 - Verify the file IntroscopeEnterpriseManager.properties is present in the base em home directory
+2018-02-26 16:47:43 INFO  MigrationUtilFileComTests:732 - File exists in the Base build, hence test case step Passed.
+2018-02-26 16:47:43 INFO  MigrationUtilFileComTests:733 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade config path or not.
+2018-02-26 16:47:43 INFO  MigrationUtilFileComTests:747 - File exists in the upgraded build, hence going to compare the content...
+2018-02-26 16:47:43 INFO  PostUpgradeUtil:328 - Commented Property Value result returned : false
+2018-02-26 16:47:43 INFO  MigrationUtilFileComTests:753 - The status result is:  false
+2018-02-26 16:56:40 INFO  MigrationUtilFileComTests:706 - Test Case execution started
+2018-02-26 16:56:40 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-26 16:56:40 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-26 16:56:40 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-26 16:56:40 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-26 16:56:40 INFO  MigrationUtilFileComTests:721 - Verify the file IntroscopeEnterpriseManager.properties is present in the base em home directory
+2018-02-26 16:56:40 INFO  MigrationUtilFileComTests:732 - File exists in the Base build, hence test case step Passed.
+2018-02-26 16:56:40 INFO  MigrationUtilFileComTests:733 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade config path or not.
+2018-02-26 16:56:40 INFO  MigrationUtilFileComTests:747 - File exists in both the upgraded and Fresh build, hence going to compare the content...
+2018-02-26 16:56:40 INFO  PostUpgradeUtil:598 - The line num is 1143
+2018-02-26 16:56:40 INFO  PostUpgradeUtil:600 - The comment line is # Whether to do seasonal prediction or not. true or false
+2018-02-26 16:56:40 INFO  PostUpgradeUtil:686 - The line num is 1275
+2018-02-26 16:56:40 INFO  PostUpgradeUtil:688 - The comment line is # Whether to do seasonal prediction or not. true or false
+2018-02-26 16:56:40 INFO  PostUpgradeUtil:686 - The line num is 1143
+2018-02-26 16:56:40 INFO  PostUpgradeUtil:688 - The comment line is # Whether to do seasonal prediction or not. true or false
+2018-02-26 16:56:40 INFO  PostUpgradeUtil:642 - The line num is 1289
+2018-02-26 16:56:40 INFO  PostUpgradeUtil:644 - The comment line is # Whether to do seasonal prediction or not. true or false
+2018-02-26 16:56:40 INFO  PostUpgradeUtil:322 - Commented Property Value result returned : true
+2018-02-26 16:56:40 INFO  MigrationUtilFileComTests:753 - The status result is:  true
+2018-02-26 16:57:27 INFO  MigrationUtilFileComTests:706 - Test Case execution started
+2018-02-26 16:57:27 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-26 16:57:27 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-26 16:57:27 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-26 16:57:27 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-26 16:57:27 INFO  MigrationUtilFileComTests:721 - Verify the file IntroscopeEnterpriseManager.properties is present in the base em home directory
+2018-02-26 16:57:27 INFO  MigrationUtilFileComTests:732 - File exists in the Base build, hence test case step Passed.
+2018-02-26 16:57:27 INFO  MigrationUtilFileComTests:733 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade config path or not.
+2018-02-26 16:57:27 INFO  MigrationUtilFileComTests:747 - File exists in both the upgraded and Fresh build, hence going to compare the content...
+2018-02-26 16:57:27 INFO  PostUpgradeUtil:598 - The line num is 1141
+2018-02-26 16:57:27 INFO  PostUpgradeUtil:600 - The comment line is # How long an inactive metric remains in the baselining cache before it is evicted
+2018-02-26 16:57:27 INFO  PostUpgradeUtil:686 - The line num is 1273
+2018-02-26 16:57:27 INFO  PostUpgradeUtil:688 - The comment line is # How long an inactive metric remains in the baselining cache before it is evicted
+2018-02-26 16:57:27 INFO  PostUpgradeUtil:686 - The line num is 1141
+2018-02-26 16:57:27 INFO  PostUpgradeUtil:688 - The comment line is # How long an inactive metric remains in the baselining cache before it is evicted
+2018-02-26 16:57:27 INFO  PostUpgradeUtil:642 - The line num is 1287
+2018-02-26 16:57:27 INFO  PostUpgradeUtil:644 - The comment line is # How long an inactive metric remains in the baselining cache before it is evicted
+2018-02-26 16:57:27 INFO  PostUpgradeUtil:322 - Commented Property Value result returned : true
+2018-02-26 16:57:27 INFO  MigrationUtilFileComTests:753 - The status result is:  true
+2018-02-26 16:58:31 INFO  MigrationUtilFileComTests:706 - Test Case execution started
+2018-02-26 16:58:31 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-26 16:58:31 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-26 16:58:31 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-26 16:58:31 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-26 16:58:31 INFO  MigrationUtilFileComTests:721 - Verify the file IntroscopeEnterpriseManager.properties is present in the base em home directory
+2018-02-26 16:58:31 INFO  MigrationUtilFileComTests:732 - File exists in the Base build, hence test case step Passed.
+2018-02-26 16:58:31 INFO  MigrationUtilFileComTests:733 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade config path or not.
+2018-02-26 16:58:31 INFO  MigrationUtilFileComTests:747 - File exists in both the upgraded and Fresh build, hence going to compare the content...
+2018-02-26 16:58:31 INFO  PostUpgradeUtil:598 - The line num is 1152
+2018-02-26 16:58:31 INFO  PostUpgradeUtil:600 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:58:31 INFO  PostUpgradeUtil:686 - The line num is 1284
+2018-02-26 16:58:31 INFO  PostUpgradeUtil:688 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:58:31 INFO  PostUpgradeUtil:686 - The line num is 1152
+2018-02-26 16:58:31 INFO  PostUpgradeUtil:688 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:58:31 INFO  PostUpgradeUtil:642 - The line num is 1298
+2018-02-26 16:58:31 INFO  PostUpgradeUtil:644 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 16:58:31 INFO  PostUpgradeUtil:322 - Commented Property Value result returned : true
+2018-02-26 16:58:31 INFO  MigrationUtilFileComTests:753 - The status result is:  true
+2018-02-26 17:00:37 INFO  MigrationUtilFileComTests:706 - Test Case execution started
+2018-02-26 17:00:37 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-26 17:00:37 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-26 17:00:37 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-26 17:00:37 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-26 17:00:37 INFO  MigrationUtilFileComTests:721 - Verify the file IntroscopeEnterpriseManager.properties is present in the base em home directory
+2018-02-26 17:00:37 INFO  MigrationUtilFileComTests:732 - File exists in the Base build, hence test case step Passed.
+2018-02-26 17:00:37 INFO  MigrationUtilFileComTests:733 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade config path or not.
+2018-02-26 17:00:37 INFO  MigrationUtilFileComTests:747 - File exists in both the upgraded and Fresh build, hence going to compare the content...
+2018-02-26 17:00:37 INFO  PostUpgradeUtil:598 - The line num is 1152
+2018-02-26 17:00:37 INFO  PostUpgradeUtil:600 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 17:00:37 INFO  PostUpgradeUtil:686 - The line num is 1284
+2018-02-26 17:00:37 INFO  PostUpgradeUtil:688 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 17:00:37 INFO  PostUpgradeUtil:328 - Commented Property Value result returned : false
+2018-02-26 17:00:37 INFO  MigrationUtilFileComTests:753 - The status result is:  false
+2018-02-26 17:01:51 INFO  MigrationUtilFileComTests:706 - Test Case execution started
+2018-02-26 17:01:51 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-26 17:01:51 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-26 17:01:51 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-26 17:01:51 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-26 17:01:51 INFO  MigrationUtilFileComTests:721 - Verify the file IntroscopeEnterpriseManager.properties is present in the base em home directory
+2018-02-26 17:01:51 INFO  MigrationUtilFileComTests:732 - File exists in the Base build, hence test case step Passed.
+2018-02-26 17:01:51 INFO  MigrationUtilFileComTests:733 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade config path or not.
+2018-02-26 17:01:51 INFO  MigrationUtilFileComTests:747 - File exists in both the upgraded and Fresh build, hence going to compare the content...
+2018-02-26 17:01:51 INFO  PostUpgradeUtil:598 - The line num is 1152
+2018-02-26 17:01:51 INFO  PostUpgradeUtil:600 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 17:01:51 INFO  PostUpgradeUtil:686 - The line num is 1284
+2018-02-26 17:01:51 INFO  PostUpgradeUtil:688 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 17:01:51 INFO  PostUpgradeUtil:328 - Commented Property Value result returned (did not go to loop) : false
+2018-02-26 17:01:51 INFO  MigrationUtilFileComTests:753 - The status result is:  false
+2018-02-26 17:03:14 INFO  MigrationUtilFileComTests:706 - Test Case execution started
+2018-02-26 17:03:14 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-26 17:03:14 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-26 17:03:14 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-26 17:03:14 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-26 17:03:14 INFO  MigrationUtilFileComTests:721 - Verify the file IntroscopeEnterpriseManager.properties is present in the base em home directory
+2018-02-26 17:03:14 INFO  MigrationUtilFileComTests:732 - File exists in the Base build, hence test case step Passed.
+2018-02-26 17:03:14 INFO  MigrationUtilFileComTests:733 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade config path or not.
+2018-02-26 17:03:14 INFO  MigrationUtilFileComTests:747 - File exists in both the upgraded and Fresh build, hence going to compare the content...
+2018-02-26 17:03:14 INFO  PostUpgradeUtil:598 - The line num is 1152
+2018-02-26 17:03:14 INFO  PostUpgradeUtil:600 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 17:03:14 INFO  PostUpgradeUtil:686 - The line num is 1284
+2018-02-26 17:03:14 INFO  PostUpgradeUtil:688 - The comment line is # Maximal size of the lucene memory cache in megabytes
+2018-02-26 17:03:14 INFO  PostUpgradeUtil:328 - Commented Property Value result returned (did not go to loop) : false
+2018-02-26 17:03:14 INFO  MigrationUtilFileComTests:753 - The status result is:  false
+2018-02-26 18:57:13 INFO  MigrationFileModificationUtilTests:638 - Test Case execution started
+2018-02-26 18:57:13 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-26 18:57:13 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-26 18:57:13 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-26 18:57:13 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-26 18:57:13 INFO  MigrationFileModificationUtilTests:654 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-26 18:57:13 INFO  MigrationFileModificationUtilTests:665 - Files exists in the base directory, hence going to update add a comment for the said property
+2018-02-26 18:57:13 INFO  PreUpgradeMain:112 - A new commented line added successfully in the file C:\Users\patas07\Desktop\MyData\LearnAutomation\TestData\migrationTest\FileCompare\1519310131633_Introscope10.1.0.15\config\IntroscopeEnterpriseManager.properties
+2018-02-26 18:57:13 INFO  MigrationFileModificationUtilTests:668 - Existing property updated Successfully
+2018-02-26 18:57:13 INFO  MigrationFileModificationUtilTests:678 - Test Case execution ended for adding new file test.
