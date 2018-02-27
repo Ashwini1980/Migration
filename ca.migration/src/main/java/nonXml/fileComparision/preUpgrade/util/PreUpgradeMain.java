@@ -103,5 +103,18 @@ public class PreUpgradeMain {
 		return blResult;
 	}
 	
-
+	public static boolean addedNewComment (File fileName, String Key) {
+		
+		PreUpgradeUtil preUpgradeUtil = new PreUpgradeUtil();
+		boolean blResult = true;
+		
+		preUpgradeUtil.addNewComment(fileName, Key);
+		LOGGER.info("A new commented line added successfully in the file "+fileName);
+		
+		return blResult;
+		
+	}
+	
+	
+	
 }

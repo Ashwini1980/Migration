@@ -6,9 +6,9 @@
   
       <properties>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-      <!-- suiteXmlFile>src/main/resources/testng.xml</suiteXmlFile-->
-      <suiteXmlFile>src/main/resources/testng_FileComparison.xml</suiteXmlFile>
-      <!-- suiteXmlFile>src/main/resources/testng_preUpgradeFile.xml</suiteXmlFile -->
+      <!-- suiteXmlFile>src/main/resources/testng_fileExistence.xml</suiteXmlFile -->
+      <!-- suiteXmlFile>src/main/resources/testng_FileComparison.xml</suiteXmlFile -->
+      <suiteXmlFile>src/main/resources/testng_preUpgradeFile.xml</suiteXmlFile>
    </properties>
    
    <dependencies>

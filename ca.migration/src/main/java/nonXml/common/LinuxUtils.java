@@ -46,7 +46,7 @@ public class LinuxUtils {
 	}
 	
 	
-	@Test (dependsOnMethods="connectToLinux")
+/*	@Test (dependsOnMethods="connectToLinux")
 	
 	public static ArrayList<String> setCommand (String command) {
 		
@@ -74,7 +74,7 @@ public class LinuxUtils {
 		    
 		
 		    br.close();
-/*		    byte[] tmp=new byte[1024];
+		    byte[] tmp=new byte[1024];
 		    while(true){
 		      while(in.available()>0){
 		        int i=in.read(tmp, 0, 1024);
@@ -89,7 +89,7 @@ public class LinuxUtils {
 		      try{
 		    	  Thread.sleep(1000);
 		    	  }catch(Exception ee){}
-		   }*/
+		   }
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -100,17 +100,20 @@ public class LinuxUtils {
 		}
 		System.out.println("InputStream is: "+al);
 		return al;
-	}
+	}*/
 	
+	//Store the results after running the commands
 	@Test (dependsOnMethods="connectToLinux")
 	
-	public static boolean getResult () {
+	public static ArrayList<String> getResult (String command) {
 		
 		ArrayList <String> al = new ArrayList<String>();
 		
 		try {
 			
-			channel=session.openChannel("exec");		   			
+			channel=session.openChannel("exec");
+			((ChannelExec)channel).setCommand(command);
+			
 		    channel.setInputStream(null);
 		    ((ChannelExec)channel).setErrStream(System.err);
 		    
@@ -122,24 +125,39 @@ public class LinuxUtils {
 		    while ((result = br.readLine()) != null)
 		   {
 		    	al.add(result);                    
-		   }		    
+		   }		
 			
 		} catch (Exception e) {
 			e.printStackTrace();
-		}	
-		
-		if (al.size() > 0) {
-			System.out.println("InputStream is: "+al);
-			return true;
-		}
-		
-		return false; 
-		
-		
-		
 			
+		} 		
+		
+		return al; 
+	
 	}
 	
+	@Test (dependsOnMethods="connectToLinux")
+	
+	public static void closeConnection () {
+		
+		try {
+			
+			channel=session.openChannel("exec");
+			
+		    channel.setInputStream(null);
+		    ((ChannelExec)channel).setErrStream(System.err);
+		    channel.connect();
+		    
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		} finally {
+			
+			 channel.disconnect();
+		     session.disconnect();
+		}
+		
+	}
 	
 	
 }

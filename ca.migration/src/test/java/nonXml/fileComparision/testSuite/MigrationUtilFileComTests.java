@@ -70,7 +70,7 @@ public class MigrationUtilFileComTests {
 	    	   	    		 
 	    	   	    	 } else {
 	    	   	    		LOGGER.info("File exists in the upgraded build, hence going to compare the content...");
-	    	   	    		result = postUpgradeUtil.unchangedPropComparison(FileComparison.strUnchanged_Prop_Files_Fc, base_file, upgrade_file);
+	    	   	    		result = postUpgradeUtil.unchangedPropComparison(base_file, upgrade_file);
 	    	   	    		Assert.assertTrue("File comarison properties Unchanged file test", result.equals(true));    	   	    		
 	    	   	    		    	   	    		 
 	    	   	    	 }      	    
@@ -698,10 +698,81 @@ public class MigrationUtilFileComTests {
 	  }
 
 	  @Parameters("OS")
-	  @Test(groups = { "BAT" }, enabled = false, description = "If base has CV,  Current has CommentDV then after migration, it should be CV")
+	  @Test(groups = { "BAT" }, enabled = false, description = "If base has Comment1 DV,  Current has Comment2 DV then after migration, it should be Commen2 DV")
 	  public void verify_ALM_FileComaprision_properties_BaseComment1DV_CurrentComment2DV_Migration_Comment2DV(String OS) {
 		  
-		  //To be implemented.
+			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseCommentLine1DV_CurrentCommentLine2DV_Migration_CommentLine2DV.trim().split(",");		
+		 	
+	    	LOGGER.info("Test Case execution started");	
+	    	
+	    	Boolean result=true;
+	    	testcaseId = "BaseComment1DVCurrentComment2DVMigrationComment2DV_Prop_File_Comparison";
+	    	
+	    	if (!listOfFiles[0].isEmpty() && listOfFiles.length > 0) {
+	    		
+	    		for (int i=0; i<listOfFiles.length; i++) {   
+	    		
+	    		if (OS.equalsIgnoreCase(MigrationUtilFileComTests.OSW)) {
+	    			
+	    			PreCheckFiles.preCheckFiles(MigrationUtilFileComTests.OSW);
+	    			
+	    			try {
+	    				
+	    	   		    LOGGER.info("Verify the file " +listOfFiles[i]+" is present in the base em home directory");
+	    	   		    String base_loc = Utils.getFileLocationbasedonFileNameWindows(listOfFiles[i], Utils.getBase_em_home());
+	    	   		    
+	    	   		    File base_file = new File(base_loc+File.separator+listOfFiles[i]);
+	    	   		    
+	    	   		 if(!base_file.exists()){
+	    	    		   result = false;	
+	    	    		   LOGGER.info("File DOES NOT exist in the Base build, hence test case step Failed.");
+	    	    		   Assert.assertTrue("File comarison properties files test", result.equals(false));    	    		   
+	    	    	    } else {
+	    	    	    	
+	    	    	    	LOGGER.info("File exists in the Base build, hence test case step Passed.");
+	    	   	    	    LOGGER.info("Verify the " +listOfFiles[i]+" is present in the upgrade config path or not.");	    	   	    	    
+	    	   	    	    String upgrade_loc = Utils.getFileLocationbasedonFileNameWindows(listOfFiles[i], Utils.getUpgrade_em_home());
+	    	   	    	    String fresh_loc = Utils.getFileLocationbasedonFileNameWindows(listOfFiles[i], Utils.getFresh_em_home());
+	    	   	    	    
+	    	   	    	    File upgrade_file = new File(upgrade_loc+File.separator+listOfFiles[i]);
+	    	   	    	    File fresh_file = new File(fresh_loc+File.separator+listOfFiles[i]); 
+	    	   	    	    
+	    	   	    	 if(!upgrade_file.exists() && !fresh_file.exists()){
+	    	   	    		 
+		    	    		 result = false;	
+		    	    		 LOGGER.info("File DOES NOT exist in the Upgraded build, hence test case step Failed.");
+		    	    		 Assert.assertTrue("File comarison properties files test", result.equals(false));     	   	    		 
+	    	   	    		 
+	    	   	    	 } else {
+	    	   	    		LOGGER.info("File exists in both the upgraded and Fresh build, hence going to compare the content...");	    	   	    			    	   	    		
+	    	   	    				
+	    	    	   	    		result = postUpgradeUtil.
+	    	    	   	    				changedPropBaseComment1DVFreshComemnt2DVUpgradeComemnt2DV(FileComparison.
+	    	    	   	    						strChanged_prop_name_baseCommentLine1DV_currentCommentLine2DV_migration_CommentLine2DV,
+	    	    	   	    				base_file, upgrade_file, fresh_file);
+	    	    	   	    		LOGGER.info("The status result is:  "+result);
+	    	    	   	    		Assert.assertTrue("Commented File comarison test default result", result.equals(true)); 
+  	   	    		 
+	    	   	    	 }      	    
+	    	   	    	    
+	    	    	    	
+	    	    	    }
+	    	   		    
+	    				
+	    			} catch (Exception e) {
+	    				Assert.assertTrue(testcaseId + " failed because of the Exception "+e,false);   
+	    			}
+	    			
+	    			
+	    		}
+	    }
+	    	} else {
+	    		
+	    		Assert.assertTrue("You have not entered any File to compare content ", result.equals(false));
+	    		
+	    	}
+		  
+		  
 		  
 	  }
 

@@ -6,8 +6,13 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import org.junit.Assert;
@@ -25,8 +30,92 @@ public class PostUpgradeUtil {
 	    static InputStream input_upgrade = null;
 	    static InputStream input_fresh = null;	
 	    static BufferedReader	br = null;
+	    
+	    BufferedReader br1 = null;
+	    BufferedReader br2 = null;
+	    static Path path = null;
+	    static List <String> lines = null;
+	    
+	//Compare 2 files and find out the difference which includes comments 	    
+	public boolean unchangedPropComparison (File baseFile, File upgradeFile) {
+		
+		boolean blResult = false;
+		
+		try {
 
-	public boolean unchangedPropComparison (String fileName, File baseFile, File upgradeFile) {		
+		     String sCurrentLine;
+		     
+		     List<String> list1 = new ArrayList<String>();
+		     List<String> list2 = new ArrayList<String>();
+		     
+		     br1 = new BufferedReader(new FileReader(baseFile));
+		     br2 = new BufferedReader(new FileReader(upgradeFile));
+			 
+		     while ((sCurrentLine = br1.readLine()) != null) {
+		         list1.add(sCurrentLine);
+		     }
+
+		     while ((sCurrentLine = br2.readLine()) != null) {
+		         list2.add(sCurrentLine);
+		     }
+		     
+		     List<String> tmpList = new ArrayList<String>(list1);
+		     
+		     tmpList.removeAll(list2);
+		     
+		     if (tmpList.size() == 0) {
+		    
+		    	 LOGGER.info("Both file are Same");
+		    	 return blResult = true;
+		    	 
+		     } else {
+		    	 
+		    	 LOGGER.info("====Both file contents are NOT Same====");
+		    	 LOGGER.info("=======================");
+		    	 
+		    	 LOGGER.info("content from "+baseFile+" which are NOT there in "+upgradeFile);		         
+		         for(int i=0;i<tmpList.size();i++){
+		        	 LOGGER.info (tmpList.get(i));
+		         }
+
+		         LOGGER.info("content from "+upgradeFile+" which are NOT there in "+baseFile);
+
+		         tmpList = list2;
+		         tmpList.removeAll(list1);
+		         for(int i=0;i<tmpList.size();i++){
+		        	 LOGGER.info (tmpList.get(i));
+		         }		    	 
+		    	 
+		     }
+		     
+		     br1.close();
+		     br2.close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();		
+			
+		} finally {
+			if (input_base != null) {
+				try {
+					input_base.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			if (input_upgrade != null) {
+				try {
+					input_upgrade.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		LOGGER.info("Comparison result is : "+blResult);
+		return blResult;
+	}
+	
+	//Compare 2 files and find out the difference which does NOT include comments i.e. only compares key and Values
+	public boolean unchangedPropComparisonUpdated (File baseFile, File upgradeFile) {		
 		
 		Map<String, String> propMap = new HashMap<String, String>();
 		int count=0;
@@ -94,6 +183,7 @@ public class PostUpgradeUtil {
 		return blResult;
 
 	}
+	
 	
 	//Rule#1
 	public boolean changedPropDefaultValue (String fileName, String keyName, File baseFile, File upgradeFile, File freshFile) {	
@@ -222,12 +312,20 @@ public class PostUpgradeUtil {
 	}
 	
 	//Rule#8
-	public boolean changedPropBaseComment1DVFreshComemnt2DVUpgradeComemnt2DV (String fileName, String keyName, File baseFile, File upgradeFile, File freshFile) {	
+	public boolean changedPropBaseComment1DVFreshComemnt2DVUpgradeComemnt2DV (String keyName, File baseFile, File upgradeFile, File freshFile) {	
 		
 		boolean blResult = false;
 		
-		//Needs to be implemented
-		LOGGER.info("Commented Property Value result returned : "+blResult);
+		if (!PostUpgradeUtil.getNewCommentBasePropertyValue(baseFile, keyName).equals(PostUpgradeUtil.getNewCommentFreshPropertyValue(freshFile, keyName))) {
+			
+			blResult = (PostUpgradeUtil.getNewCommentFreshPropertyValue(baseFile, keyName).equals(PostUpgradeUtil.getNewCommentUpgradedPropertyValue(upgradeFile, keyName)) );
+			LOGGER.info("Commented Property Value result returned : "+blResult);
+			Assert.assertEquals("After migration, Customized Value reflected successfully",true, blResult);
+			return blResult;		
+			
+		}		
+		
+		LOGGER.info("Commented Property Value result returned (did not go to loop) : "+blResult);
 		return blResult;		
 
 	}
@@ -477,6 +575,135 @@ public class PostUpgradeUtil {
 		
 	}
 
+	public static String getNewCommentBasePropertyValue(File baseFile, String keyName) {		
+				
+		try {
+			
+			String file = baseFile.toString();
+			path = Paths.get(file);
+			br = new BufferedReader (new FileReader (baseFile));
+			
+			String line;
+			String newLine=null;
+			int lineNum=0;
+			
+			lines = Files.readAllLines(path);
+			
+			while ((line = br.readLine()) != null) {
+				
+				lineNum++;
+				
+				if (line.startsWith(keyName)) {
+					
+					LOGGER.info ("The line num is " + lineNum);
+					newLine = lines.get(lineNum-2);
+					LOGGER.info ("The comment line is " + newLine);
+					return newLine;
+				}
+				
+			}
+			
+			
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
 
+			try{
+				br.close();
+			}catch(Exception e){
+
+			}
+
+		}
+
+		return null;
+	}
+	
+	public static String getNewCommentUpgradedPropertyValue(File upgradeFile, String keyName) {		
+		
+		try {
+			String file = upgradeFile.toString();
+			path = Paths.get(file);
+			br = new BufferedReader (new FileReader (upgradeFile));
+			
+			String line;
+			String newLine=null;
+			int lineNum = 0;
+			
+			lines = Files.readAllLines(path);
+			
+			while ((line = br.readLine()) != null) {
+				
+				lineNum++;
+				
+				if (line.startsWith(keyName)) {
+					
+					LOGGER.info ("The line num is " + lineNum);
+					newLine = lines.get(lineNum-2);
+					LOGGER.info ("The comment line is " + newLine);
+					return newLine;
+				}
+				
+			}
+			
+			
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+
+			try{
+				br.close();
+			}catch(Exception e){
+
+			}
+
+		}
+
+		return null;
+	}
+	
+	public static String getNewCommentFreshPropertyValue(File freshFile, String keyName) {		
+		
+		try {
+			String file = freshFile.toString();
+			path = Paths.get(file);
+			br = new BufferedReader (new FileReader (freshFile));
+			
+			String line;
+			String newLine=null;
+			int lineNum = 0;
+			
+			lines = Files.readAllLines(path);
+			
+			while ((line = br.readLine()) != null) {
+				
+				lineNum++;
+				
+				if (line.startsWith(keyName)) {
+					
+					LOGGER.info ("The line num is " + lineNum);
+					newLine = lines.get(lineNum-2);
+					LOGGER.info ("The comment line is " + newLine);
+					return newLine;
+				}
+				
+			}
+		
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+
+			try{
+				br.close();
+			}catch(Exception e){
+
+			}
+
+		}
+
+		return null;
+	}
 	
 }

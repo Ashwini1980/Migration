@@ -8,10 +8,12 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import nonXml.common.LinuxUtils;
 import nonXml.common.PreCheckFiles;
 import nonXml.fileComparision.preUpgrade.util.DefaultPropUtil;
 import nonXml.fileComparision.preUpgrade.util.PreUpgradeMain;
 import nonXml.fileExistence.testSuite.MigrationFileExistenceUtilTests;
+import nonXml.testVariables.EnvironmentVariables;
 import nonXml.testVariables.FileComparison;
 import nonXml.util.Utils;
 
@@ -30,12 +32,12 @@ public class MigrationFileModificationUtilTests {
     private static String op_updatePropBaseCVCurrentCommentDV = "updateProperty_BaseCVCurrentCommentDV";
     private static String op_updatePropBaseHPCVCurrentNULL = "updateProperty_BaseHPCVCurrentNULL";
     private static String op_updatePropBaseDPDVCurrentNULL = "updateProperty_BaseDPDVCurrentNULL";
-    private static String op_updatePropBaseCommentLine1DVCurrentCommentLine2DV = "updateProperty_BaseCommentLine1DVCurrentCommentLine2DV"; 
+    //private static String op_updatePropBaseCommentLine1DVCurrentCommentLine2DV = "updateProperty_BaseCommentLine1DVCurrentCommentLine2DV"; 
     private static String op_addNewPropFile = "addNewPropFile";
     
     //tested working fine
 	@Parameters("OS")	
-	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - Add a new Property into base file"
+	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - Add a new Property into base file"
 			+ "that property not present in Current directory, hence after migration it should be present in upgraded folder")	
 	
 	public void verify_ALM_preUpgrade_BaseAddNewCV_CurrentNull(String OS) {
@@ -65,7 +67,7 @@ public class MigrationFileModificationUtilTests {
 	    	   		
 	    	    	    if(!base_file.exists()){
 	    	    		   result = true;
-	    	    		   LOGGER.error("File DOES NOT exist in the Base build, hence cannot be proceed.");
+	    	    		   LOGGER.error("File DOES NOT exist in the Base build, hence cannot add any new Property under that file...");
 	    	    		   Assert.assertTrue("Adding new property file test", result.equals(false));	 	    		   
 	    	    		   
 	    	    	    } else {
@@ -86,10 +88,43 @@ public class MigrationFileModificationUtilTests {
 		    	    		LOGGER.info("Test Case execution ended for adding new property file test.");
 		    			
 		    		} 	else if (OS.equalsIgnoreCase(MigrationFileExistenceUtilTests.OSL)) {
-		    			
+		    				
+		    					PreCheckFiles.preCheckFiles(MigrationFileExistenceUtilTests.OSL);
+		    					
+			    	    		//Connect to Linux Server 
+			    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
     			
-		                 //Need to implement the code	    	    	
-		    	    	
+		    			try{	    	
+			    	   		
+		    	   		    LOGGER.info("Verify the file " +listOfFiles[i]+" is present in the base EM home directory");
+		    	   		    String base_loc = Utils.getFileLocationbasedonFileNameLinux(listOfFiles[i], Utils.getBase_em_home());	 
+		    	   		    
+		    	   		    String base_value = base_loc+"/"+listOfFiles[i];
+		    	   		    LOGGER.info ("Base file location is: "+base_value);
+		    	   		    
+		    				   if(!base_value.contains(Utils.getBase_em_home())){
+			    	    		   result = true;	
+			    	    		   LOGGER.info("File DOES NOT exist in the Base build, hence cannot add any new Property under that file...");
+			    	    		   Assert.assertTrue("Adding new property file test", result.equals(false));
+			    	    		   
+			    	    	    } else {
+			    	    	    	
+			    	    	    	LOGGER.info("Files exists in the base directory, hence going to add a new property");		    	    	    	
+			        	    		     	    		
+			        	    		result = DefaultPropUtil.addUpdatePropertyLinux(base_value, op_addProp );
+			        	    		LOGGER.info("New Property Added Successfully");
+			        	    		Assert.assertTrue("Adding new property files test", result.equals(true));
+			    	    	
+			    	    	    }
+			    	    	
+		    			} catch (Exception e) {
+		    				e.printStackTrace();
+		    			} finally {
+	    	    			
+	    	    			LOGGER.info("Closing the LINUX/UNIX connection");
+	    	    			LinuxUtils.closeConnection();
+	    	    			
+	    	    		}
 		    	 
 		    		} 		
 		    		
@@ -662,10 +697,9 @@ public class MigrationFileModificationUtilTests {
 	    	    		   Assert.assertTrue("updating existing property file test", result.equals(false));	 	    		   
 	    	    		   
 	    	    	    } else {
-	        	    		LOGGER.info("Files exists in the base directory, hence going to update one of the depreciated property"); 		
-	        	    		
-	        	    		Map <Object, Object> prop = DefaultPropUtil.addUpdateProperty(base_file,op_updatePropBaseCommentLine1DVCurrentCommentLine2DV );	        	    		
-	        	    		result = PreUpgradeMain.updateExistingProperty(base_file, prop);
+	        	    		LOGGER.info("Files exists in the base directory, hence going to update add a comment for the said property"); 		
+	        	    			        	    			        	    		
+	        	    		result = PreUpgradeMain.addedNewComment(base_file, FileComparison.strChanged_prop_name_baseCommentLine1DV_currentCommentLine2DV_migration_CommentLine2DV);
 	        	    		LOGGER.info("Existing property updated Successfully");
 	        	    		Assert.assertTrue("updating existing property file test", result.equals(true));
 	        	    		

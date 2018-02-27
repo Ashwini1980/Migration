@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -14,6 +15,7 @@ import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import nonXml.common.LinuxUtils;
 import nonXml.testVariables.FileComparison;
 import nonXml.util.Utils;
 
@@ -38,8 +40,12 @@ public class DefaultPropUtil {
     private static String op_updatePropBaseCVCurrentCommentDV = "updateProperty_BaseCVCurrentCommentDV";
     private static String op_updatePropBaseHPCVCurrentNULL = "updateProperty_BaseHPCVCurrentNULL";
     private static String op_updatePropBaseDPDVCurrentNULL = "updateProperty_BaseDPDVCurrentNULL";
-    private static String op_updatePropBaseCommentLine1DVCurrentCommentLine2DV = "updateProperty_BaseCommentLine1DVCurrentCommentLine2DV"; 
+    //private static String op_updatePropBaseCommentLine1DVCurrentCommentLine2DV = "updateProperty_BaseCommentLine1DVCurrentCommentLine2DV"; 
     private static String op_addNewPropFile = "addNewPropFile";
+    
+    static ArrayList <String> al = null;
+    
+    
     
 	//Add a new property the base file and that file exists
 	public static Map <Object, Object> addUpdateProperty (File fileName, String operation) {
@@ -48,7 +54,7 @@ public class DefaultPropUtil {
 		LOGGER.info("You have entered the file "+fileName+ " to add/update a new/existing property");
 		
 		int default_Value = 100;
-
+		
 		try {
 			    prop_base = new Properties();
 		        input_base = new FileInputStream (fileName);			
@@ -146,12 +152,10 @@ public class DefaultPropUtil {
 				    
 				    return propMap;
 			    	
-			    } else if (operation.equalsIgnoreCase(op_updatePropBaseCommentLine1DVCurrentCommentLine2DV)) {
-			    	
-			    	//to be implemented.......
 			    }
-
-			
+			    
+			    
+			    
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -314,4 +318,98 @@ public class DefaultPropUtil {
 		return propMap;
 	}
 
+	/*
+	 * Linux methods to file operations starts here
+	 */
+	
+	public static boolean addUpdatePropertyLinux (String fileName, String operation) {
+		
+		int default_Value = 100;
+		boolean blResult = false;
+		
+		LOGGER.info("You have entered the file "+fileName+ " to add/update a new/existing property");
+		
+		if(null == fileName){	
+			LOGGER.info("File not found, please check"+fileName);
+			return false;	
+			
+	    } else if (operation.equalsIgnoreCase(op_addProp)) {			    	
+			
+	    	String [] listOfProps = FileComparison.strChanged_Prop_Name_BaseAddNewCV_CurrentNULL_Migration_CV.trim().split(",");	    	
+	    		    	
+	    	for (int i=0; i< listOfProps.length; i++) {
+	    		
+	    		String gCommands = "grep -i "+listOfProps[i]+" "+fileName+" |wc -l";
+	    		al = LinuxUtils.getResult(gCommands);
+	    		System.out.println("The no of Keys in the file: "+al);
+	    		
+	    		String command = "echo "+listOfProps[i]+"="+default_Value+" >> "+fileName+"";
+	    		System.out.println("Command is: "+command);
+	    		System.out.println("ArrayList size is: "+al.size());
+	    		
+	    		if (!al.get(0).equals("0") && al.size() > 0) {
+	    			blResult = true;
+	    			LOGGER.info("The Key is already present, hence not going to add anything...");
+	    			Assert.assertFalse("The key is already present ", blResult);
+	    			
+	    		} else {
+	    			
+	    			LinuxUtils.getResult(command);
+	    			al.clear();
+	    			al = LinuxUtils.getResult(gCommands);
+	    			
+	    			if (!al.get(0).equals("0") && al.size() > 0) {
+	    				blResult = true;
+	    				LOGGER.info("The Key added successful....");
+	    				Assert.assertTrue("The key added successfully ", blResult);
+	    				return blResult;
+	    			} else {
+	    				LOGGER.info("The Key could NOT be added successful....");
+	    				Assert.assertTrue("The key added successfully ", false);
+	    			}
+	    			
+	    		}
+	    		
+	    	}
+		
+	    } else  {
+	    	///Tomo will continue with other code for linux
+	    }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		return blResult;
+	}
+	
+	
+	
+	
 }

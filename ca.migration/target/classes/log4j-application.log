@@ -1,0 +1,771 @@
+2018-02-27 11:16:02 INFO  MigrationFileExistenceUtilTests:238 - Test Case execution started
+2018-02-27 11:16:02 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 11:16:02 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 11:16:02 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 11:16:02 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 11:16:02 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 11:16:02 INFO  MigrationFileExistenceUtilTests:298 - Verify the fileAppMapAlertMMUpgradeConfig.properties,Analytics.propertiesis present in the base em home directory
+2018-02-27 11:16:03 INFO  MigrationFileExistenceUtilTests:307 - Test Case execution ended for test case ID=456391
+2018-02-27 12:24:18 INFO  MigrationFileExistenceUtilTests:238 - Test Case execution started
+2018-02-27 12:24:18 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 12:24:18 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 12:24:18 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 12:24:18 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 12:24:19 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 12:24:19 INFO  MigrationFileExistenceUtilTests:298 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.propertiesis present in the base EM home directory
+2018-02-27 12:24:19 INFO  MigrationFileExistenceUtilTests:308 - Test Case execution ended for test case ID=456391
+2018-02-27 12:24:57 INFO  MigrationFileExistenceUtilTests:238 - Test Case execution started
+2018-02-27 12:24:57 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 12:24:57 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 12:24:57 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 12:24:57 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 12:24:57 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 12:24:57 INFO  MigrationFileExistenceUtilTests:298 - Verify the file AppMapAlertMMUpgradeConfig.propertiesis present in the base EM home directory
+2018-02-27 12:24:58 INFO  MigrationFileExistenceUtilTests:308 - Test Case execution ended for test case ID=456391
+2018-02-27 12:47:47 INFO  MigrationFileExistenceUtilTests:238 - Test Case execution started
+2018-02-27 12:47:47 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 12:47:47 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 12:47:47 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 12:47:47 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 12:47:48 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 12:47:48 INFO  MigrationFileExistenceUtilTests:298 - Verify the file AppMapAlertMMUpgradeConfig.propertiesis present in the base EM home directory
+2018-02-27 12:47:48 INFO  MigrationFileExistenceUtilTests:308 - Test Case execution ended for test case ID=456391
+2018-02-27 13:16:40 INFO  MigrationFileExistenceUtilTests:238 - Test Case execution started
+2018-02-27 13:16:40 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 13:16:40 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 13:16:40 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 13:16:40 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 13:16:41 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 13:16:41 INFO  MigrationFileExistenceUtilTests:298 - Verify the file AppMapAlertMMUpgradeConfig.propertiesis present in the base EM home directory
+2018-02-27 13:16:41 INFO  MigrationFileExistenceUtilTests:308 - Test Case execution ended for test case ID=456391
+2018-02-27 13:18:37 INFO  MigrationFileExistenceUtilTests:238 - Test Case execution started
+2018-02-27 13:18:37 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 13:18:37 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 13:18:37 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 13:18:37 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 13:18:37 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 13:18:37 INFO  MigrationFileExistenceUtilTests:298 - Verify the file AppMapAlertMMUpgradeConfig.propertiesis present in the base EM home directory
+2018-02-27 13:18:37 INFO  MigrationFileExistenceUtilTests:308 - Test Case execution ended for test case ID=456391
+2018-02-27 13:20:46 INFO  MigrationFileExistenceUtilTests:238 - Test Case execution started
+2018-02-27 13:20:46 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 13:20:46 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 13:20:46 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 13:20:46 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 13:20:46 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 13:20:46 INFO  MigrationFileExistenceUtilTests:298 - Verify the file AppMapAlertMMUpgradeConfig.propertiesis present in the base EM home directory
+2018-02-27 13:20:47 INFO  MigrationFileExistenceUtilTests:308 - Test Case execution ended for test case ID=456391
+2018-02-27 13:21:43 INFO  MigrationFileExistenceUtilTests:238 - Test Case execution started
+2018-02-27 13:21:43 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 13:21:43 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 13:21:43 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 13:21:43 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 13:21:43 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 13:21:43 INFO  MigrationFileExistenceUtilTests:298 - Verify the file AppMapAlertMMUpgradeConfig.propertiesis present in the base EM home directory
+2018-02-27 13:21:43 INFO  MigrationFileExistenceUtilTests:308 - Test Case execution ended for test case ID=456391
+2018-02-27 13:24:24 INFO  MigrationFileExistenceUtilTests:238 - Test Case execution started
+2018-02-27 13:24:24 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 13:24:24 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 13:24:24 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 13:24:24 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 13:24:24 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 13:24:24 INFO  MigrationFileExistenceUtilTests:298 - Verify the file AppMapAlertMMUpgradeConfig.propertiesis present in the base EM home directory
+2018-02-27 13:24:24 INFO  MigrationFileExistenceUtilTests:308 - Test Case execution ended for test case ID=456391
+2018-02-27 13:26:23 INFO  MigrationFileExistenceUtilTests:238 - Test Case execution started
+2018-02-27 13:26:23 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 13:26:23 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 13:26:23 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 13:26:23 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 13:26:23 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 13:26:23 INFO  MigrationFileExistenceUtilTests:298 - Verify the file AppMapAlertMMUpgradeConfig.propertiesis present in the base EM home directory
+2018-02-27 13:26:24 INFO  MigrationFileExistenceUtilTests:308 - Test Case execution ended for test case ID=456391
+2018-02-27 13:27:01 INFO  MigrationFileExistenceUtilTests:238 - Test Case execution started
+2018-02-27 13:27:01 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 13:27:01 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 13:27:01 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 13:27:01 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 13:27:01 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 13:27:01 INFO  MigrationFileExistenceUtilTests:298 - Verify the file AppMapAlertMMUpgradeConfig.propertiesis present in the base EM home directory
+2018-02-27 13:27:02 INFO  MigrationFileExistenceUtilTests:308 - Test Case execution ended for test case ID=456391
+2018-02-27 14:10:29 INFO  MigrationFileExistenceUtilTests:265 - Test Case execution started
+2018-02-27 14:10:29 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 14:10:29 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 14:10:29 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 14:10:29 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 14:10:30 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 14:10:30 INFO  MigrationFileExistenceUtilTests:325 - Verify the file AppMapAlertMMUpgradeConfig.propertiesis present in the base EM home directory
+2018-02-27 14:10:30 INFO  MigrationFileExistenceUtilTests:335 - Test Case execution ended for test case ID=456391
+2018-02-27 14:31:07 INFO  MigrationFileExistenceUtilTests:265 - Test Case execution started
+2018-02-27 14:31:07 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 14:31:07 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 14:31:07 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 14:31:07 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 14:31:08 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 14:31:08 INFO  MigrationFileExistenceUtilTests:325 - Verify the file AppMapAlertMMUpgradeConfig.propertiesis present in the base EM home directory
+2018-02-27 14:31:08 INFO  MigrationFileExistenceUtilTests:335 - Test Case execution ended for test case ID=456391
+2018-02-27 14:33:22 INFO  MigrationFileExistenceUtilTests:266 - Test Case execution started
+2018-02-27 14:33:22 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 14:33:22 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 14:33:22 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 14:33:22 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 14:33:22 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 14:33:22 INFO  MigrationFileExistenceUtilTests:326 - Verify the file AppMapAlertMMUpgradeConfig.propertiesis present in the base EM home directory
+2018-02-27 14:33:23 INFO  MigrationFileExistenceUtilTests:336 - Test Case execution ended for test case ID=456391
+2018-02-27 14:41:26 INFO  MigrationFileExistenceUtilTests:266 - Test Case execution started
+2018-02-27 14:41:26 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 14:41:26 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 14:41:26 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 14:41:26 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 14:41:26 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 14:41:26 INFO  MigrationFileExistenceUtilTests:326 - Verify the file AppMapAlertMMUpgradeConfig.propertiesis present in the base EM home directory
+2018-02-27 14:41:27 INFO  MigrationFileExistenceUtilTests:336 - Test Case execution ended for test case ID=456391
+2018-02-27 14:52:05 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 14:52:05 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 14:52:05 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 14:52:05 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 14:52:05 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 14:52:06 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 14:52:06 INFO  MigrationFileExistenceUtilTests:94 - Verify the file AppMapAlertMMUpgradeConfig.properties is present in the base EM home directory
+2018-02-27 14:52:06 INFO  MigrationFileExistenceUtilTests:103 - File DOES NOT exist in the Base build, hence test case step Failed.
+2018-02-27 14:52:06 INFO  MigrationFileExistenceUtilTests:130 - Test Case execution ended for test case ID=456391
+2018-02-27 14:56:06 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 14:56:06 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 14:56:06 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 14:56:06 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 14:56:06 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 14:56:06 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 14:56:06 INFO  MigrationFileExistenceUtilTests:94 - Verify the file AppMapAlertMMUpgradeConfig.properties is present in the base EM home directory
+2018-02-27 14:56:06 INFO  MigrationFileExistenceUtilTests:103 - File DOES NOT exist in the Base build, hence test case step Failed.
+2018-02-27 14:56:06 INFO  MigrationFileExistenceUtilTests:130 - Test Case execution ended for test case ID=456391
+2018-02-27 14:57:02 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 14:57:02 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 14:57:02 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 14:57:02 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 14:57:02 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 14:57:03 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 14:57:03 INFO  MigrationFileExistenceUtilTests:94 - Verify the file AppMapAlertMMUpgradeConfig.properties is present in the base EM home directory
+2018-02-27 14:57:03 INFO  MigrationFileExistenceUtilTests:103 - File DOES NOT exist in the Base build, hence test case step Failed.
+2018-02-27 14:57:03 INFO  MigrationFileExistenceUtilTests:130 - Test Case execution ended for test case ID=456391
+2018-02-27 14:59:20 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 14:59:20 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 14:59:20 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 14:59:20 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 14:59:20 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 14:59:21 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 14:59:21 INFO  MigrationFileExistenceUtilTests:94 - Verify the file AppMapAlertMMUpgradeConfig.properties is present in the base EM home directory
+2018-02-27 14:59:21 INFO  MigrationFileExistenceUtilTests:103 - File DOES NOT exist in the Base build, hence test case step Failed.
+2018-02-27 14:59:21 INFO  MigrationFileExistenceUtilTests:130 - Test Case execution ended for test case ID=456391
+2018-02-27 15:06:50 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 15:06:50 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:06:50 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:06:50 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:06:50 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:06:50 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:06:50 INFO  MigrationFileExistenceUtilTests:94 - Verify the file AppMapAlertMMUpgradeConfig.properties is present in the base EM home directory
+2018-02-27 15:06:51 INFO  MigrationFileExistenceUtilTests:108 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:06:51 INFO  MigrationFileExistenceUtilTests:109 - Verify the AppMapAlertMMUpgradeConfig.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:06:51 INFO  MigrationFileExistenceUtilTests:121 - Verified that File AppMapAlertMMUpgradeConfig.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 15:06:51 INFO  MigrationFileExistenceUtilTests:130 - Test Case execution ended for test case ID=456391
+2018-02-27 15:08:26 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 15:08:26 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:08:26 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:08:26 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:08:26 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:08:26 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:08:26 INFO  MigrationFileExistenceUtilTests:94 - Verify the file AppMapAlertMMUpgradeConfig.properties is present in the base EM home directory
+2018-02-27 15:08:26 INFO  MigrationFileExistenceUtilTests:108 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:08:26 INFO  MigrationFileExistenceUtilTests:109 - Verify the AppMapAlertMMUpgradeConfig.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:08:27 INFO  MigrationFileExistenceUtilTests:121 - Verified that File AppMapAlertMMUpgradeConfig.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 15:08:27 INFO  MigrationFileExistenceUtilTests:130 - Test Case execution ended for test case ID=456391
+2018-02-27 15:09:44 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 15:09:44 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:09:44 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:09:44 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:09:44 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:09:44 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:09:44 INFO  MigrationFileExistenceUtilTests:94 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.properties is present in the base EM home directory
+2018-02-27 15:09:44 INFO  MigrationFileExistenceUtilTests:108 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:09:44 INFO  MigrationFileExistenceUtilTests:109 - Verify the AppMapAlertMMUpgradeConfig.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:09:45 INFO  MigrationFileExistenceUtilTests:121 - Verified that File AppMapAlertMMUpgradeConfig.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 15:09:45 INFO  MigrationFileExistenceUtilTests:130 - Test Case execution ended for test case ID=456391
+2018-02-27 15:09:45 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:09:45 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:09:45 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:09:45 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:09:45 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:09:45 INFO  MigrationFileExistenceUtilTests:94 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.properties is present in the base EM home directory
+2018-02-27 15:09:45 INFO  MigrationFileExistenceUtilTests:108 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:09:45 INFO  MigrationFileExistenceUtilTests:109 - Verify the Analytics.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:09:46 INFO  MigrationFileExistenceUtilTests:121 - Verified that File Analytics.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 15:09:46 INFO  MigrationFileExistenceUtilTests:130 - Test Case execution ended for test case ID=456391
+2018-02-27 15:10:29 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 15:10:29 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:10:29 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:10:29 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:10:29 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:10:30 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:10:30 INFO  MigrationFileExistenceUtilTests:94 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 15:10:30 INFO  MigrationFileExistenceUtilTests:108 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:10:30 INFO  MigrationFileExistenceUtilTests:109 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:10:30 INFO  MigrationFileExistenceUtilTests:121 - Verified that File IntroscopeEnterpriseManager.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 15:10:30 INFO  MigrationFileExistenceUtilTests:130 - Test Case execution ended for test case ID=456391
+2018-02-27 15:13:08 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 15:13:08 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:13:08 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:13:08 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:13:08 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:13:08 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:13:08 INFO  MigrationFileExistenceUtilTests:94 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 15:13:09 INFO  MigrationFileExistenceUtilTests:108 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:13:09 INFO  MigrationFileExistenceUtilTests:109 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:13:09 INFO  MigrationFileExistenceUtilTests:119 - File exists either in the updated or fresh build, hence test case failed.
+2018-02-27 15:13:09 INFO  MigrationFileExistenceUtilTests:122 - Verified that File IntroscopeEnterpriseManager.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 15:16:22 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 15:16:22 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:16:22 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:16:22 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:16:22 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:16:22 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:16:22 INFO  MigrationFileExistenceUtilTests:96 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 15:16:22 INFO  MigrationFileExistenceUtilTests:110 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:16:22 INFO  MigrationFileExistenceUtilTests:111 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:16:23 INFO  MigrationFileExistenceUtilTests:121 - File exists either in the updated or fresh build, hence test case failed.
+2018-02-27 15:16:23 INFO  MigrationFileExistenceUtilTests:137 - Test Case execution ended for test case ID=456391
+2018-02-27 15:17:45 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 15:17:45 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:17:45 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:17:45 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:17:45 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:17:45 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:17:45 INFO  MigrationFileExistenceUtilTests:96 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 15:17:46 INFO  MigrationFileExistenceUtilTests:110 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:17:46 INFO  MigrationFileExistenceUtilTests:111 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:17:46 INFO  MigrationFileExistenceUtilTests:123 - File exists either in the updated or fresh build, hence test case failed.
+2018-02-27 15:17:46 INFO  MigrationFileExistenceUtilTests:140 - Test Case execution ended for test case ID=456391
+2018-02-27 15:18:32 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 15:18:32 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:18:32 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:18:32 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:18:32 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:18:32 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:18:32 INFO  MigrationFileExistenceUtilTests:96 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 15:18:32 INFO  MigrationFileExistenceUtilTests:110 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:18:32 INFO  MigrationFileExistenceUtilTests:111 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:18:33 INFO  MigrationFileExistenceUtilTests:123 - File exists either in the updated or fresh build, hence test case failed.
+2018-02-27 15:19:25 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 15:19:25 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:19:25 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:19:25 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:19:25 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:19:26 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:19:26 INFO  MigrationFileExistenceUtilTests:96 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.properties, IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 15:19:26 INFO  MigrationFileExistenceUtilTests:110 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:19:26 INFO  MigrationFileExistenceUtilTests:111 - Verify the AppMapAlertMMUpgradeConfig.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:19:27 INFO  MigrationFileExistenceUtilTests:123 - File exists either in the updated or fresh build, hence test case failed.
+2018-02-27 15:19:56 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 15:19:56 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:19:56 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:19:56 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:19:56 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:19:56 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:19:56 INFO  MigrationFileExistenceUtilTests:96 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.properties, is present in the base EM home directory
+2018-02-27 15:19:56 INFO  MigrationFileExistenceUtilTests:110 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:19:56 INFO  MigrationFileExistenceUtilTests:111 - Verify the AppMapAlertMMUpgradeConfig.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:19:57 INFO  MigrationFileExistenceUtilTests:123 - File exists either in the updated or fresh build, hence test case failed.
+2018-02-27 15:24:28 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 15:24:28 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:24:28 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:24:28 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:24:28 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:24:28 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:24:28 INFO  MigrationFileExistenceUtilTests:96 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.properties, is present in the base EM home directory
+2018-02-27 15:24:29 INFO  MigrationFileExistenceUtilTests:110 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:24:29 INFO  MigrationFileExistenceUtilTests:111 - Verify the AppMapAlertMMUpgradeConfig.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:24:29 INFO  MigrationFileExistenceUtilTests:126 - File exists either in the updated or fresh build, hence test case failed.
+2018-02-27 15:28:45 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 15:28:45 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:28:45 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:28:45 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:28:45 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:28:45 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:28:45 INFO  MigrationFileExistenceUtilTests:96 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.properties, is present in the base EM home directory
+2018-02-27 15:28:46 INFO  MigrationFileExistenceUtilTests:110 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:28:46 INFO  MigrationFileExistenceUtilTests:111 - Verify the AppMapAlertMMUpgradeConfig.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:28:46 INFO  MigrationFileExistenceUtilTests:131 - Verified that File AppMapAlertMMUpgradeConfig.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 15:28:46 INFO  MigrationFileExistenceUtilTests:143 - Test Case execution ended for test case ID=456391
+2018-02-27 15:28:46 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:28:46 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:28:46 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:28:46 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:28:46 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:28:46 INFO  MigrationFileExistenceUtilTests:96 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.properties, is present in the base EM home directory
+2018-02-27 15:28:47 INFO  MigrationFileExistenceUtilTests:110 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:28:47 INFO  MigrationFileExistenceUtilTests:111 - Verify the Analytics.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:28:47 INFO  MigrationFileExistenceUtilTests:131 - Verified that File Analytics.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 15:28:47 INFO  MigrationFileExistenceUtilTests:143 - Test Case execution ended for test case ID=456391
+2018-02-27 15:37:03 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 15:37:03 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:37:03 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:37:03 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:37:03 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:37:03 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:37:03 INFO  MigrationFileExistenceUtilTests:96 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.properties, is present in the base EM home directory
+2018-02-27 15:37:03 INFO  MigrationFileExistenceUtilTests:110 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:37:03 INFO  MigrationFileExistenceUtilTests:111 - Verify the AppMapAlertMMUpgradeConfig.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:37:04 INFO  MigrationFileExistenceUtilTests:131 - Verified that File AppMapAlertMMUpgradeConfig.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 15:37:04 INFO  MigrationFileExistenceUtilTests:143 - Test Case execution ended for test case ID=456391
+2018-02-27 15:37:04 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:37:04 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:37:04 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:37:04 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:37:04 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:37:04 INFO  MigrationFileExistenceUtilTests:96 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.properties, is present in the base EM home directory
+2018-02-27 15:37:05 INFO  MigrationFileExistenceUtilTests:110 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:37:05 INFO  MigrationFileExistenceUtilTests:111 - Verify the Analytics.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:37:05 INFO  MigrationFileExistenceUtilTests:131 - Verified that File Analytics.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 15:37:05 INFO  MigrationFileExistenceUtilTests:143 - Test Case execution ended for test case ID=456391
+2018-02-27 15:41:10 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 15:41:10 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:41:10 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:41:10 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:41:10 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:41:10 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:41:10 INFO  MigrationFileExistenceUtilTests:96 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.properties,IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 15:41:10 INFO  MigrationFileExistenceUtilTests:110 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:41:10 INFO  MigrationFileExistenceUtilTests:111 - Verify the AppMapAlertMMUpgradeConfig.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:41:11 INFO  MigrationFileExistenceUtilTests:131 - Verified that File AppMapAlertMMUpgradeConfig.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 15:41:11 INFO  MigrationFileExistenceUtilTests:143 - Test Case execution ended for test case ID=456391
+2018-02-27 15:41:11 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:41:11 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:41:11 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:41:11 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:41:11 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:41:11 INFO  MigrationFileExistenceUtilTests:96 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.properties,IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 15:41:11 INFO  MigrationFileExistenceUtilTests:110 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:41:11 INFO  MigrationFileExistenceUtilTests:111 - Verify the Analytics.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:41:12 INFO  MigrationFileExistenceUtilTests:131 - Verified that File Analytics.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 15:41:12 INFO  MigrationFileExistenceUtilTests:143 - Test Case execution ended for test case ID=456391
+2018-02-27 15:41:12 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:41:12 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:41:12 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:41:12 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:41:12 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:41:12 INFO  MigrationFileExistenceUtilTests:96 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.properties,IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 15:41:12 INFO  MigrationFileExistenceUtilTests:110 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:41:12 INFO  MigrationFileExistenceUtilTests:111 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:41:13 INFO  MigrationFileExistenceUtilTests:126 - File exists either in the updated or fresh build, hence test case failed.
+2018-02-27 15:46:56 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 15:46:56 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:46:56 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:46:56 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:46:56 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:46:56 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:46:56 INFO  MigrationFileExistenceUtilTests:96 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.properties,IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 15:46:57 INFO  MigrationFileExistenceUtilTests:100 - Base file location is: /root/Introscope10.0.0.36/config/AppMapAlertMMUpgradeConfig.properties
+2018-02-27 15:46:57 INFO  MigrationFileExistenceUtilTests:109 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:46:57 INFO  MigrationFileExistenceUtilTests:110 - Verify the AppMapAlertMMUpgradeConfig.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:46:57 INFO  MigrationFileExistenceUtilTests:118 - Upgraded File location is: INVALID_PATHAppMapAlertMMUpgradeConfig.properties/AppMapAlertMMUpgradeConfig.properties
+2018-02-27 15:46:57 INFO  MigrationFileExistenceUtilTests:119 - Fresh File location is: INVALID_PATHAppMapAlertMMUpgradeConfig.properties/AppMapAlertMMUpgradeConfig.properties
+2018-02-27 15:46:57 INFO  MigrationFileExistenceUtilTests:128 - Verified that File AppMapAlertMMUpgradeConfig.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 15:46:57 INFO  MigrationFileExistenceUtilTests:140 - Test Case execution ended for test case ID=456391
+2018-02-27 15:46:57 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:46:57 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:46:57 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:46:57 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:46:57 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:46:57 INFO  MigrationFileExistenceUtilTests:96 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.properties,IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 15:46:58 INFO  MigrationFileExistenceUtilTests:100 - Base file location is: /root/Introscope10.0.0.36/config/Analytics.properties
+2018-02-27 15:46:58 INFO  MigrationFileExistenceUtilTests:109 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:46:58 INFO  MigrationFileExistenceUtilTests:110 - Verify the Analytics.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:46:58 INFO  MigrationFileExistenceUtilTests:118 - Upgraded File location is: INVALID_PATHAnalytics.properties/Analytics.properties
+2018-02-27 15:46:58 INFO  MigrationFileExistenceUtilTests:119 - Fresh File location is: INVALID_PATHAnalytics.properties/Analytics.properties
+2018-02-27 15:46:58 INFO  MigrationFileExistenceUtilTests:128 - Verified that File Analytics.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 15:46:58 INFO  MigrationFileExistenceUtilTests:140 - Test Case execution ended for test case ID=456391
+2018-02-27 15:46:58 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:46:58 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:46:58 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:46:58 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:46:58 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:46:58 INFO  MigrationFileExistenceUtilTests:96 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.properties,IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 15:46:59 INFO  MigrationFileExistenceUtilTests:100 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-02-27 15:46:59 INFO  MigrationFileExistenceUtilTests:109 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:46:59 INFO  MigrationFileExistenceUtilTests:110 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:46:59 INFO  MigrationFileExistenceUtilTests:118 - Upgraded File location is: /root/Introscope10.7.0.35/config/IntroscopeEnterpriseManager.properties
+2018-02-27 15:46:59 INFO  MigrationFileExistenceUtilTests:119 - Fresh File location is: /root/Introscope10.7.0.35_Upgrade/config/IntroscopeEnterpriseManager.properties
+2018-02-27 15:46:59 INFO  MigrationFileExistenceUtilTests:123 - File exists either in the updated or fresh build, hence test case failed.
+2018-02-27 15:48:23 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 15:48:23 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:48:23 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:48:23 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:48:23 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:48:24 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:48:24 INFO  MigrationFileExistenceUtilTests:96 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.properties is present in the base EM home directory
+2018-02-27 15:48:25 INFO  MigrationFileExistenceUtilTests:100 - Base file location is: /root/Introscope10.0.0.36/config/AppMapAlertMMUpgradeConfig.properties
+2018-02-27 15:48:25 INFO  MigrationFileExistenceUtilTests:109 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:48:25 INFO  MigrationFileExistenceUtilTests:110 - Verify the AppMapAlertMMUpgradeConfig.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:48:27 INFO  MigrationFileExistenceUtilTests:118 - Upgraded File location is: INVALID_PATH/AppMapAlertMMUpgradeConfig.properties/AppMapAlertMMUpgradeConfig.properties
+2018-02-27 15:48:27 INFO  MigrationFileExistenceUtilTests:119 - Fresh File location is: INVALID_PATH/AppMapAlertMMUpgradeConfig.properties/AppMapAlertMMUpgradeConfig.properties
+2018-02-27 15:48:27 INFO  MigrationFileExistenceUtilTests:128 - Verified that File AppMapAlertMMUpgradeConfig.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 15:48:27 INFO  MigrationFileExistenceUtilTests:140 - Test Case execution ended for test case ID=456391
+2018-02-27 15:48:27 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:48:27 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:48:27 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:48:27 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:48:28 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:48:28 INFO  MigrationFileExistenceUtilTests:96 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.properties is present in the base EM home directory
+2018-02-27 15:48:28 INFO  MigrationFileExistenceUtilTests:100 - Base file location is: /root/Introscope10.0.0.36/config/Analytics.properties
+2018-02-27 15:48:28 INFO  MigrationFileExistenceUtilTests:109 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:48:28 INFO  MigrationFileExistenceUtilTests:110 - Verify the Analytics.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:48:30 INFO  MigrationFileExistenceUtilTests:118 - Upgraded File location is: INVALID_PATH/Analytics.properties/Analytics.properties
+2018-02-27 15:48:30 INFO  MigrationFileExistenceUtilTests:119 - Fresh File location is: INVALID_PATH/Analytics.properties/Analytics.properties
+2018-02-27 15:48:30 INFO  MigrationFileExistenceUtilTests:128 - Verified that File Analytics.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 15:48:30 INFO  MigrationFileExistenceUtilTests:140 - Test Case execution ended for test case ID=456391
+2018-02-27 15:49:46 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 15:49:46 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:49:46 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:49:46 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:49:46 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:49:47 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:49:47 INFO  MigrationFileExistenceUtilTests:96 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.properties is present in the base EM home directory
+2018-02-27 15:49:47 INFO  MigrationFileExistenceUtilTests:100 - Base file location is: INVALID_PATH/AppMapAlertMMUpgradeConfig.properties/AppMapAlertMMUpgradeConfig.properties
+2018-02-27 15:49:47 INFO  MigrationFileExistenceUtilTests:104 - File DOES NOT exist in the Base build, hence test case step Failed.
+2018-02-27 15:49:47 INFO  MigrationFileExistenceUtilTests:140 - Test Case execution ended for test case ID=456391
+2018-02-27 15:49:47 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:49:47 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:49:47 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:49:47 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:49:47 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:49:47 INFO  MigrationFileExistenceUtilTests:96 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.properties is present in the base EM home directory
+2018-02-27 15:49:48 INFO  MigrationFileExistenceUtilTests:100 - Base file location is: INVALID_PATH/Analytics.properties/Analytics.properties
+2018-02-27 15:49:48 INFO  MigrationFileExistenceUtilTests:104 - File DOES NOT exist in the Base build, hence test case step Failed.
+2018-02-27 15:49:48 INFO  MigrationFileExistenceUtilTests:140 - Test Case execution ended for test case ID=456391
+2018-02-27 15:54:55 INFO  MigrationFileExistenceUtilTests:36 - Test Case execution started
+2018-02-27 15:54:55 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:54:55 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:54:55 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:54:55 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:54:56 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:54:56 INFO  MigrationFileExistenceUtilTests:96 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.properties is present in the base EM home directory
+2018-02-27 15:54:56 INFO  MigrationFileExistenceUtilTests:100 - Base file location is: /root/Introscope10.0.0.36/config/AppMapAlertMMUpgradeConfig.properties
+2018-02-27 15:54:56 INFO  MigrationFileExistenceUtilTests:109 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:54:56 INFO  MigrationFileExistenceUtilTests:110 - Verify the AppMapAlertMMUpgradeConfig.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:54:57 INFO  MigrationFileExistenceUtilTests:118 - Upgraded File location is: INVALID_PATH/AppMapAlertMMUpgradeConfig.properties/AppMapAlertMMUpgradeConfig.properties
+2018-02-27 15:54:57 INFO  MigrationFileExistenceUtilTests:119 - Fresh File location is: INVALID_PATH/AppMapAlertMMUpgradeConfig.properties/AppMapAlertMMUpgradeConfig.properties
+2018-02-27 15:54:57 INFO  MigrationFileExistenceUtilTests:128 - Verified that File AppMapAlertMMUpgradeConfig.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 15:54:57 INFO  MigrationFileExistenceUtilTests:142 - Closing the connection
+2018-02-27 15:54:57 INFO  MigrationFileExistenceUtilTests:147 - Test Case execution ended for test case ID=456391
+2018-02-27 15:54:57 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 15:54:57 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 15:54:57 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 15:54:57 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 15:54:57 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 15:54:57 INFO  MigrationFileExistenceUtilTests:96 - Verify the file AppMapAlertMMUpgradeConfig.properties,Analytics.properties is present in the base EM home directory
+2018-02-27 15:54:57 INFO  MigrationFileExistenceUtilTests:100 - Base file location is: /root/Introscope10.0.0.36/config/Analytics.properties
+2018-02-27 15:54:57 INFO  MigrationFileExistenceUtilTests:109 - File exists in the Base build, hence test step Passed.
+2018-02-27 15:54:57 INFO  MigrationFileExistenceUtilTests:110 - Verify the Analytics.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 15:54:58 INFO  MigrationFileExistenceUtilTests:118 - Upgraded File location is: INVALID_PATH/Analytics.properties/Analytics.properties
+2018-02-27 15:54:58 INFO  MigrationFileExistenceUtilTests:119 - Fresh File location is: INVALID_PATH/Analytics.properties/Analytics.properties
+2018-02-27 15:54:58 INFO  MigrationFileExistenceUtilTests:128 - Verified that File Analytics.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 15:54:58 INFO  MigrationFileExistenceUtilTests:142 - Closing the connection
+2018-02-27 15:54:58 INFO  MigrationFileExistenceUtilTests:147 - Test Case execution ended for test case ID=456391
+2018-02-27 16:05:37 INFO  MigrationFileExistenceUtilTests:176 - Test Case execution started
+2018-02-27 16:05:37 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 16:05:37 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 16:05:37 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 16:05:37 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 16:05:38 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 16:05:38 INFO  MigrationFileExistenceUtilTests:237 - Verify the file saml-sp-em-metadata.xml is present in the base EM home directory
+2018-02-27 16:05:38 INFO  MigrationFileExistenceUtilTests:241 - Base file location is: INVALID_PATH/saml-sp-em-metadata.xml/saml-sp-em-metadata.xml
+2018-02-27 16:05:38 INFO  MigrationFileExistenceUtilTests:250 - File DOES NOT exist in the Base build, hence test step Passed.
+2018-02-27 16:05:38 INFO  MigrationFileExistenceUtilTests:251 - Verify the saml-sp-em-metadata.xml is present in the upgrade/Fresh EM config path or not.
+2018-02-27 16:05:39 INFO  MigrationFileExistenceUtilTests:259 - Upgraded File location is: /root/Introscope10.7.0.35/config/saml-sp-em-metadata.xml
+2018-02-27 16:05:39 INFO  MigrationFileExistenceUtilTests:260 - Fresh File location is: /root/Introscope10.7.0.35_Upgrade/config/saml-sp-em-metadata.xml
+2018-02-27 16:05:39 INFO  MigrationFileExistenceUtilTests:269 - Verified that File saml-sp-em-metadata.xml is NOT exist either in upgraded OR fresh EM build
+2018-02-27 16:05:39 INFO  MigrationFileExistenceUtilTests:283 - Closing the LINUX/UNIX connection
+2018-02-27 16:08:16 INFO  MigrationFileExistenceUtilTests:176 - Test Case execution started
+2018-02-27 16:08:16 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 16:08:16 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 16:08:16 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 16:08:16 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 16:08:16 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 16:08:16 INFO  MigrationFileExistenceUtilTests:237 - Verify the file saml-sp-em-metadata.xml is present in the base EM home directory
+2018-02-27 16:08:17 INFO  MigrationFileExistenceUtilTests:241 - Base file location is: INVALID_PATH/saml-sp-em-metadata.xml/saml-sp-em-metadata.xml
+2018-02-27 16:08:17 INFO  MigrationFileExistenceUtilTests:250 - File DOES NOT exist in the Base build, hence test step Passed.
+2018-02-27 16:08:17 INFO  MigrationFileExistenceUtilTests:251 - Verify the saml-sp-em-metadata.xml is present in the upgrade/Fresh EM config path or not.
+2018-02-27 16:08:17 INFO  MigrationFileExistenceUtilTests:259 - Upgraded File location is: /root/Introscope10.7.0.35/config/saml-sp-em-metadata.xml
+2018-02-27 16:08:17 INFO  MigrationFileExistenceUtilTests:260 - Fresh File location is: /root/Introscope10.7.0.35_Upgrade/config/saml-sp-em-metadata.xml
+2018-02-27 16:08:17 INFO  MigrationFileExistenceUtilTests:264 - File exists either in the updated or fresh build, hence test case passed.
+2018-02-27 16:08:17 INFO  MigrationFileExistenceUtilTests:283 - Closing the LINUX/UNIX connection
+2018-02-27 16:08:17 INFO  MigrationFileExistenceUtilTests:288 - Test Case execution ended for test case ID=********
+2018-02-27 16:08:17 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 16:08:17 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 16:08:17 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 16:08:17 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 16:08:18 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 16:08:18 INFO  MigrationFileExistenceUtilTests:237 - Verify the file saml-sp-acc-metadata.xml is present in the base EM home directory
+2018-02-27 16:08:18 INFO  MigrationFileExistenceUtilTests:241 - Base file location is: INVALID_PATH/saml-sp-acc-metadata.xml/saml-sp-acc-metadata.xml
+2018-02-27 16:08:18 INFO  MigrationFileExistenceUtilTests:250 - File DOES NOT exist in the Base build, hence test step Passed.
+2018-02-27 16:08:18 INFO  MigrationFileExistenceUtilTests:251 - Verify the saml-sp-acc-metadata.xml is present in the upgrade/Fresh EM config path or not.
+2018-02-27 16:08:18 INFO  MigrationFileExistenceUtilTests:259 - Upgraded File location is: /root/Introscope10.7.0.35/config/saml-sp-acc-metadata.xml
+2018-02-27 16:08:18 INFO  MigrationFileExistenceUtilTests:260 - Fresh File location is: /root/Introscope10.7.0.35_Upgrade/config/saml-sp-acc-metadata.xml
+2018-02-27 16:08:18 INFO  MigrationFileExistenceUtilTests:264 - File exists either in the updated or fresh build, hence test case passed.
+2018-02-27 16:08:18 INFO  MigrationFileExistenceUtilTests:283 - Closing the LINUX/UNIX connection
+2018-02-27 16:08:18 INFO  MigrationFileExistenceUtilTests:288 - Test Case execution ended for test case ID=********
+2018-02-27 16:13:51 INFO  MigrationFileExistenceUtilTests:315 - Test Case execution started
+2018-02-27 16:13:51 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 16:13:51 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 16:13:51 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 16:13:51 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 16:13:51 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 16:13:51 INFO  MigrationFileExistenceUtilTests:375 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 16:13:52 INFO  MigrationFileExistenceUtilTests:379 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-02-27 16:13:52 INFO  MigrationFileExistenceUtilTests:388 - File EXISTS in the Base build, hence test step Passed.
+2018-02-27 16:13:52 INFO  MigrationFileExistenceUtilTests:389 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 16:13:52 INFO  MigrationFileExistenceUtilTests:397 - Upgraded File location is: /root/Introscope10.7.0.35/config/IntroscopeEnterpriseManager.properties
+2018-02-27 16:13:52 INFO  MigrationFileExistenceUtilTests:398 - Fresh File location is: /root/Introscope10.7.0.35_Upgrade/config/IntroscopeEnterpriseManager.properties
+2018-02-27 16:13:52 INFO  MigrationFileExistenceUtilTests:402 - File exists either in the updated or fresh build, hence test case passed.
+2018-02-27 16:13:52 INFO  MigrationFileExistenceUtilTests:421 - Closing the LINUX/UNIX connection
+2018-02-27 16:13:52 INFO  MigrationFileExistenceUtilTests:426 - Test Case execution ended for test case ID=********
+2018-02-27 16:17:49 INFO  MigrationFileExistenceUtilTests:175 - Test Case execution started
+2018-02-27 16:17:49 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 16:17:49 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 16:17:49 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 16:17:49 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 16:17:50 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 16:17:50 INFO  MigrationFileExistenceUtilTests:235 - Verify the file saml-sp-em-metadata.xml is present in the base EM home directory
+2018-02-27 16:17:50 INFO  MigrationFileExistenceUtilTests:239 - Base file location is: INVALID_PATH/saml-sp-em-metadata.xml/saml-sp-em-metadata.xml
+2018-02-27 16:17:50 INFO  MigrationFileExistenceUtilTests:248 - File DOES NOT exist in the Base build, hence test step Passed.
+2018-02-27 16:17:50 INFO  MigrationFileExistenceUtilTests:249 - Verify the saml-sp-em-metadata.xml is present in the upgrade/Fresh EM config path or not.
+2018-02-27 16:17:50 INFO  MigrationFileExistenceUtilTests:257 - Upgraded File location is: /root/Introscope10.7.0.35/config/saml-sp-em-metadata.xml
+2018-02-27 16:17:50 INFO  MigrationFileExistenceUtilTests:258 - Fresh File location is: /root/Introscope10.7.0.35_Upgrade/config/saml-sp-em-metadata.xml
+2018-02-27 16:17:50 INFO  MigrationFileExistenceUtilTests:262 - File exists either in the updated or fresh build, hence test case passed.
+2018-02-27 16:17:50 INFO  MigrationFileExistenceUtilTests:281 - Closing the LINUX/UNIX connection
+2018-02-27 16:17:50 INFO  MigrationFileExistenceUtilTests:286 - Test Case execution ended for test case ID=********
+2018-02-27 16:17:50 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 16:17:50 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 16:17:50 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 16:17:50 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 16:17:51 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 16:17:51 INFO  MigrationFileExistenceUtilTests:235 - Verify the file saml-sp-acc-metadata.xml is present in the base EM home directory
+2018-02-27 16:17:51 INFO  MigrationFileExistenceUtilTests:239 - Base file location is: INVALID_PATH/saml-sp-acc-metadata.xml/saml-sp-acc-metadata.xml
+2018-02-27 16:17:51 INFO  MigrationFileExistenceUtilTests:248 - File DOES NOT exist in the Base build, hence test step Passed.
+2018-02-27 16:17:51 INFO  MigrationFileExistenceUtilTests:249 - Verify the saml-sp-acc-metadata.xml is present in the upgrade/Fresh EM config path or not.
+2018-02-27 16:17:51 INFO  MigrationFileExistenceUtilTests:257 - Upgraded File location is: /root/Introscope10.7.0.35/config/saml-sp-acc-metadata.xml
+2018-02-27 16:17:51 INFO  MigrationFileExistenceUtilTests:258 - Fresh File location is: /root/Introscope10.7.0.35_Upgrade/config/saml-sp-acc-metadata.xml
+2018-02-27 16:17:51 INFO  MigrationFileExistenceUtilTests:262 - File exists either in the updated or fresh build, hence test case passed.
+2018-02-27 16:17:51 INFO  MigrationFileExistenceUtilTests:281 - Closing the LINUX/UNIX connection
+2018-02-27 16:17:51 INFO  MigrationFileExistenceUtilTests:286 - Test Case execution ended for test case ID=********
+2018-02-27 16:17:51 INFO  MigrationFileExistenceUtilTests:35 - Test Case execution started
+2018-02-27 16:17:51 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 16:17:51 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 16:17:51 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 16:17:51 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 16:17:52 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 16:17:52 INFO  MigrationFileExistenceUtilTests:95 - Verify the file AppMapAlertMMUpgradeConfig.properties is present in the base EM home directory
+2018-02-27 16:17:52 INFO  MigrationFileExistenceUtilTests:99 - Base file location is: /root/Introscope10.0.0.36/config/AppMapAlertMMUpgradeConfig.properties
+2018-02-27 16:17:52 INFO  MigrationFileExistenceUtilTests:108 - File exists in the Base build, hence test step Passed.
+2018-02-27 16:17:52 INFO  MigrationFileExistenceUtilTests:109 - Verify the AppMapAlertMMUpgradeConfig.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 16:17:52 INFO  MigrationFileExistenceUtilTests:117 - Upgraded File location is: INVALID_PATH/AppMapAlertMMUpgradeConfig.properties/AppMapAlertMMUpgradeConfig.properties
+2018-02-27 16:17:52 INFO  MigrationFileExistenceUtilTests:118 - Fresh File location is: INVALID_PATH/AppMapAlertMMUpgradeConfig.properties/AppMapAlertMMUpgradeConfig.properties
+2018-02-27 16:17:52 INFO  MigrationFileExistenceUtilTests:127 - Verified that File AppMapAlertMMUpgradeConfig.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 16:17:52 INFO  MigrationFileExistenceUtilTests:141 - Closing the LINUX/UNIX connection
+2018-02-27 16:17:52 INFO  MigrationFileExistenceUtilTests:146 - Test Case execution ended for test case ID=456391
+2018-02-27 16:17:52 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 16:17:52 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 16:17:52 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 16:17:52 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 16:17:53 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 16:17:53 INFO  MigrationFileExistenceUtilTests:95 - Verify the file Analytics.properties is present in the base EM home directory
+2018-02-27 16:17:53 INFO  MigrationFileExistenceUtilTests:99 - Base file location is: /root/Introscope10.0.0.36/config/Analytics.properties
+2018-02-27 16:17:53 INFO  MigrationFileExistenceUtilTests:108 - File exists in the Base build, hence test step Passed.
+2018-02-27 16:17:53 INFO  MigrationFileExistenceUtilTests:109 - Verify the Analytics.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 16:17:53 INFO  MigrationFileExistenceUtilTests:117 - Upgraded File location is: INVALID_PATH/Analytics.properties/Analytics.properties
+2018-02-27 16:17:53 INFO  MigrationFileExistenceUtilTests:118 - Fresh File location is: INVALID_PATH/Analytics.properties/Analytics.properties
+2018-02-27 16:17:53 INFO  MigrationFileExistenceUtilTests:127 - Verified that File Analytics.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 16:17:53 INFO  MigrationFileExistenceUtilTests:141 - Closing the LINUX/UNIX connection
+2018-02-27 16:17:53 INFO  MigrationFileExistenceUtilTests:146 - Test Case execution ended for test case ID=456391
+2018-02-27 16:17:53 INFO  MigrationFileExistenceUtilTests:314 - Test Case execution started
+2018-02-27 16:17:53 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 16:17:53 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 16:17:53 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 16:17:53 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 16:17:54 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 16:17:54 INFO  MigrationFileExistenceUtilTests:374 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 16:17:54 INFO  MigrationFileExistenceUtilTests:378 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-02-27 16:17:54 INFO  MigrationFileExistenceUtilTests:387 - File EXISTS in the Base build, hence test step Passed.
+2018-02-27 16:17:54 INFO  MigrationFileExistenceUtilTests:388 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 16:17:54 INFO  MigrationFileExistenceUtilTests:396 - Upgraded File location is: /root/Introscope10.7.0.35/config/IntroscopeEnterpriseManager.properties
+2018-02-27 16:17:54 INFO  MigrationFileExistenceUtilTests:397 - Fresh File location is: /root/Introscope10.7.0.35_Upgrade/config/IntroscopeEnterpriseManager.properties
+2018-02-27 16:17:54 INFO  MigrationFileExistenceUtilTests:401 - File exists both in the updated or fresh build, hence test case passed.
+2018-02-27 16:17:54 INFO  MigrationFileExistenceUtilTests:420 - Closing the LINUX/UNIX connection
+2018-02-27 16:17:54 INFO  MigrationFileExistenceUtilTests:425 - Test Case execution ended for test case ID=********
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:175 - Test Case execution started
+2018-02-27 19:12:48 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 19:12:48 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 19:12:48 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-27 19:12:48 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:190 - Verify the file saml-sp-em-metadata.xml is present in the base EM home directory
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:202 - File DOES NOT exist in the Base build, hence test case step Passed and proceeding...
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:203 - Verify the saml-sp-em-metadata.xml is present in the upgrade/Fresh EM config path or not.
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:215 - Verified that File saml-sp-em-metadata.xml exists both in upgraded OR fresh EM build
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:224 - Test Case execution ended for Additional properties file test.
+2018-02-27 19:12:48 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 19:12:48 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 19:12:48 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-27 19:12:48 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:190 - Verify the file saml-sp-acc-metadata.xml is present in the base EM home directory
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:202 - File DOES NOT exist in the Base build, hence test case step Passed and proceeding...
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:203 - Verify the saml-sp-acc-metadata.xml is present in the upgrade/Fresh EM config path or not.
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:215 - Verified that File saml-sp-acc-metadata.xml exists both in upgraded OR fresh EM build
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:224 - Test Case execution ended for Additional properties file test.
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:35 - Test Case execution started
+2018-02-27 19:12:48 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 19:12:48 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 19:12:48 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-27 19:12:48 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:50 - Verify the file AppMapAlertMMUpgradeConfig.properties is present in the base EM home directory
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:61 - File exists in the Base build, hence test case step Passed.
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:62 - Verify the AppMapAlertMMUpgradeConfig.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:75 - Verified that File AppMapAlertMMUpgradeConfig.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:84 - Test Case execution ended for depreciated properties file test.
+2018-02-27 19:12:48 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 19:12:48 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 19:12:48 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-27 19:12:48 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:50 - Verify the file Analytics.properties is present in the base EM home directory
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:61 - File exists in the Base build, hence test case step Passed.
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:62 - Verify the Analytics.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:75 - Verified that File Analytics.properties is NOT exist either in upgraded OR fresh EM build
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:84 - Test Case execution ended for depreciated properties file test.
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:314 - Test Case execution started
+2018-02-27 19:12:48 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 19:12:48 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 19:12:48 INFO  PreCheckFiles:28 - You have selected OS type as : Windows
+2018-02-27 19:12:48 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:330 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:342 - File exists in the Base build, hence test case step Passed and proceeding...
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:343 - Verify the IntroscopeEnterpriseManager.properties is present in the upgrade/Fresh EM config path or not.
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:355 - Verified that File IntroscopeEnterpriseManager.properties exists both in upgraded OR fresh EM build
+2018-02-27 19:12:48 INFO  MigrationFileExistenceUtilTests:364 - Test Case execution ended for Unchanged properties file test.
+2018-02-27 19:52:10 INFO  MigrationFileModificationUtilTests:47 - Test Case execution started
+2018-02-27 19:52:10 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 19:52:10 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 19:52:10 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 19:52:10 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 19:52:11 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 19:52:11 INFO  MigrationFileModificationUtilTests:99 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 19:52:11 INFO  MigrationFileModificationUtilTests:103 - Base file location is: \root\Introscope10.0.0.36\config\IntroscopeEnterpriseManager.properties
+2018-02-27 19:52:11 INFO  MigrationFileModificationUtilTests:107 - File DOES NOT exist in the Base build, hence cannot add any new Property under that file...
+2018-02-27 19:52:11 INFO  MigrationFileModificationUtilTests:676 - Test Case execution started
+2018-02-27 21:11:53 INFO  MigrationFileModificationUtilTests:47 - Test Case execution started
+2018-02-27 21:11:53 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 21:11:53 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 21:11:53 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 21:11:53 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 21:11:53 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 21:11:53 INFO  MigrationFileModificationUtilTests:99 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 21:11:54 INFO  MigrationFileModificationUtilTests:103 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-02-27 21:11:54 INFO  MigrationFileModificationUtilTests:112 - Files exists in the base directory, hence going to add a new property
+2018-02-27 21:11:54 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties to add/update a new/existing property
+2018-02-27 21:11:54 INFO  DefaultPropUtil:349 - The Key is already present, hence not going to add anything...
+2018-02-27 21:11:54 INFO  MigrationFileModificationUtilTests:124 - Closing the LINUX/UNIX connection
+2018-02-27 21:11:54 INFO  MigrationFileModificationUtilTests:673 - Test Case execution started
+2018-02-27 21:13:52 INFO  MigrationFileModificationUtilTests:47 - Test Case execution started
+2018-02-27 21:13:52 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 21:13:52 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 21:13:52 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 21:13:52 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 21:13:52 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 21:13:52 INFO  MigrationFileModificationUtilTests:99 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 21:13:52 INFO  MigrationFileModificationUtilTests:103 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-02-27 21:13:52 INFO  MigrationFileModificationUtilTests:112 - Files exists in the base directory, hence going to add a new property
+2018-02-27 21:13:52 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties to add/update a new/existing property
+2018-02-27 21:13:52 INFO  DefaultPropUtil:351 - The Key is already present, hence not going to add anything...
+2018-02-27 21:13:52 INFO  MigrationFileModificationUtilTests:124 - Closing the LINUX/UNIX connection
+2018-02-27 21:13:53 INFO  MigrationFileModificationUtilTests:673 - Test Case execution started
+2018-02-27 21:22:27 INFO  MigrationFileModificationUtilTests:47 - Test Case execution started
+2018-02-27 21:22:27 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 21:22:27 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 21:22:27 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 21:22:27 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 21:22:28 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 21:22:28 INFO  MigrationFileModificationUtilTests:99 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 21:22:28 INFO  MigrationFileModificationUtilTests:103 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-02-27 21:22:28 INFO  MigrationFileModificationUtilTests:112 - Files exists in the base directory, hence going to add a new property
+2018-02-27 21:22:28 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties to add/update a new/existing property
+2018-02-27 21:22:28 INFO  DefaultPropUtil:349 - The Key is already present, hence not going to add anything...
+2018-02-27 21:22:28 INFO  MigrationFileModificationUtilTests:124 - Closing the LINUX/UNIX connection
+2018-02-27 21:22:28 INFO  MigrationFileModificationUtilTests:673 - Test Case execution started
+2018-02-27 21:31:55 INFO  MigrationFileModificationUtilTests:47 - Test Case execution started
+2018-02-27 21:31:55 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 21:31:55 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 21:31:55 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 21:31:55 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 21:31:56 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 21:31:56 INFO  MigrationFileModificationUtilTests:99 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 21:31:56 INFO  MigrationFileModificationUtilTests:103 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-02-27 21:31:56 INFO  MigrationFileModificationUtilTests:112 - Files exists in the base directory, hence going to add a new property
+2018-02-27 21:31:56 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties to add/update a new/existing property
+2018-02-27 21:31:56 INFO  DefaultPropUtil:352 - The Key is already present, hence not going to add anything...
+2018-02-27 21:31:56 INFO  MigrationFileModificationUtilTests:124 - Closing the LINUX/UNIX connection
+2018-02-27 21:33:35 INFO  MigrationFileModificationUtilTests:47 - Test Case execution started
+2018-02-27 21:33:35 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 21:33:35 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 21:33:35 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 21:33:35 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 21:33:35 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 21:33:35 INFO  MigrationFileModificationUtilTests:99 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 21:33:36 INFO  MigrationFileModificationUtilTests:103 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-02-27 21:33:36 INFO  MigrationFileModificationUtilTests:112 - Files exists in the base directory, hence going to add a new property
+2018-02-27 21:33:36 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties to add/update a new/existing property
+2018-02-27 21:33:36 INFO  DefaultPropUtil:363 - The Key added successful....
+2018-02-27 21:33:36 INFO  MigrationFileModificationUtilTests:115 - New Property Added Successfully
+2018-02-27 21:33:36 INFO  MigrationFileModificationUtilTests:124 - Closing the LINUX/UNIX connection
+2018-02-27 21:41:00 INFO  MigrationFileModificationUtilTests:47 - Test Case execution started
+2018-02-27 21:41:00 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 21:41:00 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 21:41:00 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 21:41:00 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 21:41:00 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 21:41:00 INFO  MigrationFileModificationUtilTests:99 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 21:41:00 INFO  MigrationFileModificationUtilTests:103 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-02-27 21:41:00 INFO  MigrationFileModificationUtilTests:112 - Files exists in the base directory, hence going to add a new property
+2018-02-27 21:41:00 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties to add/update a new/existing property
+2018-02-27 21:41:00 INFO  DefaultPropUtil:352 - The Key is already present, hence not going to add anything...
+2018-02-27 21:41:00 INFO  MigrationFileModificationUtilTests:124 - Closing the LINUX/UNIX connection
+2018-02-27 21:41:33 INFO  MigrationFileModificationUtilTests:47 - Test Case execution started
+2018-02-27 21:41:33 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 21:41:33 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 21:41:33 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 21:41:33 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 21:41:33 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 21:41:33 INFO  MigrationFileModificationUtilTests:99 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 21:41:34 INFO  MigrationFileModificationUtilTests:103 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-02-27 21:41:34 INFO  MigrationFileModificationUtilTests:112 - Files exists in the base directory, hence going to add a new property
+2018-02-27 21:41:34 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties to add/update a new/existing property
+2018-02-27 21:41:34 INFO  DefaultPropUtil:352 - The Key is already present, hence not going to add anything...
+2018-02-27 21:41:34 INFO  MigrationFileModificationUtilTests:124 - Closing the LINUX/UNIX connection
+2018-02-27 21:45:48 INFO  MigrationFileModificationUtilTests:47 - Test Case execution started
+2018-02-27 21:45:48 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 21:45:48 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 21:45:48 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 21:45:48 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 21:45:49 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 21:45:49 INFO  MigrationFileModificationUtilTests:99 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 21:45:49 INFO  MigrationFileModificationUtilTests:103 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-02-27 21:45:49 INFO  MigrationFileModificationUtilTests:112 - Files exists in the base directory, hence going to add a new property
+2018-02-27 21:45:49 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties to add/update a new/existing property
+2018-02-27 21:45:49 INFO  DefaultPropUtil:363 - The Key added successful....
+2018-02-27 21:45:49 INFO  MigrationFileModificationUtilTests:115 - New Property Added Successfully
+2018-02-27 21:45:49 INFO  MigrationFileModificationUtilTests:124 - Closing the LINUX/UNIX connection
+2018-02-27 21:46:11 INFO  MigrationFileModificationUtilTests:47 - Test Case execution started
+2018-02-27 21:46:11 INFO  PreCheckFiles:22 - Start pre-upgrade tasks...
+2018-02-27 21:46:11 INFO  FileVerification:69 - Returned the number of input files required by....3
+2018-02-27 21:46:11 INFO  PreCheckFiles:28 - You have selected OS type as : Linux
+2018-02-27 21:46:11 INFO  PreCheckFiles:42 - Pre-upgrade tasks are done
+2018-02-27 21:46:11 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-02-27 21:46:11 INFO  MigrationFileModificationUtilTests:99 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-02-27 21:46:12 INFO  MigrationFileModificationUtilTests:103 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-02-27 21:46:12 INFO  MigrationFileModificationUtilTests:112 - Files exists in the base directory, hence going to add a new property
+2018-02-27 21:46:12 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties to add/update a new/existing property
+2018-02-27 21:46:12 INFO  DefaultPropUtil:352 - The Key is already present, hence not going to add anything...
+2018-02-27 21:46:12 INFO  MigrationFileModificationUtilTests:124 - Closing the LINUX/UNIX connection

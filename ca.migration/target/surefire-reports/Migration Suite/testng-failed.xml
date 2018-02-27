@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Migration Suite]">
+  <parameter name="OS" value="Linux"/>
+  <test name="Migration Window Test(failed)">
+    <classes>
+      <class name="nonXml.fileModification.testSuite.MigrationFileModificationUtilTests">
+        <methods>
+          <include name="verify_ALM_preUpgrade_BaseAddNewCV_CurrentNull" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- nonXml.fileModification.testSuite.MigrationFileModificationUtilTests -->
+    </classes>
+  </test> <!-- Migration Window Test(failed) -->
+</suite> <!-- Failed suite [Migration Suite] -->

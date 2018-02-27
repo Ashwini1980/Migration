@@ -1,10 +1,17 @@
 package nonXml.fileComparision.preUpgrade.util;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -20,6 +27,9 @@ public class PreUpgradeUtil {
 	private static String op_updatePropBaseDPDVCurrentNULL = "updateProperty_BaseDPDVCurrentNULL";
 	
 	PrintWriter pw = null;
+	BufferedReader br = null;
+	Path path = null;
+	List<String> lines = null;
 	
 	//To add a new Property
 	public void addNewProperty (File fileName, Map <Object, Object> prop) {
@@ -231,5 +241,52 @@ public class PreUpgradeUtil {
 		}
 	
 	}	
+
+	//To add a comment if the user provided Key is matched
+	
+	public void addNewComment (File fileName, String Key) {
+		
+		try {
+			
+			String strFile = fileName.toString();
+			
+			path = Paths.get(strFile);
+			
+			br = new BufferedReader (new FileReader (strFile));
+			
+		    String line;
+		    int Linenum=0;
+		    
+		    lines = Files.readAllLines(path, StandardCharsets.UTF_8);
+		
+		    while ((line = br.readLine()) != null) {
+		    	
+		    	Linenum++;
+		    	
+		    	if (line.startsWith(Key)) {
+		    		
+		    		System.out.println("The line num is " + Linenum);
+			    
+		    	    lines.add(Linenum-1, "#This is a comment line for Key****#####**** "+Key);
+		    	    Files.write(path, lines, StandardCharsets.UTF_8);
+			    	
+		    	}
+		    	
+		    }		    
+		    
+		    
+		} catch (IOException e) {
+			e.printStackTrace();
+			
+		} finally {
+			try {
+				br.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+		}
+	
+	}
 
 }
