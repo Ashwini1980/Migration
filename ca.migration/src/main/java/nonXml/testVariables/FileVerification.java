@@ -3,6 +3,7 @@ package nonXml.testVariables;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import org.codehaus.plexus.util.Os;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import nonXml.util.PropertyReader;
@@ -14,6 +15,8 @@ public class FileVerification {
 	public static String OSW = "Windows";
 	public static String OSL = "Linux";
 	
+	static boolean isWindows = Os.isFamily(Os.FAMILY_WINDOWS);
+
 	public static String getOSW() {
 		return OSW;
 	}
@@ -54,13 +57,13 @@ public class FileVerification {
 	public static int countFiles () {
 		
 		ArrayList<String> al = new ArrayList <String> ();
-		if (OSW.equalsIgnoreCase(OSW)) {
+		if (isWindows) {
 			
 			al.add(strBase_Win_Em_Home);
 			al.add(strUpgade_Win_Em_Home);
 			al.add(strFresh_Win_Em_Home);			
 			al.removeAll(Arrays.asList(null,""));
-		} else if (OSL.equalsIgnoreCase(OSL)) {
+		} else if (!isWindows) {
 			al.add(strBase_Ln_Em_Home);
 			al.add(strUpgade_Ln_Em_Home);
 			al.add(strFresh_Ln_Em_Home);

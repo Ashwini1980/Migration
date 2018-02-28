@@ -2,17 +2,16 @@ package nonXml.fileModification.testSuite;
 
 import java.io.File;
 import java.util.Map;
+
+import org.codehaus.plexus.util.Os;
 import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import nonXml.common.LinuxUtils;
 import nonXml.common.PreCheckFiles;
 import nonXml.fileComparision.preUpgrade.util.DefaultPropUtil;
 import nonXml.fileComparision.preUpgrade.util.PreUpgradeMain;
-import nonXml.fileExistence.testSuite.MigrationFileExistenceUtilTests;
 import nonXml.testVariables.EnvironmentVariables;
 import nonXml.testVariables.FileComparison;
 import nonXml.util.Utils;
@@ -21,8 +20,10 @@ public class MigrationFileModificationUtilTests {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(MigrationFileModificationUtilTests.class); 
 	private String testcaseId;	
-	public static String OSW = "Windows";
-	public static String OSL = "Linux";
+
+	boolean isWindows = Os.isFamily(Os.FAMILY_WINDOWS);
+	boolean isUnix = Os.isFamily(Os.FAMILY_UNIX);
+	
 	
     private static String op_addProp = "addProperty";
     private static String op_updatePropBaseCVCurrentDV = "updateProperty_BaseCVCurrentDV";
@@ -36,13 +37,13 @@ public class MigrationFileModificationUtilTests {
     private static String op_addNewPropFile = "addNewPropFile";
     
     //tested working fine
-	@Parameters("OS")	
+
 	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - Add a new Property into base file"
 			+ "that property not present in Current directory, hence after migration it should be present in upgraded folder")	
 	
-	public void verify_ALM_preUpgrade_BaseAddNewCV_CurrentNull(String OS) {
+	public void verify_ALM_preUpgrade_BaseAddNewCV_CurrentNull() {
 		
-		if (OS.equalsIgnoreCase(OSW) || OS.equalsIgnoreCase(OSL)) {
+		if (isWindows || isUnix) {
 			
 			LOGGER.info("Test Case execution started");	
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseAddNewCV_CurrentNULL_Migration_CV.trim().split(",");
@@ -54,9 +55,9 @@ public class MigrationFileModificationUtilTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {    		
 	    		
-	    			if (OS.equalsIgnoreCase(MigrationFileModificationUtilTests.OSW)) {
+	    			if (isWindows) {
 	    			
-	    				PreCheckFiles.preCheckFiles(MigrationFileModificationUtilTests.OSW);
+	    				PreCheckFiles.preCheckFiles(isWindows);
 	    	    	   
 	    				try{	    	
 	    	   		
@@ -87,9 +88,9 @@ public class MigrationFileModificationUtilTests {
 		    	    		}
 		    	    		LOGGER.info("Test Case execution ended for adding new property file test.");
 		    			
-		    		} 	else if (OS.equalsIgnoreCase(MigrationFileExistenceUtilTests.OSL)) {
+		    		} 	else if (!isWindows) {
 		    				
-		    					PreCheckFiles.preCheckFiles(MigrationFileExistenceUtilTests.OSL);
+		    					PreCheckFiles.preCheckFiles(!isWindows);
 		    					
 			    	    		//Connect to Linux Server 
 			    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
@@ -143,13 +144,13 @@ public class MigrationFileModificationUtilTests {
 		}
 
 	//tested working fine
-	@Parameters("OS")	
-	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - update an existing property into base file"
+	
+	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - update an existing property into base file"
 			+ "that property present in Current directory as default value, hence after migration it should have customized value.")	
 	
-	public void verify_ALM_preUpgrade_BaseCV_CurrentDVNDV(String OS) {
+	public void verify_ALM_preUpgrade_BaseCV_CurrentDVNDV() {
 		
-		if (OS.equalsIgnoreCase(OSW) || OS.equalsIgnoreCase(OSL)) {
+		if (isWindows || isUnix) {
 			
 			LOGGER.info("Test Case execution started");	
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseCV_CurrentDVNDV_Migration_CV.trim().split(",");
@@ -161,9 +162,9 @@ public class MigrationFileModificationUtilTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {    		
 	    		
-	    			if (OS.equalsIgnoreCase(MigrationFileModificationUtilTests.OSW)) {
+	    			if (isWindows) {
 	    			
-	    				PreCheckFiles.preCheckFiles(MigrationFileModificationUtilTests.OSW);
+	    				PreCheckFiles.preCheckFiles(isWindows);
 	    	    	   
 	    				try{	    	
 	    	   		
@@ -194,7 +195,7 @@ public class MigrationFileModificationUtilTests {
 		    	    		}
 		    	    		LOGGER.info("Test Case execution ended for updaing the existing property file test.");
 		    			
-		    		} 	else if (OS.equalsIgnoreCase(MigrationFileExistenceUtilTests.OSL)) {
+		    		} 	else if (!isWindows) {
 		    			
     			
 		                 //Need to implement the code	    	    	
@@ -217,13 +218,13 @@ public class MigrationFileModificationUtilTests {
 		}
 	
 	//This test case is only for testing purpose, in real environment we do not need to run this test case.
-	@Parameters("OS")	
-	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - Default property in base version and in the current version that "
+
+	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - Default property in base version and in the current version that "
 			+ "property should have new default value then after migration it should have the new default value.")	
 	
-	public void verify_ALM_preUpgrade_BaseDV_CurrentNDV(String OS) {
+	public void verify_ALM_preUpgrade_BaseDV_CurrentNDV() {
 		
-		if (OS.equalsIgnoreCase(OSW) || OS.equalsIgnoreCase(OSL)) {
+		if (isWindows || isUnix) {
 			
 			LOGGER.info("Test Case execution started");	
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseDV_CurrentNDV_Migration_NDV.trim().split(",");
@@ -235,9 +236,9 @@ public class MigrationFileModificationUtilTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {    		
 	    		
-	    			if (OS.equalsIgnoreCase(MigrationFileModificationUtilTests.OSW)) {
+	    			if (isWindows) {
 	    			
-	    				PreCheckFiles.preCheckFiles(MigrationFileModificationUtilTests.OSW);
+	    				PreCheckFiles.preCheckFiles(isWindows);
 	    	    	   
 	    				try{	    	
 	    	   		
@@ -268,7 +269,7 @@ public class MigrationFileModificationUtilTests {
 		    	    		}
 		    	    		LOGGER.info("Test Case execution ended for updaing the existing property file test.");
 		    			
-		    		} 	else if (OS.equalsIgnoreCase(MigrationFileExistenceUtilTests.OSL)) {
+		    		} 	else if (!isWindows) {
 		    			
     			
 		                 //Need to implement the code	    	    	
@@ -291,13 +292,13 @@ public class MigrationFileModificationUtilTests {
 		}
 	
 	//This test case is only for testing purpose, in real environment we do not need to run this test case.
-	@Parameters("OS")	
-	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - One property in base version is not present but in the current version that "
+
+	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - One property in base version is not present but in the current version that "
 			+ "property should be added and have new default value then after migration it should have the new default value.")	
 	
-	public void verify_ALM_preUpgrade_BaseNULL_CurrentNDV(String OS) {
+	public void verify_ALM_preUpgrade_BaseNULL_CurrentNDV() {
 		
-		if (OS.equalsIgnoreCase(OSW) || OS.equalsIgnoreCase(OSL)) {
+		if (isWindows || isUnix) {
 			
 			LOGGER.info("Test Case execution started");	
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseNULL_CurrentNDV_Migration_NDV.trim().split(",");
@@ -309,9 +310,9 @@ public class MigrationFileModificationUtilTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {    		
 	    		
-	    			if (OS.equalsIgnoreCase(MigrationFileModificationUtilTests.OSW)) {
+	    			if (isWindows) {
 	    			
-	    				PreCheckFiles.preCheckFiles(MigrationFileModificationUtilTests.OSW);
+	    				PreCheckFiles.preCheckFiles(isWindows);
 	    	    	   
 	    				try{	    	
 	    	   		
@@ -342,7 +343,7 @@ public class MigrationFileModificationUtilTests {
 		    	    		}
 		    	    		LOGGER.info("Test Case execution ended for updaing the existing property file test.");
 		    			
-		    		} 	else if (OS.equalsIgnoreCase(MigrationFileExistenceUtilTests.OSL)) {
+		    		} 	else if (!isWindows) {
 		    			
     			
 		                 //Need to implement the code	    	    	
@@ -365,13 +366,13 @@ public class MigrationFileModificationUtilTests {
 		}
    	
 	//tested working fine
-	@Parameters("OS")	
-	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - One property in base version is commented but in the current version that "
+	
+	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - One property in base version is commented but in the current version that "
 			+ "property should has default value after migration that property should have commented.")	
 	
-	public void verify_ALM_preUpgrade_BaseCommentCV_CurrentDV(String OS) {
+	public void verify_ALM_preUpgrade_BaseCommentCV_CurrentDV() {
 		
-		if (OS.equalsIgnoreCase(OSW) || OS.equalsIgnoreCase(OSL)) {
+		if (isWindows || isUnix) {
 			
 			LOGGER.info("Test Case execution started");	
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseCommentCV_CurrentDV_Migration_CommentCV.trim().split(",");
@@ -383,9 +384,9 @@ public class MigrationFileModificationUtilTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {    		
 	    		
-	    			if (OS.equalsIgnoreCase(MigrationFileModificationUtilTests.OSW)) {
+	    			if (isWindows) {
 	    			
-	    				PreCheckFiles.preCheckFiles(MigrationFileModificationUtilTests.OSW);
+	    				PreCheckFiles.preCheckFiles(isWindows);
 	    	    	   
 	    				try{	    	
 	    	   		
@@ -416,7 +417,7 @@ public class MigrationFileModificationUtilTests {
 		    	    		}
 		    	    		LOGGER.info("Test Case execution ended for updaing the existing property file test.");
 		    			
-		    		} 	else if (OS.equalsIgnoreCase(MigrationFileExistenceUtilTests.OSL)) {
+		    		} 	else if (!isWindows) {
 		    			
     			
 		                 //Need to implement the code	    	    	
@@ -439,13 +440,13 @@ public class MigrationFileModificationUtilTests {
 		}
 	
 	//tested working fine.
-	@Parameters("OS")	
-	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - One property in base version is Customized but in the current version that "
+
+	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - One property in base version is Customized but in the current version that "
 			+ "property is commented after migration that property should have Customized value.")	
 	
-	public void verify_ALM_preUpgrade_BaseCV_CurrentCommentDV(String OS) {
+	public void verify_ALM_preUpgrade_BaseCV_CurrentCommentDV() {
 		
-		if (OS.equalsIgnoreCase(OSW) || OS.equalsIgnoreCase(OSL)) {
+		if (isWindows || isUnix) {
 			
 			LOGGER.info("Test Case execution started");	
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseCV_CurrentCommentDV_Migration_CV.trim().split(",");
@@ -457,9 +458,9 @@ public class MigrationFileModificationUtilTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {    		
 	    		
-	    			if (OS.equalsIgnoreCase(MigrationFileModificationUtilTests.OSW)) {
+	    			if (isWindows) {
 	    			
-	    				PreCheckFiles.preCheckFiles(MigrationFileModificationUtilTests.OSW);
+	    				PreCheckFiles.preCheckFiles(isWindows);
 	    	    	   
 	    				try{	    	
 	    	   		
@@ -490,7 +491,7 @@ public class MigrationFileModificationUtilTests {
 		    	    		}
 		    	    		LOGGER.info("Test Case execution ended for updaing the existing property file test.");
 		    			
-		    		} 	else if (OS.equalsIgnoreCase(MigrationFileExistenceUtilTests.OSL)) {
+		    		} 	else if (isWindows) {
 		    			
     			
 		                 //Need to implement the code	    	    	
@@ -513,13 +514,13 @@ public class MigrationFileModificationUtilTests {
 		}
 	
 	//tested working fine
-	@Parameters("OS")	
-	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - One property in base version is hidden property but in the current version that "
+	
+	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - One property in base version is hidden property but in the current version that "
 			+ "property is not present after migration that property should have HPCV.")	
 	
-	public void verify_ALM_preUpgrade_BaseHPCV_CurrentNULL(String OS) {
+	public void verify_ALM_preUpgrade_BaseHPCV_CurrentNULL() {
 		
-		if (OS.equalsIgnoreCase(OSW) || OS.equalsIgnoreCase(OSL)) {
+		if (isWindows || isUnix) {
 			
 			LOGGER.info("Test Case execution started");	
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseHPCV_CurrentNULL_Migration_HPCV.trim().split(",");
@@ -531,9 +532,9 @@ public class MigrationFileModificationUtilTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {    		
 	    		
-	    			if (OS.equalsIgnoreCase(MigrationFileModificationUtilTests.OSW)) {
+	    			if (isWindows) {
 	    			
-	    				PreCheckFiles.preCheckFiles(MigrationFileModificationUtilTests.OSW);
+	    				PreCheckFiles.preCheckFiles(isWindows);
 	    	    	   
 	    				try{	    	
 	    	   		
@@ -564,7 +565,7 @@ public class MigrationFileModificationUtilTests {
 		    	    		}
 		    	    		LOGGER.info("Test Case execution ended for Updating hidden property file test.");
 		    			
-		    		} 	else if (OS.equalsIgnoreCase(MigrationFileExistenceUtilTests.OSL)) {
+		    		} 	else if (!isWindows) {
 		    			
     			
 		                 //Need to implement the code	    	    	
@@ -587,13 +588,13 @@ public class MigrationFileModificationUtilTests {
 		}
 	
 	//tested working fine
-	@Parameters("OS")	
-	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - One property in base version is depreciated property but in the current version that "
+
+	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - One property in base version is depreciated property but in the current version that "
 			+ "property is not present after migration that property should not be present.")	
 	
-	public void verify_ALM_preUpgrade_BaseDPDV_CurrentNULL(String OS) {
+	public void verify_ALM_preUpgrade_BaseDPDV_CurrentNULL() {
 		
-		if (OS.equalsIgnoreCase(OSW) || OS.equalsIgnoreCase(OSL)) {
+		if (isWindows || isUnix) {
 			
 			LOGGER.info("Test Case execution started");	
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseDPDV_CurrentNULL_Migration_NULL.trim().split(",");
@@ -605,9 +606,9 @@ public class MigrationFileModificationUtilTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {    		
 	    		
-	    			if (OS.equalsIgnoreCase(MigrationFileModificationUtilTests.OSW)) {
+	    			if (isWindows) {
 	    			
-	    				PreCheckFiles.preCheckFiles(MigrationFileModificationUtilTests.OSW);
+	    				PreCheckFiles.preCheckFiles(isWindows);
 	    	    	   
 	    				try{	    	
 	    	   		
@@ -638,7 +639,7 @@ public class MigrationFileModificationUtilTests {
 		    	    		}
 		    	    		LOGGER.info("Test Case execution ended for Updating depreciated property file test.");
 		    			
-		    		} 	else if (OS.equalsIgnoreCase(MigrationFileExistenceUtilTests.OSL)) {
+		    		} 	else if (!isWindows) {
 		    			
     			
 		                 //Need to implement the code	    	    	
@@ -661,14 +662,14 @@ public class MigrationFileModificationUtilTests {
 		}
 	
 	//Need to implement this method. Not fully imepletemented yet...
-	@Parameters("OS")	
-	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - One property in base "
+	
+	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - One property in base "
 			+ "version is default property and above that add one commentline say comment1 and but in the current version above the same property "
 			+ "property, add another comment say Comment2 after migration comment2 should be populdated above that property.")	
 	
-	public void verify_ALM_preUpgrade_BaseCommentLine1DV_CurrentCommentLine2DV(String OS) {
+	public void verify_ALM_preUpgrade_BaseCommentLine1DV_CurrentCommentLine2DV() {
 		
-		if (OS.equalsIgnoreCase(OSW) || OS.equalsIgnoreCase(OSL)) {
+		if (isWindows || isUnix) {
 			
 			LOGGER.info("Test Case execution started");	
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseCommentLine1DV_CurrentCommentLine2DV_Migration_CommentLine2DV.trim().split(",");
@@ -680,9 +681,9 @@ public class MigrationFileModificationUtilTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {    		
 	    		
-	    			if (OS.equalsIgnoreCase(MigrationFileModificationUtilTests.OSW)) {
+	    			if (isWindows) {
 	    			
-	    				PreCheckFiles.preCheckFiles(MigrationFileModificationUtilTests.OSW);
+	    				PreCheckFiles.preCheckFiles(isWindows);
 	    	    	   
 	    				try{	    	
 	    	   		
@@ -712,7 +713,7 @@ public class MigrationFileModificationUtilTests {
 		    	    		}
 		    	    		LOGGER.info("Test Case execution ended for adding new file test.");
 		    			
-		    		} 	else if (OS.equalsIgnoreCase(MigrationFileExistenceUtilTests.OSL)) {
+		    		} 	else if (!isWindows) {
 		    			
     			
 		                 //Need to implement the code	    	    	
@@ -734,22 +735,22 @@ public class MigrationFileModificationUtilTests {
 			
 		}
 	
-	@Parameters("OS")	
-	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - Adding a new file in Base version but that file not present in"
+	
+	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - Adding a new file in Base version but that file not present in"
 			+ "current build then after migration that newly added file should be present unde the specific directory")	
 	
-	public void verify_ALM_preUpgrade_AddNewFile_BaseVersion(String OS) {
+	public void verify_ALM_preUpgrade_AddNewFile_BaseVersion() {
 		
-		if (OS.equalsIgnoreCase(OSW) || OS.equalsIgnoreCase(OSL)) {
+		if (isWindows || isUnix) {
 			
 			LOGGER.info("Test Case execution started");	
 			
 			Boolean result=false;
 	    	testcaseId = "Preupgrade_AddNewFile_in BaseVersion";	    	
   		
-	    			if (OS.equalsIgnoreCase(MigrationFileModificationUtilTests.OSW)) {
+	    			if (isWindows) {
 	    			
-	    				PreCheckFiles.preCheckFiles(MigrationFileModificationUtilTests.OSW);	    				
+	    				PreCheckFiles.preCheckFiles(isWindows);	    				
 	    	    	   
 	    				try{	    	
 	    	   		
@@ -782,7 +783,7 @@ public class MigrationFileModificationUtilTests {
 		    	    		}
 		    	    		LOGGER.info("Test Case execution ended for Adding new property file test.");
 		    			
-		    		} 	else if (OS.equalsIgnoreCase(MigrationFileExistenceUtilTests.OSL)) {
+		    		} 	else if (isWindows) {
 		    			
     			
 		                 //Need to implement the code	    	    	

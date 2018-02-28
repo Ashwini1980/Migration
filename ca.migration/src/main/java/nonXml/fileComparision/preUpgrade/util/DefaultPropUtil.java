@@ -341,11 +341,11 @@ public class DefaultPropUtil {
 	    		
 	    		String gCommands = "grep -i "+listOfProps[i]+" "+fileName+" |wc -l";
 	    		al = LinuxUtils.getResult(gCommands);
-	    		System.out.println("The no of Keys in the file: "+al);
+	    		LOGGER.info("The no of Keys in the file: "+al);
 	    		
-	    		String command = "echo "+listOfProps[i]+"="+default_Value+" >> "+fileName+"";
-	    		System.out.println("Command is: "+command);
-	    		System.out.println("ArrayList size is: "+al.size());
+	    		//String command = "echo "+listOfProps[i]+"="+default_Value+" >> "+fileName+"";
+	    		String command = "sed -i -e '$a\\"+listOfProps[i]+"="+default_Value+"' "+fileName+"";
+	    		LOGGER.info("Command is: "+command);
 	    		
 	    		if (!al.get(0).equals("0") && al.size() > 0) {
 	    			blResult = true;

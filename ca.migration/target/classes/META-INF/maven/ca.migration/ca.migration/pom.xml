@@ -6,9 +6,9 @@
   
       <properties>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-      <!-- suiteXmlFile>src/main/resources/testng.xml</suiteXmlFile-->
-      <suiteXmlFile>src/main/resources/testng_FileComparison.xml</suiteXmlFile>
-      <!-- suiteXmlFile>src/main/resources/testng_preUpgradeFile.xml</suiteXmlFile -->
+      <!-- suiteXmlFile1>src/main/resources/testng_fileExistence.xml</suiteXmlFile1 -->
+      <!-- suiteXmlFile2>src/main/resources/testng_FileComparison.xml</suiteXmlFile2 -->
+      <!-- suiteXmlFile3>src/main/resources/testng_preUpgradeFile.xml</suiteXmlFile3 -->
    </properties>
    
    <dependencies>
@@ -43,6 +43,12 @@
          <artifactId>jsch</artifactId>
          <version>0.1.53</version>
        </dependency>
+       
+       <dependency>
+    <groupId>org.codehaus.plexus</groupId>
+    <artifactId>plexus-utils</artifactId>
+    <version>3.0.24</version>
+</dependency>
       
    </dependencies>   
    <build>
@@ -63,7 +69,8 @@
          <version>2.17</version>
          <configuration>
             <suiteXmlFiles>
-               <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+               <!-- suiteXmlFile1>${suiteXmlFile1}</suiteXmlFile1 -->
+               <!-- suiteXmlFile1>${suiteXmlFile1}</suiteXmlFile1 -->
             </suiteXmlFiles>
          </configuration>
       </plugin>
