@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Migration Suite]">
+  <parameter name="OS" value="Linux"/>
   <test name="Migration Window Test(failed)">
     <classes>
-      <class name="nonXml.fileComparision.testSuite.MigrationUtilFileComTests">
+      <class name="nonXml.fileModification.testSuite.MigrationFileModificationUtilTests">
         <methods>
-          <include name="verify_ALM_FileComaprision_properties_BaseDPDV_CurrentNULL_Migration_NULL"/>
-          <include name="verify_ALM_FileComaprision_properties_BaseComment1DV_CurrentComment2DV_Migration_Comment2DV"/>
-          <include name="verify_ALM_FileComaprision_properties_BaseCV_CurrentCommentDV_Migration_CommentCV"/>
-          <include name="verify_ALM_FileComaprision_properties_BaseDV_CurrentNDV_Migration_NDV"/>
-          <include name="verify_ALM_UnchangedFileComaprision_properties"/>
+          <include name="verify_ALM_preUpgrade_AddNewFile_BaseVersion" invocation-numbers="0"/>
         </methods>
-      </class> <!-- nonXml.fileComparision.testSuite.MigrationUtilFileComTests -->
+      </class> <!-- nonXml.fileModification.testSuite.MigrationFileModificationUtilTests -->
     </classes>
   </test> <!-- Migration Window Test(failed) -->
 </suite> <!-- Failed suite [Migration Suite] -->

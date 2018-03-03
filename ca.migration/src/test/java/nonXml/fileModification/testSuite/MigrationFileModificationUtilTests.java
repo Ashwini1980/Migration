@@ -7,6 +7,7 @@ import org.codehaus.plexus.util.Os;
 import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import nonXml.common.LinuxUtils;
 import nonXml.common.PreCheckFiles;
@@ -24,6 +25,9 @@ public class MigrationFileModificationUtilTests {
 	boolean isWindows = Os.isFamily(Os.FAMILY_WINDOWS);
 	boolean isUnix = Os.isFamily(Os.FAMILY_UNIX);
 	
+	private static String OSW = "Windows";
+	private static String OSL = "Linux";
+	
 	
     private static String op_addProp = "addProperty";
     private static String op_updatePropBaseCVCurrentDV = "updateProperty_BaseCVCurrentDV";
@@ -33,17 +37,18 @@ public class MigrationFileModificationUtilTests {
     private static String op_updatePropBaseCVCurrentCommentDV = "updateProperty_BaseCVCurrentCommentDV";
     private static String op_updatePropBaseHPCVCurrentNULL = "updateProperty_BaseHPCVCurrentNULL";
     private static String op_updatePropBaseDPDVCurrentNULL = "updateProperty_BaseDPDVCurrentNULL";
-    //private static String op_updatePropBaseCommentLine1DVCurrentCommentLine2DV = "updateProperty_BaseCommentLine1DVCurrentCommentLine2DV"; 
+    private static String op_updatePropBaseCommentLine1DVCurrentCommentLine2DV = "updateProperty_BaseCommentLine1DVCurrentCommentLine2DV"; 
     private static String op_addNewPropFile = "addNewPropFile";
     
     //tested working fine
 
-	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - Add a new Property into base file"
+    @Parameters ("OS")
+	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - Add a new Property into base file"
 			+ "that property not present in Current directory, hence after migration it should be present in upgraded folder")	
 	
-	public void verify_ALM_preUpgrade_BaseAddNewCV_CurrentNull() {
+	public void verify_ALM_preUpgrade_BaseAddNewCV_CurrentNull(String OS) {
 		
-		if (isWindows || isUnix) {
+		if (OS.equalsIgnoreCase(MigrationFileModificationUtilTests.OSW) || OS.equalsIgnoreCase(OSL)) {
 			
 			LOGGER.info("Test Case execution started");	
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseAddNewCV_CurrentNULL_Migration_CV.trim().split(",");
@@ -55,9 +60,9 @@ public class MigrationFileModificationUtilTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {    		
 	    		
-	    			if (isWindows) {
+	    			if (OS.equalsIgnoreCase(MigrationFileModificationUtilTests.OSW)) {
 	    			
-	    				PreCheckFiles.preCheckFiles(isWindows);
+	    				PreCheckFiles.preCheckFiles(OSW);
 	    	    	   
 	    				try{	    	
 	    	   		
@@ -88,9 +93,9 @@ public class MigrationFileModificationUtilTests {
 		    	    		}
 		    	    		LOGGER.info("Test Case execution ended for adding new property file test.");
 		    			
-		    		} 	else if (!isWindows) {
+		    		} 	else if (OS.equalsIgnoreCase(MigrationFileModificationUtilTests.OSL)) {
 		    				
-		    					PreCheckFiles.preCheckFiles(!isWindows);
+		    					PreCheckFiles.preCheckFiles(OSL);
 		    					
 			    	    		//Connect to Linux Server 
 			    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
@@ -145,12 +150,13 @@ public class MigrationFileModificationUtilTests {
 
 	//tested working fine
 	
-	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - update an existing property into base file"
+    @Parameters ("OS")
+	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - update an existing property into base file"
 			+ "that property present in Current directory as default value, hence after migration it should have customized value.")	
 	
-	public void verify_ALM_preUpgrade_BaseCV_CurrentDVNDV() {
+	public void verify_ALM_preUpgrade_BaseCV_CurrentDVNDV(String OS) {
 		
-		if (isWindows || isUnix) {
+		if (OS.equalsIgnoreCase(MigrationFileModificationUtilTests.OSW) || OS.equalsIgnoreCase(MigrationFileModificationUtilTests.OSL)) {
 			
 			LOGGER.info("Test Case execution started");	
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseCV_CurrentDVNDV_Migration_CV.trim().split(",");
@@ -162,9 +168,9 @@ public class MigrationFileModificationUtilTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {    		
 	    		
-	    			if (isWindows) {
+	    			if (OS.equalsIgnoreCase(MigrationFileModificationUtilTests.OSW)) {
 	    			
-	    				PreCheckFiles.preCheckFiles(isWindows);
+	    				PreCheckFiles.preCheckFiles(OSW);
 	    	    	   
 	    				try{	    	
 	    	   		
@@ -195,16 +201,49 @@ public class MigrationFileModificationUtilTests {
 		    	    		}
 		    	    		LOGGER.info("Test Case execution ended for updaing the existing property file test.");
 		    			
-		    		} 	else if (!isWindows) {
+		    		} 	else if (OS.equalsIgnoreCase(MigrationFileModificationUtilTests.OSL)) {
 		    			
-    			
-		                 //Need to implement the code	    	    	
-		    	    	
-		    	 
+    					PreCheckFiles.preCheckFiles(OSL);
+    					
+	    	    		//Connect to Linux Server 
+	    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
+		
+	    	    		try{	    	
+	    	   		
+	    	    			LOGGER.info("Verify the file " +listOfFiles[i]+" is present in the base EM home directory");
+	    	    			String base_loc = Utils.getFileLocationbasedonFileNameLinux(listOfFiles[i], Utils.getBase_em_home());	 
+    	   		    
+	    	    			String base_value = base_loc+"/"+listOfFiles[i];
+	    	    			LOGGER.info ("Base file location is: "+base_value);
+    	   		    
+	    	    			if(!base_value.contains(Utils.getBase_em_home())){
+	    	    				result = true;	
+	    	    				LOGGER.info("File DOES NOT exist in the Base build, hence cannot update any existing Property under that file...");
+	    	    				Assert.assertTrue("Updating new property file test", result.equals(false));
+	    	    		   
+	    	    			} else {
+	    	    	    	
+	    	    				LOGGER.info("Files exists in the base directory, hence going to update the existing property");		    	    	    	
+	        	    		     	    		
+	    	    				result = DefaultPropUtil.addUpdatePropertyLinux(base_value, op_updatePropBaseCVCurrentDV );
+	    	    				LOGGER.info("Updating existing Property updated Successfully");
+	    	    				Assert.assertTrue("Updating new property files test", result.equals(true));
+	    	    	
+	    	    			}
+	    	    	
+	    	    		} catch (Exception e) {
+	    	    			e.printStackTrace();
+	    	    		} finally {
+	    			
+	    	    			LOGGER.info("Closing the LINUX/UNIX connection");
+	    	    			LinuxUtils.closeConnection();
+	    			
+	    	    		}
+    	 
 		    		} 		
-		    		
-		    		
-		    	}
+    		
+    		
+	    		}
 		    	
 		    	}	else {    		
 		    		Assert.assertTrue("You have not entered any File to Check ", result.equals(true));
@@ -219,7 +258,7 @@ public class MigrationFileModificationUtilTests {
 	
 	//This test case is only for testing purpose, in real environment we do not need to run this test case.
 
-	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - Default property in base version and in the current version that "
+	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - Default property in base version and in the current version that "
 			+ "property should have new default value then after migration it should have the new default value.")	
 	
 	public void verify_ALM_preUpgrade_BaseDV_CurrentNDV() {
@@ -238,7 +277,7 @@ public class MigrationFileModificationUtilTests {
 	    		
 	    			if (isWindows) {
 	    			
-	    				PreCheckFiles.preCheckFiles(isWindows);
+	    				PreCheckFiles.preCheckFiles(OSW);
 	    	    	   
 	    				try{	    	
 	    	   		
@@ -293,7 +332,7 @@ public class MigrationFileModificationUtilTests {
 	
 	//This test case is only for testing purpose, in real environment we do not need to run this test case.
 
-	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - One property in base version is not present but in the current version that "
+	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - One property in base version is not present but in the current version that "
 			+ "property should be added and have new default value then after migration it should have the new default value.")	
 	
 	public void verify_ALM_preUpgrade_BaseNULL_CurrentNDV() {
@@ -312,7 +351,7 @@ public class MigrationFileModificationUtilTests {
 	    		
 	    			if (isWindows) {
 	    			
-	    				PreCheckFiles.preCheckFiles(isWindows);
+	    				PreCheckFiles.preCheckFiles(OSW);
 	    	    	   
 	    				try{	    	
 	    	   		
@@ -367,12 +406,13 @@ public class MigrationFileModificationUtilTests {
    	
 	//tested working fine
 	
-	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - One property in base version is commented but in the current version that "
+	@Parameters ("OS")
+	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - One property in base version is commented but in the current version that "
 			+ "property should has default value after migration that property should have commented.")	
 	
-	public void verify_ALM_preUpgrade_BaseCommentCV_CurrentDV() {
+	public void verify_ALM_preUpgrade_BaseCommentCV_CurrentDV(String OS) {
 		
-		if (isWindows || isUnix) {
+		if (OS.equalsIgnoreCase(OSW) || OS.equalsIgnoreCase(OSL)) {
 			
 			LOGGER.info("Test Case execution started");	
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseCommentCV_CurrentDV_Migration_CommentCV.trim().split(",");
@@ -384,9 +424,9 @@ public class MigrationFileModificationUtilTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {    		
 	    		
-	    			if (isWindows) {
+	    			if (OS.equalsIgnoreCase(OSW)) {
 	    			
-	    				PreCheckFiles.preCheckFiles(isWindows);
+	    				PreCheckFiles.preCheckFiles(OSW);
 	    	    	   
 	    				try{	    	
 	    	   		
@@ -417,13 +457,46 @@ public class MigrationFileModificationUtilTests {
 		    	    		}
 		    	    		LOGGER.info("Test Case execution ended for updaing the existing property file test.");
 		    			
-		    		} 	else if (!isWindows) {
+		    		} 	else if (OS.equalsIgnoreCase(OSL)) {
 		    			
     			
-		                 //Need to implement the code	    	    	
-		    	    	
-		    	 
-		    		} 		
+    					PreCheckFiles.preCheckFiles(OSL);
+    					
+	    	    		//Connect to Linux Server 
+	    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
+		
+	    	    		try{	    	
+	    	   		
+	    	    			LOGGER.info("Verify the file " +listOfFiles[i]+" is present in the base EM home directory");
+	    	    			String base_loc = Utils.getFileLocationbasedonFileNameLinux(listOfFiles[i], Utils.getBase_em_home());	 
+    	   		    
+	    	    			String base_value = base_loc+"/"+listOfFiles[i];
+	    	    			LOGGER.info ("Base file location is: "+base_value);
+    	   		    
+	    	    			if(!base_value.contains(Utils.getBase_em_home())){
+	    	    				result = true;	
+	    	    				LOGGER.info("File DOES NOT exist in the Base build, hence cannot update any existing Property under that file...");
+	    	    				Assert.assertTrue("Updating new property file test", result.equals(false));
+	    	    		   
+	    	    			} else {
+	    	    	    	
+	    	    				LOGGER.info("Files exists in the base directory, hence going to update the existing property");		    	    	    	
+	        	    		     	    		
+	    	    				result = DefaultPropUtil.addUpdatePropertyLinux(base_value, op_updatePropBaseCommentCVCurrentDV );
+	    	    				LOGGER.info("Updating existing Property updated Successfully");
+	    	    				Assert.assertTrue("Updating new property files test", result.equals(true));
+	    	    	
+	    	    			}
+	    	    	
+	    	    		} catch (Exception e) {
+	    	    			e.printStackTrace();
+	    	    		} finally {
+	    			
+	    	    			LOGGER.info("Closing the LINUX/UNIX connection");
+	    	    			LinuxUtils.closeConnection();
+	    			
+	    	    		}
+		    		}
 		    		
 		    		
 		    	}
@@ -440,13 +513,14 @@ public class MigrationFileModificationUtilTests {
 		}
 	
 	//tested working fine.
-
-	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - One property in base version is Customized but in the current version that "
+	
+	@Parameters ("OS")
+	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - One property in base version is Customized but in the current version that "
 			+ "property is commented after migration that property should have Customized value.")	
 	
-	public void verify_ALM_preUpgrade_BaseCV_CurrentCommentDV() {
+	public void verify_ALM_preUpgrade_BaseCV_CurrentCommentDV(String OS) {
 		
-		if (isWindows || isUnix) {
+		if (OS.equalsIgnoreCase(OSW) || OS.equalsIgnoreCase(OSL)) {
 			
 			LOGGER.info("Test Case execution started");	
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseCV_CurrentCommentDV_Migration_CV.trim().split(",");
@@ -458,9 +532,9 @@ public class MigrationFileModificationUtilTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {    		
 	    		
-	    			if (isWindows) {
+	    			if (OS.equalsIgnoreCase(OSW)) {
 	    			
-	    				PreCheckFiles.preCheckFiles(isWindows);
+	    				PreCheckFiles.preCheckFiles(OSW);
 	    	    	   
 	    				try{	    	
 	    	   		
@@ -491,10 +565,44 @@ public class MigrationFileModificationUtilTests {
 		    	    		}
 		    	    		LOGGER.info("Test Case execution ended for updaing the existing property file test.");
 		    			
-		    		} 	else if (isWindows) {
+		    		} 	else if (OS.equalsIgnoreCase(OSL)) {
 		    			
-    			
-		                 //Need to implement the code	    	    	
+    					PreCheckFiles.preCheckFiles(OSL);
+    					
+	    	    		//Connect to Linux Server 
+	    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
+		
+	    	    		try{	    	
+	    	   		
+	    	    			LOGGER.info("Verify the file " +listOfFiles[i]+" is present in the base EM home directory");
+	    	    			String base_loc = Utils.getFileLocationbasedonFileNameLinux(listOfFiles[i], Utils.getBase_em_home());	 
+    	   		    
+	    	    			String base_value = base_loc+"/"+listOfFiles[i];
+	    	    			LOGGER.info ("Base file location is: "+base_value);
+    	   		    
+	    	    			if(!base_value.contains(Utils.getBase_em_home())){
+	    	    				result = true;	
+	    	    				LOGGER.info("File DOES NOT exist in the Base build, hence cannot update any existing Property under that file...");
+	    	    				Assert.assertTrue("Updating new property file test", result.equals(false));
+	    	    		   
+	    	    			} else {
+	    	    	    	
+	    	    				LOGGER.info("Files exists in the base directory, hence going to update the existing property");		    	    	    	
+	        	    		     	    		
+	    	    				result = DefaultPropUtil.addUpdatePropertyLinux(base_value, op_updatePropBaseCVCurrentCommentDV );
+	    	    				LOGGER.info("Updating existing Property updated Successfully");
+	    	    				Assert.assertTrue("Updating new property files test", result.equals(true));
+	    	    	
+	    	    			}
+	    	    	
+	    	    		} catch (Exception e) {
+	    	    			e.printStackTrace();
+	    	    		} finally {
+	    			
+	    	    			LOGGER.info("Closing the LINUX/UNIX connection");
+	    	    			LinuxUtils.closeConnection();
+	    			
+	    	    		}	    	    	
 		    	    	
 		    	 
 		    		} 		
@@ -515,12 +623,13 @@ public class MigrationFileModificationUtilTests {
 	
 	//tested working fine
 	
-	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - One property in base version is hidden property but in the current version that "
+	@Parameters ("OS")
+	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - One property in base version is hidden property but in the current version that "
 			+ "property is not present after migration that property should have HPCV.")	
 	
-	public void verify_ALM_preUpgrade_BaseHPCV_CurrentNULL() {
+	public void verify_ALM_preUpgrade_BaseHPCV_CurrentNULL(String OS) {
 		
-		if (isWindows || isUnix) {
+		if (OS.equalsIgnoreCase(OSW)|| OS.equalsIgnoreCase(OSL)) {
 			
 			LOGGER.info("Test Case execution started");	
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseHPCV_CurrentNULL_Migration_HPCV.trim().split(",");
@@ -532,9 +641,9 @@ public class MigrationFileModificationUtilTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {    		
 	    		
-	    			if (isWindows) {
+	    			if (OS.equalsIgnoreCase(OSW)) {
 	    			
-	    				PreCheckFiles.preCheckFiles(isWindows);
+	    				PreCheckFiles.preCheckFiles(OSW);
 	    	    	   
 	    				try{	    	
 	    	   		
@@ -565,10 +674,44 @@ public class MigrationFileModificationUtilTests {
 		    	    		}
 		    	    		LOGGER.info("Test Case execution ended for Updating hidden property file test.");
 		    			
-		    		} 	else if (!isWindows) {
+		    		} 	else if (OS.equalsIgnoreCase(OSL)) {
 		    			
-    			
-		                 //Need to implement the code	    	    	
+		    			PreCheckFiles.preCheckFiles(OSL);
+    					
+	    	    		//Connect to Linux Server 
+	    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
+		
+	    	    		try{	    	
+	    	   		
+	    	    			LOGGER.info("Verify the file " +listOfFiles[i]+" is present in the base EM home directory");
+	    	    			String base_loc = Utils.getFileLocationbasedonFileNameLinux(listOfFiles[i], Utils.getBase_em_home());	 
+    	   		    
+	    	    			String base_value = base_loc+"/"+listOfFiles[i];
+	    	    			LOGGER.info ("Base file location is: "+base_value);
+    	   		    
+	    	    			if(!base_value.contains(Utils.getBase_em_home())){
+	    	    				result = true;	
+	    	    				LOGGER.info("File DOES NOT exist in the Base build, hence cannot update any existing Property under that file...");
+	    	    				Assert.assertTrue("Updating new property file test", result.equals(false));
+	    	    		   
+	    	    			} else {
+	    	    	    	
+	    	    				LOGGER.info("Files exists in the base directory, hence going to update the existing property");		    	    	    	
+	        	    		     	    		
+	    	    				result = DefaultPropUtil.addUpdatePropertyLinux(base_value, op_updatePropBaseHPCVCurrentNULL );
+	    	    				LOGGER.info("Updating existing Property updated Successfully");
+	    	    				Assert.assertTrue("Updating new property files test", result.equals(true));
+	    	    	
+	    	    			}
+	    	    	
+	    	    		} catch (Exception e) {
+	    	    			e.printStackTrace();
+	    	    		} finally {
+	    			
+	    	    			LOGGER.info("Closing the LINUX/UNIX connection");
+	    	    			LinuxUtils.closeConnection();
+	    			
+	    	    		}    	    	
 		    	    	
 		    	 
 		    		} 		
@@ -588,13 +731,14 @@ public class MigrationFileModificationUtilTests {
 		}
 	
 	//tested working fine
-
-	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - One property in base version is depreciated property but in the current version that "
+	
+	@Parameters ("OS")
+	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - One property in base version is depreciated property but in the current version that "
 			+ "property is not present after migration that property should not be present.")	
 	
-	public void verify_ALM_preUpgrade_BaseDPDV_CurrentNULL() {
+	public void verify_ALM_preUpgrade_BaseDPDV_CurrentNULL(String OS) {
 		
-		if (isWindows || isUnix) {
+		if (OS.equalsIgnoreCase(OSW) || OS.equalsIgnoreCase(OSL)) {
 			
 			LOGGER.info("Test Case execution started");	
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseDPDV_CurrentNULL_Migration_NULL.trim().split(",");
@@ -606,9 +750,9 @@ public class MigrationFileModificationUtilTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {    		
 	    		
-	    			if (isWindows) {
+	    			if (OS.equalsIgnoreCase(OSW)) {
 	    			
-	    				PreCheckFiles.preCheckFiles(isWindows);
+	    				PreCheckFiles.preCheckFiles(OSW);
 	    	    	   
 	    				try{	    	
 	    	   		
@@ -639,10 +783,44 @@ public class MigrationFileModificationUtilTests {
 		    	    		}
 		    	    		LOGGER.info("Test Case execution ended for Updating depreciated property file test.");
 		    			
-		    		} 	else if (!isWindows) {
-		    			
+		    		} 	else if (OS.equalsIgnoreCase(OSL)) {		    			
     			
-		                 //Need to implement the code	    	    	
+		    			PreCheckFiles.preCheckFiles(OSL);
+    					
+	    	    		//Connect to Linux Server 
+	    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
+		
+	    	    		try{	    	
+	    	   		
+	    	    			LOGGER.info("Verify the file " +listOfFiles[i]+" is present in the base EM home directory");
+	    	    			String base_loc = Utils.getFileLocationbasedonFileNameLinux(listOfFiles[i], Utils.getBase_em_home());	 
+    	   		    
+	    	    			String base_value = base_loc+"/"+listOfFiles[i];
+	    	    			LOGGER.info ("Base file location is: "+base_value);
+    	   		    
+	    	    			if(!base_value.contains(Utils.getBase_em_home())){
+	    	    				result = true;	
+	    	    				LOGGER.info("File DOES NOT exist in the Base build, hence cannot update any existing Property under that file...");
+	    	    				Assert.assertTrue("Updating new property file test", result.equals(false));
+	    	    		   
+	    	    			} else {
+	    	    	    	
+	    	    				LOGGER.info("Files exists in the base directory, hence going to update the existing property");		    	    	    	
+	        	    		     	    		
+	    	    				result = DefaultPropUtil.addUpdatePropertyLinux(base_value, op_updatePropBaseDPDVCurrentNULL );
+	    	    				LOGGER.info("Updating existing Property updated Successfully");
+	    	    				Assert.assertTrue("Updating new property files test", result.equals(true));
+	    	    	
+	    	    			}
+	    	    	
+	    	    		} catch (Exception e) {
+	    	    			e.printStackTrace();
+	    	    		} finally {
+	    			
+	    	    			LOGGER.info("Closing the LINUX/UNIX connection");
+	    	    			LinuxUtils.closeConnection();
+	    			
+	    	    		}    	    	    	
 		    	    	
 		    	 
 		    		} 		
@@ -661,15 +839,16 @@ public class MigrationFileModificationUtilTests {
 			
 		}
 	
-	//Need to implement this method. Not fully imepletemented yet...
-	
-	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - One property in base "
+
+	//TESTED working fine
+	@Parameters ("OS")
+	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - One property in base "
 			+ "version is default property and above that add one commentline say comment1 and but in the current version above the same property "
 			+ "property, add another comment say Comment2 after migration comment2 should be populdated above that property.")	
 	
-	public void verify_ALM_preUpgrade_BaseCommentLine1DV_CurrentCommentLine2DV() {
+	public void verify_ALM_preUpgrade_BaseCommentLine1DV_CurrentCommentLine2DV(String OS) {
 		
-		if (isWindows || isUnix) {
+		if (OS.equalsIgnoreCase(OSW) || OS.equalsIgnoreCase(OSL)) {
 			
 			LOGGER.info("Test Case execution started");	
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseCommentLine1DV_CurrentCommentLine2DV_Migration_CommentLine2DV.trim().split(",");
@@ -681,9 +860,9 @@ public class MigrationFileModificationUtilTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {    		
 	    		
-	    			if (isWindows) {
+	    			if (OS.equalsIgnoreCase(OSW)) {
 	    			
-	    				PreCheckFiles.preCheckFiles(isWindows);
+	    				PreCheckFiles.preCheckFiles(OSW);
 	    	    	   
 	    				try{	    	
 	    	   		
@@ -713,10 +892,46 @@ public class MigrationFileModificationUtilTests {
 		    	    		}
 		    	    		LOGGER.info("Test Case execution ended for adding new file test.");
 		    			
-		    		} 	else if (!isWindows) {
+		    		} 	else if (OS.equalsIgnoreCase(OSL)) {
 		    			
     			
-		                 //Need to implement the code	    	    	
+		    			PreCheckFiles.preCheckFiles(OSL);
+    					
+	    	    		//Connect to Linux Server 
+	    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
+		
+	    	    		try{	    	
+	    	   		
+	    	    			LOGGER.info("Verify the file " +listOfFiles[i]+" is present in the base EM home directory");
+	    	    			String base_loc = Utils.getFileLocationbasedonFileNameLinux(listOfFiles[i], Utils.getBase_em_home());	 
+    	   		    
+	    	    			String base_value = base_loc+"/"+listOfFiles[i];
+	    	    			LOGGER.info ("Base file location is: "+base_value);
+    	   		    
+	    	    			if(!base_value.contains(Utils.getBase_em_home())){
+	    	    				result = true;	
+	    	    				LOGGER.info("File DOES NOT exist in the Base build, hence cannot update any existing Property under that file...");
+	    	    				Assert.assertTrue("Updating new property file test", result.equals(false));
+	    	    		   
+	    	    			} else {
+	    	    	    	
+	    	    				LOGGER.info("Files exists in the base directory, hence going to update the existing property");		    	    	    	
+	        	    		     	    		
+	    	    				result = DefaultPropUtil.addUpdatePropertyLinux(base_value, op_updatePropBaseCommentLine1DVCurrentCommentLine2DV );
+	    	    				LOGGER.info("Updating existing Property updated Successfully");
+	    	    				Assert.assertTrue("Updating new property files test", result.equals(true));
+	    	    	
+	    	    			}
+	    	    	
+	    	    		} catch (Exception e) {
+	    	    			e.printStackTrace();
+	    	    		} finally {
+	    			
+	    	    			LOGGER.info("Closing the LINUX/UNIX connection");
+	    	    			LinuxUtils.closeConnection();
+	    			
+	    	    		}    	    	    	
+		    	    		    	    	
 		    	    	
 		    	 
 		    		} 		
@@ -735,29 +950,34 @@ public class MigrationFileModificationUtilTests {
 			
 		}
 	
-	
+	@Parameters ("OS")
 	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - Adding a new file in Base version but that file not present in"
 			+ "current build then after migration that newly added file should be present unde the specific directory")	
 	
-	public void verify_ALM_preUpgrade_AddNewFile_BaseVersion() {
+	public void verify_ALM_preUpgrade_AddNewFile_BaseVersion(String OS) {
 		
-		if (isWindows || isUnix) {
+		if (OS.equalsIgnoreCase(OSW) || OS.equalsIgnoreCase(OSL)) {
 			
 			LOGGER.info("Test Case execution started");	
+			String [] listOfFiles = FileComparison.strAdd_NewFile_Name.trim().split(",");
 			
 			Boolean result=false;
-	    	testcaseId = "Preupgrade_AddNewFile_in BaseVersion";	    	
+	    	testcaseId = "Preupgrade_AddNewFile_in BaseVersion";	
+	    	
+	    	if (!listOfFiles[0].isEmpty() && listOfFiles.length > 0) {
+	    		
+	    		for (int i=0; i<listOfFiles.length; i++) { 
   		
-	    			if (isWindows) {
+	    			if (OS.equalsIgnoreCase(OSW)) {
 	    			
-	    				PreCheckFiles.preCheckFiles(isWindows);	    				
+	    				PreCheckFiles.preCheckFiles(OSW);	    				
 	    	    	   
 	    				try{	    	
 	    	   		
-	    	   		    LOGGER.info("Verify the file " +FileComparison.strAdd_NewFile_Name+" is present in the base EM home directory");
-	    	   		    String base_loc = Utils.getFileLocationbasedonFileNameWindows(FileComparison.strAdd_NewFile_Name, Utils.getBase_em_home()); 
+	    	   		    LOGGER.info("Verify the file " +listOfFiles[i]+" is present in the base EM home directory");
+	    	   		    String base_loc = Utils.getFileLocationbasedonFileNameWindows(listOfFiles[i], Utils.getBase_em_home()); 
 	    	   		
-	    	   		    File base_file = new File(base_loc+File.separator+FileComparison.strAdd_NewFile_Name); 
+	    	   		    File base_file = new File(base_loc+File.separator+listOfFiles[i]); 
 	    	   		
 	    	    	    if(base_file.exists()){
 	    	    		   result = true;
@@ -769,8 +989,8 @@ public class MigrationFileModificationUtilTests {
 	        	    		LOGGER.info("Files DOES NOT exist in the base directory, hence going to create a new property file"); 
 	        	    		
 	        	    		base_file = new File (Utils.getBase_em_home()+File.separator+"config"+File.separator+"shutoff");
-	        	    		Map <Object, Object> prop = DefaultPropUtil.addFile(FileComparison.strAdd_NewFile_Name, op_addNewPropFile, base_file);	        	    		
-	        	    		result = PreUpgradeMain.addNewFile(FileComparison.strAdd_NewFile_Name, prop);
+	        	    		Map <Object, Object> prop = DefaultPropUtil.addFile(listOfFiles[i], op_addNewPropFile, base_file);	        	    		
+	        	    		result = PreUpgradeMain.addNewFile(listOfFiles[i], prop);
 	        	    		LOGGER.info("New Property file updated Successfully under "+base_file);
 	        	    		Assert.assertTrue("Adding new property file test", result.equals(true));
 	        	    		
@@ -783,20 +1003,64 @@ public class MigrationFileModificationUtilTests {
 		    	    		}
 		    	    		LOGGER.info("Test Case execution ended for Adding new property file test.");
 		    			
-		    		} 	else if (isWindows) {
+		    		} 	else if (OS.equalsIgnoreCase(OSL)) {
 		    			
     			
-		                 //Need to implement the code	    	    	
+		    			PreCheckFiles.preCheckFiles(OSL);
+    					
+	    	    		//Connect to Linux Server 
+	    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
+		
+	    	    		try{	    	
+	    	   		
+	    	    			LOGGER.info("Verify the file " +listOfFiles[i]+" is present in the base EM home directory");
+	    	    			String base_loc = Utils.getFileLocationbasedonFileNameLinux(listOfFiles[i], Utils.getBase_em_home());	 
+    	   		    
+	    	    			String base_value = base_loc+"/"+listOfFiles[i];
+	    	    			LOGGER.info ("Base file location is: "+base_value);
+    	   		    
+	    	    			if(base_value.contains(Utils.getBase_em_home())){
+	    	    				result = true;	
+	    	    				LOGGER.info("File already exist in the Base build, hence cannot add the specified Property file under the directory...");
+	    	    				Assert.assertTrue("Adding new property file test", result.equals(false));
+	    	    		   
+	    	    			} else {
+	    	    	    	
+	    	    				LOGGER.info("Files does NOT exist in the base directory, hence going to add the new property file");		    	    	    	
+	    	    				String base_path = Utils.getBase_em_home()+"/"+"config"+"/"+"shutoff"; 	    		
+	    	    				result = DefaultPropUtil.addFileInLinux(listOfFiles[i], op_addNewPropFile, base_path);
+	    	    				
+	    	    				Assert.assertTrue("Addinf new property files test", result.equals(true));
+	    	    				LOGGER.info("Added new Property file Successfully");
+	    	    	
+	    	    			}
+	    	    	
+	    	    		} catch (Exception e) {
+	    	    			e.printStackTrace();
+	    	    		} finally {
+	    			
+	    	    			LOGGER.info("Closing the LINUX/UNIX connection");
+	    	    			LinuxUtils.closeConnection();
+	    			
+	    	    		}    	    	    	
+		    	    		    	    	
 		    	    	
 		    	 
 		    		} 		
-	    	
-						
+		    		
+		    		
+		    	}
+		    	
+		    	}	else {    		
+		    		Assert.assertTrue("You have not entered any File to Check ", result.equals(true));
+		    		    		
+		    		}		
+				
 			} else {
 				Assert.assertTrue("You have not entered correct OS version, enter either Windows or Linux", false);
 			}
 			
 		}
-	
+
 	
 }

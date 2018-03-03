@@ -1,259 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="5" ignored="0" total="11" passed="6">
+<testng-results skipped="0" failed="0" ignored="9" total="10" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Migration Suite" duration-ms="132" started-at="2018-02-28T10:52:41Z" finished-at="2018-02-28T10:52:41Z">
+  <suite name="Migration Suite" duration-ms="1040" started-at="2018-03-02T21:00:54Z" finished-at="2018-03-02T21:00:55Z">
     <groups>
-      <group name="BAT">
-        <method signature="MigrationUtilFileComTests.verify_ALM_FileComaprision_properties_BaseAddNewCV_CurrentNULL_Migration_AddNewCV()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_FileComaprision_properties_BaseAddNewCV_CurrentNULL_Migration_AddNewCV" class="nonXml.fileComparision.testSuite.MigrationUtilFileComTests"/>
-        <method signature="MigrationUtilFileComTests.verify_ALM_FileComaprision_properties_BaseCV_CurrentCommentDV_Migration_CommentCV()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_FileComaprision_properties_BaseCV_CurrentCommentDV_Migration_CommentCV" class="nonXml.fileComparision.testSuite.MigrationUtilFileComTests"/>
-        <method signature="MigrationUtilFileComTests.verify_ALM_FileComaprision_properties_BaseCV_CurrentDVNDV_Migration_CV()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_FileComaprision_properties_BaseCV_CurrentDVNDV_Migration_CV" class="nonXml.fileComparision.testSuite.MigrationUtilFileComTests"/>
-        <method signature="MigrationUtilFileComTests.verify_ALM_FileComaprision_properties_BaseComment1DV_CurrentComment2DV_Migration_Comment2DV()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_FileComaprision_properties_BaseComment1DV_CurrentComment2DV_Migration_Comment2DV" class="nonXml.fileComparision.testSuite.MigrationUtilFileComTests"/>
-        <method signature="MigrationUtilFileComTests.verify_ALM_FileComaprision_properties_BaseCommentCV_CurrentDV_Migration_CommentCV()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_FileComaprision_properties_BaseCommentCV_CurrentDV_Migration_CommentCV" class="nonXml.fileComparision.testSuite.MigrationUtilFileComTests"/>
-        <method signature="MigrationUtilFileComTests.verify_ALM_FileComaprision_properties_BaseDPDV_CurrentNULL_Migration_NULL()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_FileComaprision_properties_BaseDPDV_CurrentNULL_Migration_NULL" class="nonXml.fileComparision.testSuite.MigrationUtilFileComTests"/>
-        <method signature="MigrationUtilFileComTests.verify_ALM_FileComaprision_properties_BaseDV_CurrentNDV_Migration_NDV()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_FileComaprision_properties_BaseDV_CurrentNDV_Migration_NDV" class="nonXml.fileComparision.testSuite.MigrationUtilFileComTests"/>
-        <method signature="MigrationUtilFileComTests.verify_ALM_FileComaprision_properties_BaseHPCV_CurrentNULL_Migration_HPCV()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_FileComaprision_properties_BaseHPCV_CurrentNULL_Migration_HPCV" class="nonXml.fileComparision.testSuite.MigrationUtilFileComTests"/>
-        <method signature="MigrationUtilFileComTests.verify_ALM_FileComaprision_properties_BaseNULL_CurrentNDV_Migration_NDV()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_FileComaprision_properties_BaseNULL_CurrentNDV_Migration_NDV" class="nonXml.fileComparision.testSuite.MigrationUtilFileComTests"/>
-        <method signature="MigrationUtilFileComTests.verify_ALM_FileComaprision_properties_Base_Current_Migration_DefaultValue()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_FileComaprision_properties_Base_Current_Migration_DefaultValue" class="nonXml.fileComparision.testSuite.MigrationUtilFileComTests"/>
-        <method signature="MigrationUtilFileComTests.verify_ALM_UnchangedFileComaprision_properties()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_UnchangedFileComaprision_properties" class="nonXml.fileComparision.testSuite.MigrationUtilFileComTests"/>
-      </group> <!-- BAT -->
+      <group name="preUpgrade">
+        <method signature="MigrationFileModificationUtilTests.verify_ALM_preUpgrade_AddNewFile_BaseVersion(java.lang.String)[pri:0, instance:nonXml.fileModification.testSuite.MigrationFileModificationUtilTests@5649fd9b]" name="verify_ALM_preUpgrade_AddNewFile_BaseVersion" class="nonXml.fileModification.testSuite.MigrationFileModificationUtilTests"/>
+      </group> <!-- preUpgrade -->
     </groups>
-    <test name="Migration Window Test" duration-ms="132" started-at="2018-02-28T10:52:41Z" finished-at="2018-02-28T10:52:41Z">
-      <class name="nonXml.fileComparision.testSuite.MigrationUtilFileComTests">
-        <test-method status="PASS" signature="verify_ALM_FileComaprision_properties_BaseAddNewCV_CurrentNULL_Migration_AddNewCV()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_FileComaprision_properties_BaseAddNewCV_CurrentNULL_Migration_AddNewCV" duration-ms="47" started-at="2018-02-28T16:22:41Z" description="If base has AddNewCV,  Current has NULL then after migration it should have CV" finished-at="2018-02-28T16:22:41Z">
+    <test name="Migration Window Test" duration-ms="1040" started-at="2018-03-02T21:00:54Z" finished-at="2018-03-02T21:00:55Z">
+      <class name="nonXml.fileModification.testSuite.MigrationFileModificationUtilTests">
+        <test-method status="PASS" signature="verify_ALM_preUpgrade_AddNewFile_BaseVersion(java.lang.String)[pri:0, instance:nonXml.fileModification.testSuite.MigrationFileModificationUtilTests@5649fd9b]" name="verify_ALM_preUpgrade_AddNewFile_BaseVersion" duration-ms="1028" started-at="2018-03-03T02:30:54Z" description="ConfigUtility Merge feature - Adding a new file in Base version but that file not present incurrent build then after migration that newly added file should be present unde the specific directory" finished-at="2018-03-03T02:30:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Linux]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_ALM_FileComaprision_properties_BaseAddNewCV_CurrentNULL_Migration_AddNewCV -->
-        <test-method status="PASS" signature="verify_ALM_FileComaprision_properties_BaseCV_CurrentDVNDV_Migration_CV()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_FileComaprision_properties_BaseCV_CurrentDVNDV_Migration_CV" duration-ms="15" started-at="2018-02-28T16:22:41Z" description="If base has CV, Current has DV/NDV then after migration it should have Customized Value(CV)." finished-at="2018-02-28T16:22:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_ALM_FileComaprision_properties_BaseCV_CurrentDVNDV_Migration_CV -->
-        <test-method status="FAIL" signature="verify_ALM_FileComaprision_properties_BaseCV_CurrentCommentDV_Migration_CommentCV()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_FileComaprision_properties_BaseCV_CurrentCommentDV_Migration_CommentCV" duration-ms="0" started-at="2018-02-28T16:22:41Z" description="If base has CV,  Current has CommentDV then after migration, it should be CV" finished-at="2018-02-28T16:22:41Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Unchanged File comarison test default result]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Unchanged File comarison test default result
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at nonXml.fileComparision.testSuite.MigrationUtilFileComTests.verify_ALM_FileComaprision_properties_BaseCV_CurrentCommentDV_Migration_CommentCV(MigrationUtilFileComTests.java:674)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_ALM_FileComaprision_properties_BaseCV_CurrentCommentDV_Migration_CommentCV -->
-        <test-method status="FAIL" signature="verify_ALM_FileComaprision_properties_BaseComment1DV_CurrentComment2DV_Migration_Comment2DV()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_FileComaprision_properties_BaseComment1DV_CurrentComment2DV_Migration_Comment2DV" duration-ms="16" started-at="2018-02-28T16:22:41Z" description="If base has Comment1 DV,  Current has Comment2 DV then after migration, it should be Commen2 DV" finished-at="2018-02-28T16:22:41Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[After migration, Customized Value reflected successfully expected:<true> but was:<false>]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: After migration, Customized Value reflected successfully expected:<true> but was:<false>
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at nonXml.fileComparision.postUpgrade.util.PostUpgradeUtil.changedPropBaseComment1DVFreshComemnt2DVUpgradeComemnt2DV(PostUpgradeUtil.java:323)
-	at nonXml.fileComparision.testSuite.MigrationUtilFileComTests.verify_ALM_FileComaprision_properties_BaseComment1DV_CurrentComment2DV_Migration_Comment2DV(MigrationUtilFileComTests.java:752)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_ALM_FileComaprision_properties_BaseComment1DV_CurrentComment2DV_Migration_Comment2DV -->
-        <test-method status="PASS" signature="verify_ALM_FileComaprision_properties_BaseCommentCV_CurrentDV_Migration_CommentCV()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_FileComaprision_properties_BaseCommentCV_CurrentDV_Migration_CommentCV" duration-ms="0" started-at="2018-02-28T16:22:41Z" description="If base has commented CV,  Current has DV then after migration it should have Commented CV" finished-at="2018-02-28T16:22:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_ALM_FileComaprision_properties_BaseCommentCV_CurrentDV_Migration_CommentCV -->
-        <test-method status="FAIL" signature="verify_ALM_FileComaprision_properties_BaseDPDV_CurrentNULL_Migration_NULL()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_FileComaprision_properties_BaseDPDV_CurrentNULL_Migration_NULL" duration-ms="6" started-at="2018-02-28T16:22:41Z" description="If base has DPDV,  Current has NULL then after migration, it should be NULL" finished-at="2018-02-28T16:22:41Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[After migration, Customized Value reflected successfully expected:<true> but was:<false>]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: After migration, Customized Value reflected successfully expected:<true> but was:<false>
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at nonXml.fileComparision.postUpgrade.util.PostUpgradeUtil.changedPropBaseDPCVFreshNULLUpgradeNULL(PostUpgradeUtil.java:360)
-	at nonXml.fileComparision.testSuite.MigrationUtilFileComTests.verify_ALM_FileComaprision_properties_BaseDPDV_CurrentNULL_Migration_NULL(MigrationUtilFileComTests.java:920)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_ALM_FileComaprision_properties_BaseDPDV_CurrentNULL_Migration_NULL -->
-        <test-method status="PASS" signature="verify_ALM_FileComaprision_properties_BaseHPCV_CurrentNULL_Migration_HPCV()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_FileComaprision_properties_BaseHPCV_CurrentNULL_Migration_HPCV" duration-ms="15" started-at="2018-02-28T16:22:41Z" description="If base has HPCV,  Current has NULL then after migration, it should be HPCV" finished-at="2018-02-28T16:22:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_ALM_FileComaprision_properties_BaseHPCV_CurrentNULL_Migration_HPCV -->
-        <test-method status="FAIL" signature="verify_ALM_FileComaprision_properties_BaseDV_CurrentNDV_Migration_NDV()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_FileComaprision_properties_BaseDV_CurrentNDV_Migration_NDV" duration-ms="0" started-at="2018-02-28T16:22:41Z" description="If base has DV,  Current has NDV then after migration it should have NDV" finished-at="2018-02-28T16:22:41Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Unchanged File comarison test default result]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Unchanged File comarison test default result
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at nonXml.fileComparision.testSuite.MigrationUtilFileComTests.verify_ALM_FileComaprision_properties_BaseDV_CurrentNDV_Migration_NDV(MigrationUtilFileComTests.java:334)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_ALM_FileComaprision_properties_BaseDV_CurrentNDV_Migration_NDV -->
-        <test-method status="PASS" signature="verify_ALM_FileComaprision_properties_BaseNULL_CurrentNDV_Migration_NDV()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_FileComaprision_properties_BaseNULL_CurrentNDV_Migration_NDV" duration-ms="0" started-at="2018-02-28T16:22:41Z" description="If base has NULL,  Current has NDV then after migration it should have NDV" finished-at="2018-02-28T16:22:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_ALM_FileComaprision_properties_BaseNULL_CurrentNDV_Migration_NDV -->
-        <test-method status="PASS" signature="verify_ALM_FileComaprision_properties_Base_Current_Migration_DefaultValue()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_FileComaprision_properties_Base_Current_Migration_DefaultValue" duration-ms="16" started-at="2018-02-28T16:22:41Z" description="If on Base and Current version have default property value then after migration, it should have Deafult Value." finished-at="2018-02-28T16:22:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_ALM_FileComaprision_properties_Base_Current_Migration_DefaultValue -->
-        <test-method status="FAIL" signature="verify_ALM_UnchangedFileComaprision_properties()[pri:0, instance:nonXml.fileComparision.testSuite.MigrationUtilFileComTests@3159c4b8]" name="verify_ALM_UnchangedFileComaprision_properties" duration-ms="0" started-at="2018-02-28T16:22:41Z" description="To compare any unchanged properties file on base and upgraded folder, all content should be same" finished-at="2018-02-28T16:22:41Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[File comarison properties Unchanged file test]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: File comarison properties Unchanged file test
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at nonXml.fileComparision.testSuite.MigrationUtilFileComTests.verify_ALM_UnchangedFileComaprision_properties(MigrationUtilFileComTests.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_ALM_UnchangedFileComaprision_properties -->
-      </class> <!-- nonXml.fileComparision.testSuite.MigrationUtilFileComTests -->
+        </test-method> <!-- verify_ALM_preUpgrade_AddNewFile_BaseVersion -->
+      </class> <!-- nonXml.fileModification.testSuite.MigrationFileModificationUtilTests -->
     </test> <!-- Migration Window Test -->
   </suite> <!-- Migration Suite -->
 </testng-results>

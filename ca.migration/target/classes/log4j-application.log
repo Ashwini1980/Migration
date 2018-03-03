@@ -674,3 +674,378 @@
 2018-02-28 16:22:41 INFO  PostUpgradeUtil:86 - # CA Wily Introscope(R) Version 10.7.0 Release 10.7.0.45
 2018-02-28 16:22:41 INFO  PostUpgradeUtil:86 - # Copyright &copy; 2018 CA. All Rights Reserved.
 2018-02-28 16:22:41 INFO  PostUpgradeUtil:113 - Comparison result is : false
+2018-03-02 22:12:53 INFO  MigrationFileModificationUtilTests:161 - Test Case execution started
+2018-03-02 22:12:53 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-02 22:12:53 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-02 22:12:53 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-02 22:12:53 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-02 22:12:55 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-02 22:12:55 INFO  MigrationFileModificationUtilTests:213 - Verify the file IntroscopeWebView.properties is present in the base EM home directory
+2018-03-02 22:12:55 INFO  MigrationFileModificationUtilTests:217 - Base file location is: INVALID_PATH/IntroscopeWebView.properties/IntroscopeWebView.properties
+2018-03-02 22:12:55 INFO  MigrationFileModificationUtilTests:221 - File DOES NOT exist in the Base build, hence cannot update any existing Property under that file...
+2018-03-02 22:12:55 INFO  MigrationFileModificationUtilTests:238 - Closing the LINUX/UNIX connection
+2018-03-02 22:14:08 INFO  MigrationFileModificationUtilTests:161 - Test Case execution started
+2018-03-02 22:14:08 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-02 22:14:08 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-02 22:14:08 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-02 22:14:08 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-02 22:14:09 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-02 22:14:09 INFO  MigrationFileModificationUtilTests:213 - Verify the file IntroscopeWebView.properties is present in the base EM home directory
+2018-03-02 22:14:09 INFO  MigrationFileModificationUtilTests:217 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeWebView.properties
+2018-03-02 22:14:09 INFO  MigrationFileModificationUtilTests:226 - Files exists in the base directory, hence going to update the existing property
+2018-03-02 22:14:09 INFO  MigrationFileModificationUtilTests:238 - Closing the LINUX/UNIX connection
+2018-03-02 22:16:36 INFO  MigrationFileModificationUtilTests:161 - Test Case execution started
+2018-03-02 22:16:36 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-02 22:16:36 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-02 22:16:36 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-02 22:16:36 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-02 22:16:36 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-02 22:16:36 INFO  MigrationFileModificationUtilTests:213 - Verify the file IntroscopeWebView.properties is present in the base EM home directory
+2018-03-02 22:16:37 INFO  MigrationFileModificationUtilTests:217 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeWebView.properties
+2018-03-02 22:16:37 INFO  MigrationFileModificationUtilTests:226 - Files exists in the base directory, hence going to update the existing property
+2018-03-02 22:16:37 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeWebView.properties to add/update a new/existing property
+2018-03-02 22:16:37 INFO  DefaultPropUtil:383 - The no of Keys in the file: [2]
+2018-03-02 22:16:37 INFO  DefaultPropUtil:387 - Command is: sed -i 's/introscope.webview.tcp.port=grep -i introscope.webview.tcp.port /root/Introscope10.0.0.36/config/IntroscopeWebView.properties |cut -d = -f2/introscope.webview.tcp.port=100' /root/Introscope10.0.0.36/config/IntroscopeWebView.properties
+2018-03-02 22:16:37 INFO  DefaultPropUtil:402 - The Key updated successful....
+2018-03-02 22:16:37 INFO  MigrationFileModificationUtilTests:229 - Updating existing Property updated Successfully
+2018-03-02 22:16:37 INFO  MigrationFileModificationUtilTests:238 - Closing the LINUX/UNIX connection
+2018-03-02 22:24:34 INFO  MigrationFileModificationUtilTests:161 - Test Case execution started
+2018-03-02 22:24:34 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-02 22:24:34 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-02 22:24:34 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-02 22:24:34 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-02 22:24:34 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-02 22:24:34 INFO  MigrationFileModificationUtilTests:213 - Verify the file IntroscopeWebView.properties is present in the base EM home directory
+2018-03-02 22:24:35 INFO  MigrationFileModificationUtilTests:217 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeWebView.properties
+2018-03-02 22:24:35 INFO  MigrationFileModificationUtilTests:226 - Files exists in the base directory, hence going to update the existing property
+2018-03-02 22:24:35 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeWebView.properties to add/update a new/existing property
+2018-03-02 22:24:35 INFO  DefaultPropUtil:383 - The no of Keys in the file: [2]
+2018-03-02 22:24:35 INFO  DefaultPropUtil:389 - Command is: sed -i 's/introscope.webview.tcp.port=# If uncommented, the http listener specified by the introscope.webview.tcp.port property is not created,/introscope.webview.tcp.port=100' /root/Introscope10.0.0.36/config/IntroscopeWebView.properties
+2018-03-02 22:24:35 INFO  DefaultPropUtil:404 - The Key updated successful....
+2018-03-02 22:24:35 INFO  MigrationFileModificationUtilTests:229 - Updating existing Property updated Successfully
+2018-03-02 22:24:35 INFO  MigrationFileModificationUtilTests:238 - Closing the LINUX/UNIX connection
+2018-03-02 22:26:07 INFO  MigrationFileModificationUtilTests:161 - Test Case execution started
+2018-03-02 22:26:07 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-02 22:26:07 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-02 22:26:07 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-02 22:26:07 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-02 22:26:07 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-02 22:26:07 INFO  MigrationFileModificationUtilTests:213 - Verify the file IntroscopeWebView.properties is present in the base EM home directory
+2018-03-02 22:26:08 INFO  MigrationFileModificationUtilTests:217 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeWebView.properties
+2018-03-02 22:26:08 INFO  MigrationFileModificationUtilTests:226 - Files exists in the base directory, hence going to update the existing property
+2018-03-02 22:26:08 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeWebView.properties to add/update a new/existing property
+2018-03-02 22:26:08 INFO  DefaultPropUtil:383 - The no of Keys in the file: [2]
+2018-03-02 22:27:15 INFO  MigrationFileModificationUtilTests:161 - Test Case execution started
+2018-03-02 22:27:15 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-02 22:27:15 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-02 22:27:15 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-02 22:27:15 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-02 22:27:15 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-02 22:27:15 INFO  MigrationFileModificationUtilTests:213 - Verify the file IntroscopeWebView.properties is present in the base EM home directory
+2018-03-02 22:27:15 INFO  MigrationFileModificationUtilTests:217 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeWebView.properties
+2018-03-02 22:27:15 INFO  MigrationFileModificationUtilTests:226 - Files exists in the base directory, hence going to update the existing property
+2018-03-02 22:27:15 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeWebView.properties to add/update a new/existing property
+2018-03-02 22:27:15 INFO  DefaultPropUtil:383 - The no of Keys in the file: [2]
+2018-03-02 22:27:15 INFO  DefaultPropUtil:389 - Command is: sed -i 's/introscope.webview.tcp.port=8080/introscope.webview.tcp.port=100' /root/Introscope10.0.0.36/config/IntroscopeWebView.properties
+2018-03-02 22:27:16 INFO  DefaultPropUtil:404 - The Key updated successful....
+2018-03-02 22:27:16 INFO  MigrationFileModificationUtilTests:229 - Updating existing Property updated Successfully
+2018-03-02 22:27:16 INFO  MigrationFileModificationUtilTests:238 - Closing the LINUX/UNIX connection
+2018-03-02 22:31:50 INFO  MigrationFileModificationUtilTests:161 - Test Case execution started
+2018-03-02 22:31:50 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-02 22:31:50 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-02 22:31:50 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-02 22:31:50 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-02 22:31:51 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-02 22:31:51 INFO  MigrationFileModificationUtilTests:213 - Verify the file IntroscopeWebView.properties is present in the base EM home directory
+2018-03-02 22:31:51 INFO  MigrationFileModificationUtilTests:217 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeWebView.properties
+2018-03-02 22:31:51 INFO  MigrationFileModificationUtilTests:226 - Files exists in the base directory, hence going to update the existing property
+2018-03-02 22:31:51 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeWebView.properties to add/update a new/existing property
+2018-03-02 22:31:51 INFO  DefaultPropUtil:383 - The no of Keys in the file: [2]
+2018-03-02 22:31:51 INFO  DefaultPropUtil:389 - Command is: sed -i 's/introscope.webview.tcp.port=8080/introscope.webview.tcp.port=100/g' /root/Introscope10.0.0.36/config/IntroscopeWebView.properties
+2018-03-02 22:31:51 INFO  DefaultPropUtil:404 - The Key updated successful....
+2018-03-02 22:31:51 INFO  MigrationFileModificationUtilTests:229 - Updating existing Property updated Successfully
+2018-03-02 22:31:51 INFO  MigrationFileModificationUtilTests:238 - Closing the LINUX/UNIX connection
+2018-03-02 23:04:46 INFO  MigrationFileModificationUtilTests:417 - Test Case execution started
+2018-03-02 23:04:46 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-02 23:04:46 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-02 23:04:46 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-02 23:04:46 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-02 23:04:47 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-02 23:04:47 INFO  MigrationFileModificationUtilTests:470 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-03-02 23:04:47 INFO  MigrationFileModificationUtilTests:474 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-03-02 23:04:47 INFO  MigrationFileModificationUtilTests:483 - Files exists in the base directory, hence going to update the existing property
+2018-03-02 23:04:47 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties to add/update a new/existing property
+2018-03-02 23:04:47 INFO  DefaultPropUtil:424 - The no of Keys in the file: [1]
+2018-03-02 23:04:47 INFO  DefaultPropUtil:429 - Command is: sed -i 's/introscope.enterprisemanager.port.channel2=5443/#introscope.enterprisemanager.port.channel2=100/g' /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-03-02 23:04:47 INFO  DefaultPropUtil:444 - The Key updated successful....
+2018-03-02 23:04:47 INFO  MigrationFileModificationUtilTests:486 - Updating existing Property updated Successfully
+2018-03-02 23:04:47 INFO  MigrationFileModificationUtilTests:495 - Closing the LINUX/UNIX connection
+2018-03-02 23:15:24 INFO  MigrationFileModificationUtilTests:525 - Test Case execution started
+2018-03-02 23:15:24 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-02 23:15:24 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-02 23:15:24 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-02 23:15:24 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-02 23:15:25 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-02 23:15:25 INFO  MigrationFileModificationUtilTests:577 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-03-02 23:15:25 INFO  MigrationFileModificationUtilTests:581 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-03-02 23:15:25 INFO  MigrationFileModificationUtilTests:590 - Files exists in the base directory, hence going to update the existing property
+2018-03-02 23:15:25 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties to add/update a new/existing property
+2018-03-02 23:15:25 INFO  DefaultPropUtil:466 - The no of Keys in the file: [1]
+2018-03-02 23:15:25 INFO  DefaultPropUtil:471 - Command is: sed -i 's/introscope.enterprisemanager.webserver.refresh=60/#introscope.enterprisemanager.webserver.refresh=100/g' /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-03-02 23:15:25 INFO  DefaultPropUtil:486 - The Key updated successful....
+2018-03-02 23:15:25 INFO  MigrationFileModificationUtilTests:593 - Updating existing Property updated Successfully
+2018-03-02 23:15:25 INFO  MigrationFileModificationUtilTests:602 - Closing the LINUX/UNIX connection
+2018-03-02 23:26:05 INFO  MigrationFileModificationUtilTests:525 - Test Case execution started
+2018-03-02 23:26:05 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-02 23:26:05 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-02 23:26:05 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-02 23:26:05 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-02 23:26:05 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-02 23:26:05 INFO  MigrationFileModificationUtilTests:577 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-03-02 23:26:06 INFO  MigrationFileModificationUtilTests:581 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-03-02 23:26:06 INFO  MigrationFileModificationUtilTests:590 - Files exists in the base directory, hence going to update the existing property
+2018-03-02 23:26:06 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties to add/update a new/existing property
+2018-03-02 23:26:06 INFO  DefaultPropUtil:466 - The no of Keys in the file: [1]
+2018-03-02 23:26:06 INFO  DefaultPropUtil:471 - Command is: sed -i 's/introscope.enterprisemanager.webserver.refresh=100/introscope.enterprisemanager.webserver.refresh=100/g' /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-03-02 23:26:06 INFO  DefaultPropUtil:486 - The Key updated successful....
+2018-03-02 23:26:06 INFO  MigrationFileModificationUtilTests:593 - Updating existing Property updated Successfully
+2018-03-02 23:26:06 INFO  MigrationFileModificationUtilTests:602 - Closing the LINUX/UNIX connection
+2018-03-02 23:26:06 INFO  MigrationFileModificationUtilTests:634 - Test Case execution started
+2018-03-02 23:26:06 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-02 23:26:06 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-02 23:26:06 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-02 23:26:06 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-02 23:26:06 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-02 23:26:06 INFO  MigrationFileModificationUtilTests:686 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-03-02 23:26:06 INFO  MigrationFileModificationUtilTests:690 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-03-02 23:26:06 INFO  MigrationFileModificationUtilTests:699 - Files exists in the base directory, hence going to update the existing property
+2018-03-02 23:26:06 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties to add/update a new/existing property
+2018-03-02 23:26:07 INFO  DefaultPropUtil:507 - The no of Keys in the file: [0]
+2018-03-02 23:26:07 INFO  DefaultPropUtil:511 - Command is: sed -i -e '$a\ca.migtration.hiddenFileTest=100' /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-03-02 23:26:07 INFO  DefaultPropUtil:526 - The Key added successful....
+2018-03-02 23:26:07 INFO  MigrationFileModificationUtilTests:702 - Updating existing Property updated Successfully
+2018-03-02 23:26:07 INFO  MigrationFileModificationUtilTests:711 - Closing the LINUX/UNIX connection
+2018-03-02 23:27:16 INFO  MigrationFileModificationUtilTests:634 - Test Case execution started
+2018-03-02 23:27:16 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-02 23:27:16 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-02 23:27:16 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-02 23:27:16 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-02 23:27:16 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-02 23:27:16 INFO  MigrationFileModificationUtilTests:686 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-03-02 23:27:17 INFO  MigrationFileModificationUtilTests:690 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-03-02 23:27:17 INFO  MigrationFileModificationUtilTests:699 - Files exists in the base directory, hence going to update the existing property
+2018-03-02 23:27:17 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties to add/update a new/existing property
+2018-03-02 23:27:17 INFO  DefaultPropUtil:507 - The no of Keys in the file: [1]
+2018-03-02 23:27:17 INFO  DefaultPropUtil:511 - Command is: sed -i -e '$a\ca.migtration.hiddenFileTest=100' /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-03-02 23:27:17 INFO  DefaultPropUtil:515 - The Key is already present, hence not going to add anything...
+2018-03-02 23:27:17 INFO  MigrationFileModificationUtilTests:711 - Closing the LINUX/UNIX connection
+2018-03-02 23:28:52 INFO  MigrationFileModificationUtilTests:634 - Test Case execution started
+2018-03-02 23:28:52 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-02 23:28:52 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-02 23:28:52 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-02 23:28:52 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-02 23:28:53 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-02 23:28:53 INFO  MigrationFileModificationUtilTests:686 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-03-02 23:28:53 INFO  MigrationFileModificationUtilTests:690 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-03-02 23:28:53 INFO  MigrationFileModificationUtilTests:699 - Files exists in the base directory, hence going to update the existing property
+2018-03-02 23:28:53 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties to add/update a new/existing property
+2018-03-02 23:28:53 INFO  DefaultPropUtil:507 - The no of Keys in the file: [0]
+2018-03-02 23:28:53 INFO  DefaultPropUtil:511 - Command is: sed -i -e '$a\ca.migtration.hiddenFileTest=100' /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-03-02 23:28:53 INFO  DefaultPropUtil:526 - The Key added successful....
+2018-03-02 23:28:53 INFO  MigrationFileModificationUtilTests:702 - Updating existing Property updated Successfully
+2018-03-02 23:28:53 INFO  MigrationFileModificationUtilTests:711 - Closing the LINUX/UNIX connection
+2018-03-02 23:34:18 INFO  MigrationFileModificationUtilTests:743 - Test Case execution started
+2018-03-02 23:34:18 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-02 23:34:18 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-02 23:34:18 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-02 23:34:18 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-02 23:34:19 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-02 23:34:19 INFO  MigrationFileModificationUtilTests:795 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-03-02 23:34:19 INFO  MigrationFileModificationUtilTests:799 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-03-02 23:34:19 INFO  MigrationFileModificationUtilTests:808 - Files exists in the base directory, hence going to update the existing property
+2018-03-02 23:34:19 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties to add/update a new/existing property
+2018-03-02 23:34:19 INFO  DefaultPropUtil:547 - The no of Keys in the file: [0]
+2018-03-02 23:34:19 INFO  DefaultPropUtil:551 - Command is: sed -i -e '$a\ca.migtration.depreciatedFileTest=100' /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-03-02 23:34:19 INFO  DefaultPropUtil:566 - The Key added successful....
+2018-03-02 23:34:19 INFO  MigrationFileModificationUtilTests:811 - Updating existing Property updated Successfully
+2018-03-02 23:34:19 INFO  MigrationFileModificationUtilTests:820 - Closing the LINUX/UNIX connection
+2018-03-03 00:38:34 INFO  MigrationFileModificationUtilTests:853 - Test Case execution started
+2018-03-03 00:38:34 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-03 00:38:34 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-03 00:38:34 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-03 00:38:34 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-03 00:38:35 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-03 00:38:35 INFO  MigrationFileModificationUtilTests:905 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-03-03 00:38:35 INFO  MigrationFileModificationUtilTests:909 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-03-03 00:38:35 INFO  MigrationFileModificationUtilTests:918 - Files exists in the base directory, hence going to update the existing property
+2018-03-03 00:38:35 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties to add/update a new/existing property
+2018-03-03 00:38:35 INFO  DefaultPropUtil:587 - The no of Keys in the file: [0]
+2018-03-03 00:38:35 INFO  MigrationFileModificationUtilTests:930 - Closing the LINUX/UNIX connection
+2018-03-03 00:40:37 INFO  MigrationFileModificationUtilTests:853 - Test Case execution started
+2018-03-03 00:40:37 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-03 00:40:37 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-03 00:40:37 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-03 00:40:37 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-03 00:40:37 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-03 00:40:37 INFO  MigrationFileModificationUtilTests:905 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-03-03 00:40:38 INFO  MigrationFileModificationUtilTests:909 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-03-03 00:40:38 INFO  MigrationFileModificationUtilTests:918 - Files exists in the base directory, hence going to update the existing property
+2018-03-03 00:40:38 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties to add/update a new/existing property
+2018-03-03 00:40:38 INFO  DefaultPropUtil:587 - The no of Keys in the file: [1]
+2018-03-03 00:40:38 INFO  DefaultPropUtil:592 - Command is: sed -i -e '/ca.migtration.depreciatedFileTest=100/ i#***This is the Comment Line for Key ca.migtration.depreciatedFileTest***' +fileName
+2018-03-03 00:40:38 INFO  DefaultPropUtil:607 - The Key updated successful....
+2018-03-03 00:40:38 INFO  MigrationFileModificationUtilTests:921 - Updating existing Property updated Successfully
+2018-03-03 00:40:38 INFO  MigrationFileModificationUtilTests:930 - Closing the LINUX/UNIX connection
+2018-03-03 00:42:41 INFO  MigrationFileModificationUtilTests:853 - Test Case execution started
+2018-03-03 00:42:41 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-03 00:42:41 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-03 00:42:41 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-03 00:42:41 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-03 00:42:41 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-03 00:42:41 INFO  MigrationFileModificationUtilTests:905 - Verify the file IntroscopeEnterpriseManager.properties is present in the base EM home directory
+2018-03-03 00:42:42 INFO  MigrationFileModificationUtilTests:909 - Base file location is: /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-03-03 00:42:42 INFO  MigrationFileModificationUtilTests:918 - Files exists in the base directory, hence going to update the existing property
+2018-03-03 00:42:42 INFO  DefaultPropUtil:330 - You have entered the file /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties to add/update a new/existing property
+2018-03-03 00:42:42 INFO  DefaultPropUtil:587 - The no of Keys in the file: [1]
+2018-03-03 00:42:42 INFO  DefaultPropUtil:592 - Command is: sed -i -e '/ca.migtration.depreciatedFileTest=100/ i #***This is the Comment Line for Key ca.migtration.depreciatedFileTest***' /root/Introscope10.0.0.36/config/IntroscopeEnterpriseManager.properties
+2018-03-03 00:42:42 INFO  DefaultPropUtil:607 - The Key updated successful....
+2018-03-03 00:42:42 INFO  MigrationFileModificationUtilTests:921 - Updating existing Property updated Successfully
+2018-03-03 00:42:42 INFO  MigrationFileModificationUtilTests:930 - Closing the LINUX/UNIX connection
+2018-03-03 02:02:21 INFO  MigrationFileModificationUtilTests:961 - Test Case execution started
+2018-03-03 02:02:21 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-03 02:02:21 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-03 02:02:21 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-03 02:02:21 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-03 02:02:22 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-03 02:02:22 INFO  MigrationFileModificationUtilTests:1016 - Verify the file MigrationTest.properties is present in the base EM home directory
+2018-03-03 02:02:22 INFO  MigrationFileModificationUtilTests:1020 - Base file location is: INVALID_PATH/MigrationTest.properties/MigrationTest.properties
+2018-03-03 02:02:22 INFO  MigrationFileModificationUtilTests:1029 - Files does NOT exist in the base directory, hence going to add the new property file
+2018-03-03 02:02:22 INFO  DefaultPropUtil:638 - The no of files in the current directory: []
+2018-03-03 02:02:22 INFO  DefaultPropUtil:641 - Command is: echo #***This is a test File for Migration Testing*** >> /root/Introscope10.0.0.36/config/shutoff/MigrationTest.properties 
+2018-03-03 02:02:22 INFO  MigrationFileModificationUtilTests:1041 - Closing the LINUX/UNIX connection
+2018-03-03 02:04:50 INFO  MigrationFileModificationUtilTests:961 - Test Case execution started
+2018-03-03 02:04:50 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-03 02:04:50 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-03 02:04:50 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-03 02:04:50 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-03 02:04:50 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-03 02:04:50 INFO  MigrationFileModificationUtilTests:1016 - Verify the file MigrationTest.properties is present in the base EM home directory
+2018-03-03 02:04:51 INFO  MigrationFileModificationUtilTests:1020 - Base file location is: INVALID_PATH/MigrationTest.properties/MigrationTest.properties
+2018-03-03 02:04:51 INFO  MigrationFileModificationUtilTests:1029 - Files does NOT exist in the base directory, hence going to add the new property file
+2018-03-03 02:04:51 INFO  DefaultPropUtil:638 - The no of files in the current directory: []
+2018-03-03 02:04:51 INFO  DefaultPropUtil:642 - Command is: echo #***This is a test File for Migration Testing*** >> /root/Introscope10.0.0.36/config/shutoff/MigrationTest.properties 
+2018-03-03 02:04:51 INFO  MigrationFileModificationUtilTests:1041 - Closing the LINUX/UNIX connection
+2018-03-03 02:05:39 INFO  MigrationFileModificationUtilTests:961 - Test Case execution started
+2018-03-03 02:05:39 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-03 02:05:39 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-03 02:05:39 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-03 02:05:39 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-03 02:05:40 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-03 02:05:40 INFO  MigrationFileModificationUtilTests:1016 - Verify the file MigrationTest.properties is present in the base EM home directory
+2018-03-03 02:05:40 INFO  MigrationFileModificationUtilTests:1020 - Base file location is: INVALID_PATH/MigrationTest.properties/MigrationTest.properties
+2018-03-03 02:05:40 INFO  MigrationFileModificationUtilTests:1029 - Files does NOT exist in the base directory, hence going to add the new property file
+2018-03-03 02:05:40 INFO  DefaultPropUtil:638 - The no of files in the current directory: []
+2018-03-03 02:05:40 INFO  DefaultPropUtil:642 - Command is: echo #***This is a test File for Migration Testing*** >> /root/Introscope10.0.0.36/config/shutoff/MigrationTest.properties 
+2018-03-03 02:05:40 INFO  MigrationFileModificationUtilTests:1041 - Closing the LINUX/UNIX connection
+2018-03-03 02:07:54 INFO  MigrationFileModificationUtilTests:961 - Test Case execution started
+2018-03-03 02:07:54 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-03 02:07:54 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-03 02:07:54 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-03 02:07:54 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-03 02:07:54 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-03 02:07:54 INFO  MigrationFileModificationUtilTests:1016 - Verify the file MigrationTest.properties is present in the base EM home directory
+2018-03-03 02:07:54 INFO  MigrationFileModificationUtilTests:1020 - Base file location is: INVALID_PATH/MigrationTest.properties/MigrationTest.properties
+2018-03-03 02:07:54 INFO  MigrationFileModificationUtilTests:1029 - Files does NOT exist in the base directory, hence going to add the new property file
+2018-03-03 02:07:54 INFO  DefaultPropUtil:638 - The no of files in the current directory: []
+2018-03-03 02:07:54 INFO  DefaultPropUtil:642 - Command is: echo #***This is a test File for Migration Testing*** >> /root/Introscope10.0.0.36/config/shutoff/MigrationTest.properties 
+2018-03-03 02:07:55 INFO  MigrationFileModificationUtilTests:1041 - Closing the LINUX/UNIX connection
+2018-03-03 02:09:47 INFO  MigrationFileModificationUtilTests:961 - Test Case execution started
+2018-03-03 02:09:47 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-03 02:09:47 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-03 02:09:47 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-03 02:09:47 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-03 02:09:47 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-03 02:09:47 INFO  MigrationFileModificationUtilTests:1016 - Verify the file MigrationTest.properties is present in the base EM home directory
+2018-03-03 02:09:48 INFO  MigrationFileModificationUtilTests:1020 - Base file location is: INVALID_PATH/MigrationTest.properties/MigrationTest.properties
+2018-03-03 02:09:48 INFO  MigrationFileModificationUtilTests:1029 - Files does NOT exist in the base directory, hence going to add the new property file
+2018-03-03 02:09:48 INFO  DefaultPropUtil:638 - The no of files in the current directory: []
+2018-03-03 02:09:48 INFO  DefaultPropUtil:642 - Command is: echo #***This is a test File for Migration Testing*** >> /root/Introscope10.0.0.36/config/shutoff/MigrationTest.properties 
+2018-03-03 02:09:48 INFO  MigrationFileModificationUtilTests:1041 - Closing the LINUX/UNIX connection
+2018-03-03 02:12:18 INFO  MigrationFileModificationUtilTests:961 - Test Case execution started
+2018-03-03 02:12:18 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-03 02:12:18 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-03 02:12:18 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-03 02:12:18 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-03 02:12:18 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-03 02:12:18 INFO  MigrationFileModificationUtilTests:1016 - Verify the file MigrationTest.properties is present in the base EM home directory
+2018-03-03 02:12:18 INFO  MigrationFileModificationUtilTests:1020 - Base file location is: INVALID_PATH/MigrationTest.properties/MigrationTest.properties
+2018-03-03 02:12:18 INFO  MigrationFileModificationUtilTests:1029 - Files does NOT exist in the base directory, hence going to add the new property file
+2018-03-03 02:12:18 INFO  DefaultPropUtil:639 - The no of files in the current directory: []
+2018-03-03 02:12:18 INFO  DefaultPropUtil:643 - Command is: echo #***This is a test File for Migration Testing*** >> /root/Introscope10.0.0.36/config/shutoff/MigrationTest.properties 
+2018-03-03 02:12:19 INFO  MigrationFileModificationUtilTests:1041 - Closing the LINUX/UNIX connection
+2018-03-03 02:13:19 INFO  MigrationFileModificationUtilTests:961 - Test Case execution started
+2018-03-03 02:13:19 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-03 02:13:19 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-03 02:13:19 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-03 02:13:19 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-03 02:13:20 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-03 02:13:20 INFO  MigrationFileModificationUtilTests:1016 - Verify the file MigrationTest.properties is present in the base EM home directory
+2018-03-03 02:13:20 INFO  MigrationFileModificationUtilTests:1020 - Base file location is: INVALID_PATH/MigrationTest.properties/MigrationTest.properties
+2018-03-03 02:13:20 INFO  MigrationFileModificationUtilTests:1029 - Files does NOT exist in the base directory, hence going to add the new property file
+2018-03-03 02:13:20 INFO  DefaultPropUtil:639 - The no of files in the current directory: []
+2018-03-03 02:13:20 INFO  DefaultPropUtil:643 - Command is: echo #***This is a test File for Migration Testing*** >> /root/Introscope10.0.0.36/config/shutoff/MigrationTest.properties 
+2018-03-03 02:13:20 INFO  MigrationFileModificationUtilTests:1032 - Added new Property file Successfully
+2018-03-03 02:13:20 INFO  MigrationFileModificationUtilTests:1041 - Closing the LINUX/UNIX connection
+2018-03-03 02:18:07 INFO  MigrationFileModificationUtilTests:961 - Test Case execution started
+2018-03-03 02:18:07 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-03 02:18:07 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-03 02:18:07 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-03 02:18:07 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-03 02:18:07 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-03 02:18:07 INFO  MigrationFileModificationUtilTests:1016 - Verify the file MigrationTest.properties is present in the base EM home directory
+2018-03-03 02:18:08 INFO  MigrationFileModificationUtilTests:1020 - Base file location is: INVALID_PATH/MigrationTest.properties/MigrationTest.properties
+2018-03-03 02:18:08 INFO  MigrationFileModificationUtilTests:1029 - Files does NOT exist in the base directory, hence going to add the new property file
+2018-03-03 02:18:08 INFO  DefaultPropUtil:639 - The no of files in the current directory: []
+2018-03-03 02:18:08 INFO  DefaultPropUtil:643 - Command is: echo +#***This is a test File for Migration Testing***+ >> /root/Introscope10.0.0.36/config/shutoff/MigrationTest.properties 
+2018-03-03 02:18:08 INFO  MigrationFileModificationUtilTests:1032 - Added new Property file Successfully
+2018-03-03 02:18:08 INFO  MigrationFileModificationUtilTests:1041 - Closing the LINUX/UNIX connection
+2018-03-03 02:23:50 INFO  MigrationFileModificationUtilTests:961 - Test Case execution started
+2018-03-03 02:23:50 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-03 02:23:50 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-03 02:23:50 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-03 02:23:50 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-03 02:23:50 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-03 02:23:50 INFO  MigrationFileModificationUtilTests:1016 - Verify the file MigrationTest.properties is present in the base EM home directory
+2018-03-03 02:23:51 INFO  MigrationFileModificationUtilTests:1020 - Base file location is: INVALID_PATH/MigrationTest.properties/MigrationTest.properties
+2018-03-03 02:23:51 INFO  MigrationFileModificationUtilTests:1029 - Files does NOT exist in the base directory, hence going to add the new property file
+2018-03-03 02:23:51 INFO  DefaultPropUtil:639 - The no of files in the current directory: []
+2018-03-03 02:23:51 INFO  DefaultPropUtil:643 - Command is: echo '#***This is a test File for Migration Testing***' >> /root/Introscope10.0.0.36/config/shutoff/MigrationTest.properties 
+2018-03-03 02:23:51 INFO  MigrationFileModificationUtilTests:1032 - Added new Property file Successfully
+2018-03-03 02:23:51 INFO  MigrationFileModificationUtilTests:1041 - Closing the LINUX/UNIX connection
+2018-03-03 02:27:19 INFO  MigrationFileModificationUtilTests:961 - Test Case execution started
+2018-03-03 02:27:19 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-03 02:27:19 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-03 02:27:19 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-03 02:27:19 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-03 02:27:19 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-03 02:27:19 INFO  MigrationFileModificationUtilTests:1016 - Verify the file MigrationTest.properties is present in the base EM home directory
+2018-03-03 02:27:20 INFO  MigrationFileModificationUtilTests:1020 - Base file location is: INVALID_PATH/MigrationTest.properties/MigrationTest.properties
+2018-03-03 02:27:20 INFO  MigrationFileModificationUtilTests:1029 - Files does NOT exist in the base directory, hence going to add the new property file
+2018-03-03 02:27:20 INFO  DefaultPropUtil:639 - The no of files in the current directory: []
+2018-03-03 02:27:20 INFO  DefaultPropUtil:643 - Command is: echo '#***This is a test File for Migration Testing***' >> /root/Introscope10.0.0.36/config/shutoff/MigrationTest.properties 
+2018-03-03 02:27:20 INFO  MigrationFileModificationUtilTests:1032 - Added new Property file Successfully
+2018-03-03 02:27:20 INFO  MigrationFileModificationUtilTests:1041 - Closing the LINUX/UNIX connection
+2018-03-03 02:30:54 INFO  MigrationFileModificationUtilTests:961 - Test Case execution started
+2018-03-03 02:30:54 INFO  PreCheckFiles:25 - Start pre-upgrade tasks...
+2018-03-03 02:30:54 INFO  FileVerification:72 - Returned the number of input files required by....3
+2018-03-03 02:30:54 INFO  PreCheckFiles:40 - You have selected OS type as LINUX/UNIX
+2018-03-03 02:30:54 INFO  PreCheckFiles:47 - Pre-upgrade tasks are done
+2018-03-03 02:30:55 INFO  LinuxUtils:44 - Connected to the linux server successfully...
+2018-03-03 02:30:55 INFO  MigrationFileModificationUtilTests:1016 - Verify the file MigrationTest.properties is present in the base EM home directory
+2018-03-03 02:30:55 INFO  MigrationFileModificationUtilTests:1020 - Base file location is: INVALID_PATH/MigrationTest.properties/MigrationTest.properties
+2018-03-03 02:30:55 INFO  MigrationFileModificationUtilTests:1029 - Files does NOT exist in the base directory, hence going to add the new property file
+2018-03-03 02:30:55 INFO  DefaultPropUtil:639 - The no of files in the current directory: []
+2018-03-03 02:30:55 INFO  DefaultPropUtil:643 - Command is: echo '#***This is a test File for Migration Testing***' >> /root/Introscope10.0.0.36/config/shutoff/MigrationTest.properties 
+2018-03-03 02:30:55 INFO  DefaultPropUtil:660 - The file added successful....
+2018-03-03 02:30:55 INFO  MigrationFileModificationUtilTests:1034 - Added new Property file Successfully
+2018-03-03 02:30:55 INFO  MigrationFileModificationUtilTests:1042 - Closing the LINUX/UNIX connection

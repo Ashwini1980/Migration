@@ -40,7 +40,7 @@ public class DefaultPropUtil {
     private static String op_updatePropBaseCVCurrentCommentDV = "updateProperty_BaseCVCurrentCommentDV";
     private static String op_updatePropBaseHPCVCurrentNULL = "updateProperty_BaseHPCVCurrentNULL";
     private static String op_updatePropBaseDPDVCurrentNULL = "updateProperty_BaseDPDVCurrentNULL";
-    //private static String op_updatePropBaseCommentLine1DVCurrentCommentLine2DV = "updateProperty_BaseCommentLine1DVCurrentCommentLine2DV"; 
+    private static String op_updatePropBaseCommentLine1DVCurrentCommentLine2DV = "updateProperty_BaseCommentLine1DVCurrentCommentLine2DV"; 
     private static String op_addNewPropFile = "addNewPropFile";
     
     static ArrayList <String> al = null;
@@ -214,6 +214,8 @@ public class DefaultPropUtil {
 		
 	}
 	
+	
+
 	//To get the path to add a new property file
 	
 	public static File getFilePath() {
@@ -372,42 +374,304 @@ public class DefaultPropUtil {
 	    		
 	    	}
 		
-	    } else  {
-	    	///Tomo will continue with other code for linux
-	    }
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	    } else if (operation.equalsIgnoreCase(op_updatePropBaseCVCurrentDV))  {
+	    	
+	    	String [] listOfProps = FileComparison.strChanged_Prop_Name_BaseCV_CurrentDVNDV_Migration_CV.trim().split(",");
+	    	
+	    	for (int i=0; i<listOfProps.length; i++) {
+	    		
+	    		String gCommands = "grep -i "+listOfProps[i]+" "+fileName+" |wc -l";
+	    		al = LinuxUtils.getResult(gCommands);
+	    		LOGGER.info("The no of Keys in the file: "+al);
+	    		String vCommands = "grep -i "+listOfProps[i]+"= "+fileName+" |cut -d "+"="+" -f2";
+	    		al = LinuxUtils.getResult(vCommands);
+	    		
+	    		String command = "sed -i 's/"+listOfProps[i]+"="+al.get(0)+"/"+listOfProps[i]+"="+default_Value+"/g' "+fileName+"";
+	    		LOGGER.info("Command is: "+command);
+	    		
+	    		if (al.get(0).equals("0") && al.size() < 1) {
+	    			blResult = true;
+	    			LOGGER.info("The Key is NOT present in the specific file, hence not going to update anything...");
+	    			Assert.assertFalse("The key is NOT present ", blResult);
+	    			
+	    		} else {
+	    			
+	    			LinuxUtils.getResult(command);
+	    			al.clear();
+	    			al = LinuxUtils.getResult(gCommands);
+	    			
+	    			if (!al.get(0).equals("0") && al.size() > 0) {
+	    				blResult = true;
+	    				LOGGER.info("The Key updated successful....");
+	    				Assert.assertTrue("The key updated successfully ", blResult);
+	    				return blResult;
+	    			} else {
+	    				LOGGER.info("The Key could NOT be added successful....");
+	    				Assert.assertTrue("The key added successfully ", false);
+	    			}
+	    			
+	    		}
+	    		
+	    	}
+	    	
+	    	
+	    } else if (operation.equalsIgnoreCase(op_updatePropBaseCommentCVCurrentDV)) {
+	    	
+	    	String [] listOfProps = FileComparison.strChanged_Prop_Name_BaseCommentCV_CurrentDV_Migration_CommentCV.trim().split(",");
+	    	
+	    	for (int i=0; i<listOfProps.length; i++) {
+	    		
+	    		String gCommands = "grep -i "+listOfProps[i]+" "+fileName+" |wc -l";
+	    		al = LinuxUtils.getResult(gCommands);
+	    		LOGGER.info("The no of Keys in the file: "+al);
+	    		String vCommands = "grep -i "+listOfProps[i]+"= "+fileName+" |cut -d "+"="+" -f2";
+	    		al = LinuxUtils.getResult(vCommands);
+	    		
+	    		String command = "sed -i 's/"+listOfProps[i]+"="+al.get(0)+"/"+"#"+listOfProps[i]+"="+default_Value+"/g' "+fileName+"";
+	    		LOGGER.info("Command is: "+command);
+	    		
+	    		if (al.get(0).equals("0") && al.size() <= 1) {
+	    			blResult = true;
+	    			LOGGER.info("The Key is NOT present in the specific file, hence not going to update anything...");
+	    			Assert.assertFalse("The key is NOT present ", blResult);
+	    			
+	    		} else {
+	    			
+	    			LinuxUtils.getResult(command);
+	    			al.clear();
+	    			al = LinuxUtils.getResult(gCommands);
+	    			
+	    			if (!al.get(0).equals("0") && al.size() > 0) {
+	    				blResult = true;
+	    				LOGGER.info("The Key updated successful....");
+	    				Assert.assertTrue("The key updated successfully ", blResult);
+	    				return blResult;
+	    			} else {
+	    				LOGGER.info("The Key could NOT be added successful....");
+	    				Assert.assertTrue("The key added successfully ", false);
+	    			}
+	    			
+	    		}
+	    		
+	    	}
+	    	
+	    	
+	    	
+	    } else if (operation.equalsIgnoreCase(op_updatePropBaseCVCurrentCommentDV)) {
+	    	
+	    	String [] listOfProps = FileComparison.strChanged_Prop_Name_BaseCV_CurrentCommentDV_Migration_CV.trim().split(",");
+	    	
+	    	for (int i=0; i<listOfProps.length; i++) {
+	    		
+	    		String gCommands = "grep -i "+listOfProps[i]+" "+fileName+" |wc -l";
+	    		al = LinuxUtils.getResult(gCommands);
+	    		LOGGER.info("The no of Keys in the file: "+al);
+	    		String vCommands = "grep -i "+listOfProps[i]+"= "+fileName+" |cut -d "+"="+" -f2";
+	    		al = LinuxUtils.getResult(vCommands);
+	    		
+	    		String command = "sed -i 's/"+listOfProps[i]+"="+al.get(0)+"/"+listOfProps[i]+"="+default_Value+"/g' "+fileName+"";
+	    		LOGGER.info("Command is: "+command);
+	    		
+	    		if (al.get(0).equals("0") && al.size() <= 1) {
+	    			blResult = true;
+	    			LOGGER.info("The Key is NOT present in the specific file, hence not going to update anything...");
+	    			Assert.assertFalse("The key is NOT present ", blResult);
+	    			
+	    		} else {
+	    			
+	    			LinuxUtils.getResult(command);
+	    			al.clear();
+	    			al = LinuxUtils.getResult(gCommands);
+	    			
+	    			if (!al.get(0).equals("0") && al.size() > 0) {
+	    				blResult = true;
+	    				LOGGER.info("The Key updated successful....");
+	    				Assert.assertTrue("The key updated successfully ", blResult);
+	    				return blResult;
+	    			} else {
+	    				LOGGER.info("The Key could NOT be added successful....");
+	    				Assert.assertTrue("The key added successfully ", false);
+	    			}
+	    			
+	    		}
+	    		
+	    	}
+	    	
+	    	
+	    } else if (operation.equalsIgnoreCase(op_updatePropBaseHPCVCurrentNULL)) {
+	    	
+	    	String [] listOfProps = FileComparison.strChanged_Prop_Name_BaseHPCV_CurrentNULL_Migration_HPCV.trim().split(",");
+	    	
+	    	for (int i=0; i< listOfProps.length; i++) {
+	    		
+	    		String gCommands = "grep -i "+listOfProps[i]+" "+fileName+" |wc -l";
+	    		al = LinuxUtils.getResult(gCommands);
+	    		LOGGER.info("The no of Keys in the file: "+al);
+	    		
+	    		//String command = "echo "+listOfProps[i]+"="+default_Value+" >> "+fileName+"";
+	    		String command = "sed -i -e '$a\\"+listOfProps[i]+"="+default_Value+"' "+fileName+"";
+	    		LOGGER.info("Command is: "+command);
+	    		
+	    		if (!al.get(0).equals("0") && al.size() > 0) {
+	    			blResult = true;
+	    			LOGGER.info("The Key is already present, hence not going to add anything...");
+	    			Assert.assertFalse("The key is already present ", blResult);
+	    			
+	    		} else {
+	    			
+	    			LinuxUtils.getResult(command);
+	    			al.clear();
+	    			al = LinuxUtils.getResult(gCommands);
+	    			
+	    			if (!al.get(0).equals("0") && al.size() > 0) {
+	    				blResult = true;
+	    				LOGGER.info("The Key added successful....");
+	    				Assert.assertTrue("The key added successfully ", blResult);
+	    				return blResult;
+	    			} else {
+	    				LOGGER.info("The Key could NOT be added successful....");
+	    				Assert.assertTrue("The key added successfully ", false);
+	    			}
+	    			
+	    		}
+	    		
+	    	}
+	    	
+	    	
+	    } else if (operation.equalsIgnoreCase(op_updatePropBaseDPDVCurrentNULL)) {
+	    	
+	    	String [] listOfProps = FileComparison.strChanged_Prop_Name_BaseDPDV_CurrentNULL_Migration_NULL.trim().split(",");
+	    	
+	    	for (int i=0; i< listOfProps.length; i++) {
+	    		
+	    		String gCommands = "grep -i "+listOfProps[i]+" "+fileName+" |wc -l";
+	    		al = LinuxUtils.getResult(gCommands);
+	    		LOGGER.info("The no of Keys in the file: "+al);
+	    		
+	    		//String command = "echo "+listOfProps[i]+"="+default_Value+" >> "+fileName+"";
+	    		String command = "sed -i -e '$a\\"+listOfProps[i]+"="+default_Value+"' "+fileName+"";
+	    		LOGGER.info("Command is: "+command);
+	    		
+	    		if (!al.get(0).equals("0") && al.size() > 0) {
+	    			blResult = true;
+	    			LOGGER.info("The Key is already present, hence not going to add anything...");
+	    			Assert.assertFalse("The key is already present ", blResult);
+	    			
+	    		} else {
+	    			
+	    			LinuxUtils.getResult(command);
+	    			al.clear();
+	    			al = LinuxUtils.getResult(gCommands);
+	    			
+	    			if (!al.get(0).equals("0") && al.size() > 0) {
+	    				blResult = true;
+	    				LOGGER.info("The Key added successful....");
+	    				Assert.assertTrue("The key added successfully ", blResult);
+	    				return blResult;
+	    			} else {
+	    				LOGGER.info("The Key could NOT be added successful....");
+	    				Assert.assertTrue("The key added successfully ", false);
+	    			}
+	    			
+	    		}
+	    		
+	    	}
+	    	
+	    	
+	    } else if (operation.equalsIgnoreCase(op_updatePropBaseCommentLine1DVCurrentCommentLine2DV)){
+	    	
+	    	String [] listOfProps = FileComparison.strChanged_prop_name_baseCommentLine1DV_currentCommentLine2DV_migration_CommentLine2DV.trim().split(",");
+	    	
+	    	for (int i=0; i<listOfProps.length; i++) {
+	    		
+	    		String gCommands = "grep -i "+listOfProps[i]+" "+fileName+" |wc -l";
+	    		al = LinuxUtils.getResult(gCommands);
+	    		LOGGER.info("The no of Keys in the file: "+al);
+	    		String vCommands = "grep -i "+listOfProps[i]+"= "+fileName+" |cut -d "+"="+" -f2";
+	    		al = LinuxUtils.getResult(vCommands);
+	    		
+	    		String command = "sed -i -e '/"+listOfProps[i]+"="+al.get(0)+"/ i " +"#***This is the Comment Line for Key "+listOfProps[i]+"***' "+fileName+"";
+	    		LOGGER.info("Command is: "+command);
+    		
+	    		if (al.get(0).equals("0") && al.size() <= 1) {
+	    			blResult = true;
+	    			LOGGER.info("The Key is NOT present in the specific file, hence not going to update anything...");
+	    			Assert.assertFalse("The key is NOT present ", blResult);
+	    			
+	    		} else {
+	    			
+	    			LinuxUtils.getResult(command);
+	    			al.clear();
+	    			al = LinuxUtils.getResult(gCommands);
+	    			
+	    			if (!al.get(0).equals("0") && al.size() > 0) {
+	    				blResult = true;
+	    				LOGGER.info("The Key updated successful....");
+	    				Assert.assertTrue("The key updated successfully ", blResult);
+	    				return blResult;
+	    			} else {
+	    				LOGGER.info("The Key could NOT be added successful....");
+	    				Assert.assertTrue("The key added successfully ", false);
+	    			}
+	    			
+	    		}
+	    		
+	    	}
+	    	
+	    } 
 		
 		return blResult;
 	}
+	
+	//Add a new file in Linux server
+	
+	public static boolean addFileInLinux (String fileName, String operation, String path) {
+		
+		boolean blResult = false;
+		
+		String listOfFiles [] = FileComparison.strAdd_NewFile_Name.trim().split(",");
+	
+		for (int i=0; i<listOfFiles.length; i++) {
+			
+			String gCommands = "find "+path+" -name "+fileName+"";
+			System.out.println("gCommand is: "+gCommands);
+			al = LinuxUtils.getResult(gCommands);
+			LOGGER.info("The no of files in the current directory: "+al);
+			System.out.println("AL size is: "+al.size());
+			
+			String command = "echo '"+"#***This is a test File for Migration Testing***"+"' >> "+path+"/"+fileName+" ";			
+			LOGGER.info("Command is: "+command);
+		
+			if (!(al.size() == 0)) {
+				blResult = true;
+				LOGGER.info("The File is already present in the specific file, hence not going to add it again...");
+				Assert.assertFalse("The file is already present ", blResult);
+				
+			} else {
+				
+				LinuxUtils.getResult(command);
+				al.clear();
+			    al = LinuxUtils.getResult(gCommands);
+				
+				if (!al.get(0).equals("0") && al.size() > 0) {
+					blResult = true;
+					LOGGER.info("The file added successful....");
+					Assert.assertTrue("The file added successfully ", blResult);
+					return blResult;
+					
+				} else {
+					LOGGER.info("The file could NOT be added successful....");
+					Assert.assertTrue("The file could NOT be added successfully ", false);
+				}
+				
+			}
+			
+		}
+		
+		return blResult;
+		
+	}
+	
 	
 	
 	
