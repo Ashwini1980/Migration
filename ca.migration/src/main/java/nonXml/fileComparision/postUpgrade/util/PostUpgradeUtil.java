@@ -18,6 +18,9 @@ import java.util.Map.Entry;
 import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import nonXml.common.LinuxUtils;
+
 import java.util.Properties;
 
 public class PostUpgradeUtil {
@@ -35,6 +38,7 @@ public class PostUpgradeUtil {
 	    BufferedReader br2 = null;
 	    static Path path = null;
 	    static List <String> lines = null;
+	    static ArrayList <String> al, al1 = null;
 	    
 	//Compare 2 files and find out the difference which includes comments 	    
 	public boolean unchangedPropComparison (File baseFile, File upgradeFile) {
@@ -704,6 +708,57 @@ public class PostUpgradeUtil {
 		}
 
 		return null;
+	}
+	
+	
+	/*
+	 * Linux Code for Post upgrade comparison
+	 */
+	
+	
+	public boolean unchangedPropComparisonLinux (String baseFile, String upgradeFile) {
+		
+		boolean blResult = false;
+			
+    		String base_command = "grep -Fxvf "+upgradeFile+" "+baseFile+"";
+    		LOGGER.info("Command is: "+base_command);
+    		
+    		String upgrade_command = "grep -Fxvf "+baseFile+" "+upgradeFile+"";
+    		LOGGER.info("Command is: "+upgrade_command);
+    		    		
+    		al = LinuxUtils.getResult(base_command);
+    		al1 = LinuxUtils.getResult(upgrade_command);
+    		
+    		if (!(al.size() == 0) && !(al1.size() == 0)) {
+    			
+    			blResult = true;
+    			LOGGER.info("The Files are NOT equal");
+    			
+    			LOGGER.info("The following contents are present in base file but not present in Upgraded File");
+    			LOGGER.info("===================================");
+    			for (int i=0; i< al.size(); i++) {
+    				LOGGER.info(al.get(i));
+    			}
+    			
+    			LOGGER.info("The following contents are present in upgraded file but not present in Base File");
+    			LOGGER.info("===================================");
+    			for (int i=0; i< al1.size(); i++) {
+    				LOGGER.info(al1.get(i));
+    			}
+    			
+    			Assert.assertFalse("The Files are NOT equal", blResult );    			
+    			
+    		} else {
+    			blResult = true;
+    			LOGGER.info("Both files are equal..");
+    			Assert.assertTrue("The Files are NOT equal", blResult );
+    		}
+
+
+		
+
+		LOGGER.info("Comparison result is : "+blResult);
+		return blResult;
 	}
 	
 }

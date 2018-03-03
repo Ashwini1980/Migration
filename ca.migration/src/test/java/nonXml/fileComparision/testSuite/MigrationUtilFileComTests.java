@@ -7,10 +7,13 @@ import org.codehaus.plexus.util.Os;
 import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import nonXml.common.LinuxUtils;
 import nonXml.common.PreCheckFiles;
 import nonXml.fileComparision.postUpgrade.util.PostUpgradeUtil;
+import nonXml.testVariables.EnvironmentVariables;
 import nonXml.testVariables.FileComparison;
 import nonXml.util.Utils;
 
@@ -19,16 +22,19 @@ public class MigrationUtilFileComTests {
 	
 		private static final Logger LOGGER = LoggerFactory.getLogger(MigrationUtilFileComTests.class); 
 		private String testcaseId;	
-		//public static String OSW = "Windows";
-		//public static String OSL = "Linux";
+		
+		public static String OSW = "Windows";
+		public static String OSL = "Linux";
 		
 		boolean isWindows = Os.isFamily(Os.FAMILY_WINDOWS);
-		boolean isUnix = Os.isFamily(Os.FAMILY_UNIX);
+		boolean isUnix = Os.isFamily(Os.FAMILY_UNIX);		
 		
 		PostUpgradeUtil postUpgradeUtil = new PostUpgradeUtil();
-
-	  @Test(groups = { "BAT" }, enabled = true, description = "To compare any unchanged properties file on base and upgraded folder, all content should be same")
-	  public void verify_ALM_UnchangedFileComaprision_properties() {
+		
+		
+      @Parameters ("OS")
+	  @Test(groups = { "BAT" }, enabled = false, description = "To compare any unchanged properties file on base and upgraded folder, all content should be same")
+	  public void verify_ALM_UnchangedFileComaprision_properties(String OS) {
 		  
 			String [] listOfFiles = FileComparison.strUnchanged_Prop_Files_Fc.trim().split(",");		
 		 	
@@ -41,9 +47,9 @@ public class MigrationUtilFileComTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {   
 	    		
-	    		if (isWindows) {
+	    		if (OS.equalsIgnoreCase(OSW)) {
 	    			
-	    			PreCheckFiles.preCheckFiles(isWindows);
+	    			PreCheckFiles.preCheckFiles(OSW);
 	    			
 	    			try {
 	    				
@@ -86,6 +92,63 @@ public class MigrationUtilFileComTests {
 	    			}
 	    			
 	    			
+	    		} else if (OS.equalsIgnoreCase(OSL)) {
+	    			
+	    			PreCheckFiles.preCheckFiles(OSL);
+	    			
+	    			//Connect to Linux Server 
+    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
+	    			
+	    			try {
+	    				
+	    	   		    LOGGER.info("Verify the file " +listOfFiles[i]+" is present in the base EM home directory");
+	    	   		    String base_loc = Utils.getFileLocationbasedonFileNameLinux(listOfFiles[i], Utils.getBase_em_home());
+	    	   		    
+	    	   		    String base_file = base_loc+"/"+listOfFiles[i];
+	    	   		    System.out.println("Base File is: "+base_file);
+	    	   		    
+	    	   		 if(!base_file.contains(Utils.getBase_em_home())){
+	    	    		   result = false;	
+	    	    		   LOGGER.info("File DOES NOT exist in the Base build, hence nothing to compare...");
+	    	    		   Assert.assertTrue("File comarison properties files test", result.equals(false)); 
+	    	    		   
+	    	    	    } else {
+	    	    	    	
+	    	    	    	LOGGER.info("File exists in the Base build, hence test case step Passed.");
+	    	   	    	    LOGGER.info("Verify the " +listOfFiles[i]+" is present in the upgrade config path or not.");	    	   	    	    
+	    	   	    	    
+	    	   	    	    String upgrade_loc = Utils.getFileLocationbasedonFileNameLinux (listOfFiles[i], Utils.getUpgrade_em_home());   
+	    	   	    	    String upgrade_value = upgrade_loc+"/"+listOfFiles[i];	
+	    	   	    	    System.out.println("Upgrade File is: "+upgrade_value);
+	    	   	    	    
+	    	   	    	 if(!upgrade_value.contains(Utils.getUpgrade_em_home())){
+	    	   	    		 
+		    	    		 result = false;	
+		    	    		 LOGGER.info("File DOES NOT exist in the Upgraded build, hence nothing to compare...");
+		    	    		 Assert.assertTrue("File comarison properties Unchanged file test", result.equals(false));     	   	    		 
+	    	   	    		 
+	    	   	    	 } else {
+	    	   	    		 
+	    	   	    		LOGGER.info("File exists in the upgraded build, hence going to compare the content...");
+	    	   	    		result = postUpgradeUtil.unchangedPropComparisonLinux(base_file, upgrade_value);
+	    	   	    		Assert.assertTrue("File comarison properties Unchanged file test", result.equals(true));    	   	    		
+	    	   	    		    	   	    		 
+	    	   	    	 }      	    
+	    	   	    	    
+	    	    	    	
+	    	    	    }
+	    	   		    
+	    				
+	    			} catch (Exception e) {
+	    				Assert.assertTrue(testcaseId + " failed because of the Exception "+e,false);   
+	    			}  finally {
+    	    			
+    	    			LOGGER.info("Closing the LINUX/UNIX connection");
+    	    			LinuxUtils.closeConnection();
+    	    			
+    	    		}
+	    			
+	    			
 	    		}
 	    }
 	    	} else {
@@ -98,10 +161,10 @@ public class MigrationUtilFileComTests {
 		  
 		  
 	  }
-
-
+      
+      @Parameters ("OS")
 	  @Test(groups = { "BAT" }, enabled = true, description ="If on Base and Current version have default property value then after migration, it should have Deafult Value.")
-	  public void verify_ALM_FileComaprision_properties_Base_Current_Migration_DefaultValue() {
+	  public void verify_ALM_FileComaprision_properties_Base_Current_Migration_DefaultValue(String OS) {
 		  
 			String [] listOfFiles = FileComparison.strChanged_File_Name_Base_Current_Migration_DefaultValue.trim().split(",");		
 		 	
@@ -114,9 +177,9 @@ public class MigrationUtilFileComTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {   
 	    		
-	    		if (isWindows) {
+	    		if (OS.equalsIgnoreCase(OSW)) {
 	    			
-	    			PreCheckFiles.preCheckFiles(isWindows);
+	    			PreCheckFiles.preCheckFiles(OSW);
 	    			
 	    			try {
 	    				
@@ -175,6 +238,10 @@ public class MigrationUtilFileComTests {
 	    			}
 	    			
 	    			
+	    		} else if (OS.equalsIgnoreCase(OSL)) {
+	    			
+	    			PreCheckFiles.preCheckFiles(OSL);
+	    			
 	    		}
 	    }
 	    	} else {
@@ -186,10 +253,10 @@ public class MigrationUtilFileComTests {
 		  
 		  
 	  }
-	  
-
-	  @Test(groups = { "BAT" }, enabled = true, description = "If base has CV, Current has DV/NDV then after migration it should have Customized Value(CV).")
-	  public void verify_ALM_FileComaprision_properties_BaseCV_CurrentDVNDV_Migration_CV() {
+	        
+      @Parameters ("OS")
+	  @Test(groups = { "BAT" }, enabled = false, description = "If base has CV, Current has DV/NDV then after migration it should have Customized Value(CV).")
+	  public void verify_ALM_FileComaprision_properties_BaseCV_CurrentDVNDV_Migration_CV(String OS) {
 		  
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseCV_CurrentDVNDV_Migration_CV.trim().split(",");		
 		 	
@@ -202,9 +269,9 @@ public class MigrationUtilFileComTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {   
 	    		
-	    		if (isWindows) {
+	    		if (OS.equalsIgnoreCase(OSW)) {
 	    			
-	    			PreCheckFiles.preCheckFiles(isWindows);
+	    			PreCheckFiles.preCheckFiles(OSW);
 	    			
 	    			try {
 	    				
@@ -273,10 +340,10 @@ public class MigrationUtilFileComTests {
 		  
 		  
 	  }
-	    
-
-	  @Test(groups = { "BAT" }, enabled = true, description = "If base has DV,  Current has NDV then after migration it should have NDV")
-	  public void verify_ALM_FileComaprision_properties_BaseDV_CurrentNDV_Migration_NDV() {
+	         
+      @Parameters ("OS")
+	  @Test(groups = { "BAT" }, enabled = false, description = "If base has DV,  Current has NDV then after migration it should have NDV")
+	  public void verify_ALM_FileComaprision_properties_BaseDV_CurrentNDV_Migration_NDV(String OS) {
 		  
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseDV_CurrentNDV_Migration_NDV.trim().split(",");		
 		 	
@@ -289,9 +356,9 @@ public class MigrationUtilFileComTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {   
 	    		
-	    		if (isWindows) {
+	    		if (OS.equalsIgnoreCase(OSW)) {
 	    			
-	    			PreCheckFiles.preCheckFiles(isWindows);
+	    			PreCheckFiles.preCheckFiles(OSW);
 	    			
 	    			try {
 	    				
@@ -359,9 +426,9 @@ public class MigrationUtilFileComTests {
 		  
 	  }
 	  
-
-	  @Test(groups = { "BAT" }, enabled = true, description = "If base has NULL,  Current has NDV then after migration it should have NDV")
-	  public void verify_ALM_FileComaprision_properties_BaseNULL_CurrentNDV_Migration_NDV() {
+      @Parameters ("OS")
+	  @Test(groups = { "BAT" }, enabled = false, description = "If base has NULL,  Current has NDV then after migration it should have NDV")
+	  public void verify_ALM_FileComaprision_properties_BaseNULL_CurrentNDV_Migration_NDV(String OS) {
 		  
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseNULL_CurrentNDV_Migration_NDV.trim().split(",");		
 		 	
@@ -374,9 +441,9 @@ public class MigrationUtilFileComTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {   
 	    		
-	    		if (isWindows) {
+	    		if (OS.equalsIgnoreCase(OSW)) {
 	    			
-	    			PreCheckFiles.preCheckFiles(isWindows);
+	    			PreCheckFiles.preCheckFiles(OSW);
 	    			
 	    			try {
 	    				
@@ -444,9 +511,9 @@ public class MigrationUtilFileComTests {
 		  
 	  }
 	  
-
-	  @Test(groups = { "BAT" }, enabled = true, description = "If base has AddNewCV,  Current has NULL then after migration it should have CV")
-	  public void verify_ALM_FileComaprision_properties_BaseAddNewCV_CurrentNULL_Migration_AddNewCV() {
+      @Parameters ("OS")
+	  @Test(groups = { "BAT" }, enabled = false, description = "If base has AddNewCV,  Current has NULL then after migration it should have CV")
+	  public void verify_ALM_FileComaprision_properties_BaseAddNewCV_CurrentNULL_Migration_AddNewCV(String OS) {
 		  
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseAddNewCV_CurrentNULL_Migration_CV.trim().split(",");		
 		 	
@@ -459,9 +526,9 @@ public class MigrationUtilFileComTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {   
 	    		
-	    		if (isWindows) {
+	    		if (OS.equalsIgnoreCase(OSW)) {
 	    			
-	    			PreCheckFiles.preCheckFiles(isWindows);
+	    			PreCheckFiles.preCheckFiles(OSW);
 	    			
 	    			try {
 	    				
@@ -529,9 +596,9 @@ public class MigrationUtilFileComTests {
 		  
 	  }
 	    
-
-	  @Test(groups = { "BAT" }, enabled = true, description = "If base has commented CV,  Current has DV then after migration it should have Commented CV")
-	  public void verify_ALM_FileComaprision_properties_BaseCommentCV_CurrentDV_Migration_CommentCV() {
+      @Parameters ("OS")
+	  @Test(groups = { "BAT" }, enabled = false, description = "If base has commented CV,  Current has DV then after migration it should have Commented CV")
+	  public void verify_ALM_FileComaprision_properties_BaseCommentCV_CurrentDV_Migration_CommentCV(String OS) {
 		  
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseCommentCV_CurrentDV_Migration_CommentCV.trim().split(",");		
 		 	
@@ -544,9 +611,9 @@ public class MigrationUtilFileComTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {   
 	    		
-	    		if (isWindows) {
+	    		if (OS.equalsIgnoreCase(OSW)) {
 	    			
-	    			PreCheckFiles.preCheckFiles(isWindows);
+	    			PreCheckFiles.preCheckFiles(OSW);
 	    			
 	    			try {
 	    				
@@ -614,9 +681,9 @@ public class MigrationUtilFileComTests {
 		  
 	  }
 
-
-	  @Test(groups = { "BAT" }, enabled = true, description = "If base has CV,  Current has CommentDV then after migration, it should be CV")
-	  public void verify_ALM_FileComaprision_properties_BaseCV_CurrentCommentDV_Migration_CommentCV() {
+      @Parameters ("OS")
+	  @Test(groups = { "BAT" }, enabled = false, description = "If base has CV,  Current has CommentDV then after migration, it should be CV")
+	  public void verify_ALM_FileComaprision_properties_BaseCV_CurrentCommentDV_Migration_CommentCV(String OS) {
 		  
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseCV_CurrentCommentDV_Migration_CV.trim().split(",");		
 		 	
@@ -629,9 +696,9 @@ public class MigrationUtilFileComTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {   
 	    		
-	    		if (isWindows) {
+	    		if (OS.equalsIgnoreCase(OSW)) {
 	    			
-	    			PreCheckFiles.preCheckFiles(isWindows);
+	    			PreCheckFiles.preCheckFiles(OSW);
 	    			
 	    			try {
 	    				
@@ -698,10 +765,10 @@ public class MigrationUtilFileComTests {
 	    	}
 		  
 	  }
-
-
-	  @Test(groups = { "BAT" }, enabled = true, description = "If base has Comment1 DV,  Current has Comment2 DV then after migration, it should be Commen2 DV")
-	  public void verify_ALM_FileComaprision_properties_BaseComment1DV_CurrentComment2DV_Migration_Comment2DV() {
+      
+      @Parameters ("OS")
+	  @Test(groups = { "BAT" }, enabled = false, description = "If base has Comment1 DV,  Current has Comment2 DV then after migration, it should be Commen2 DV")
+	  public void verify_ALM_FileComaprision_properties_BaseComment1DV_CurrentComment2DV_Migration_Comment2DV(String OS) {
 		  
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseCommentLine1DV_CurrentCommentLine2DV_Migration_CommentLine2DV.trim().split(",");		
 		 	
@@ -714,9 +781,9 @@ public class MigrationUtilFileComTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {   
 	    		
-	    		if (isWindows) {
+	    		if (OS.equalsIgnoreCase(OSW)) {
 	    			
-	    			PreCheckFiles.preCheckFiles(isWindows);
+	    			PreCheckFiles.preCheckFiles(OSW);
 	    			
 	    			try {
 	    				
@@ -778,9 +845,9 @@ public class MigrationUtilFileComTests {
 		  
 	  }
 
-
-	  @Test(groups = { "BAT" }, enabled = true, description = "If base has HPCV,  Current has NULL then after migration, it should be HPCV")
-	  public void verify_ALM_FileComaprision_properties_BaseHPCV_CurrentNULL_Migration_HPCV() {
+      @Parameters ("OS")
+	  @Test(groups = { "BAT" }, enabled = false, description = "If base has HPCV,  Current has NULL then after migration, it should be HPCV")
+	  public void verify_ALM_FileComaprision_properties_BaseHPCV_CurrentNULL_Migration_HPCV(String OS) {
 		  
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseHPCV_CurrentNULL_Migration_HPCV.trim().split(",");		
 		 	
@@ -793,9 +860,9 @@ public class MigrationUtilFileComTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {   
 	    		
-	    		if (isWindows) {
+	    		if (OS.equalsIgnoreCase(OSW)) {
 	    			
-	    			PreCheckFiles.preCheckFiles(isWindows);
+	    			PreCheckFiles.preCheckFiles(OSW);
 	    			
 	    			try {
 	    				
@@ -863,9 +930,9 @@ public class MigrationUtilFileComTests {
 		  
 	  }
 	  
-
-	  @Test(groups = { "BAT" }, enabled = true, description = "If base has DPDV,  Current has NULL then after migration, it should be NULL")
-	  public void verify_ALM_FileComaprision_properties_BaseDPDV_CurrentNULL_Migration_NULL() {
+      @Parameters ("OS")
+	  @Test(groups = { "BAT" }, enabled = false, description = "If base has DPDV,  Current has NULL then after migration, it should be NULL")
+	  public void verify_ALM_FileComaprision_properties_BaseDPDV_CurrentNULL_Migration_NULL(String OS) {
 		  
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseDPDV_CurrentNULL_Migration_NULL.trim().split(",");		
 		 	
@@ -878,9 +945,9 @@ public class MigrationUtilFileComTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {   
 	    		
-	    		if (isWindows) {
+	    		if (OS.equalsIgnoreCase(OSW)) {
 	    			
-	    			PreCheckFiles.preCheckFiles(isWindows);
+	    			PreCheckFiles.preCheckFiles(OSW);
 	    			
 	    			try {
 	    				

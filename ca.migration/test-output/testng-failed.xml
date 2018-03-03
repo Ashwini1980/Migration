@@ -4,11 +4,11 @@
   <parameter name="OS" value="Linux"/>
   <test name="Migration Window Test(failed)">
     <classes>
-      <class name="nonXml.fileModification.testSuite.MigrationFileModificationUtilTests">
+      <class name="nonXml.fileComparision.testSuite.MigrationUtilFileComTests">
         <methods>
-          <include name="verify_ALM_preUpgrade_AddNewFile_BaseVersion" invocation-numbers="0"/>
+          <include name="verify_ALM_UnchangedFileComaprision_properties" invocation-numbers="0"/>
         </methods>
-      </class> <!-- nonXml.fileModification.testSuite.MigrationFileModificationUtilTests -->
+      </class> <!-- nonXml.fileComparision.testSuite.MigrationUtilFileComTests -->
     </classes>
   </test> <!-- Migration Window Test(failed) -->
 </suite> <!-- Failed suite [Migration Suite] -->

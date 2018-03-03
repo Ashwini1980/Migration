@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Migration_Suite">
-              <span class="suite-name border-passed">Migration Suite</span>
+              <span class="suite-name border-failed">Migration Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Migration_Suite">
-                    <span>C:\Users\patas07\Desktop\MyData\GIT Code\ca.migration\src\main\resources\testng_preUpgradeFile.xml</span>
+                    <span>C:\Users\patas07\Desktop\MyData\GIT Code\ca.migration\src\main\resources\testng_FileComparison.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Migration_Suite" class="hide-methods passed suite-Migration_Suite"> (hide)</a> <!-- hide-methods passed suite-Migration_Suite -->
-                      <a href="#" panel-name="suite-Migration_Suite" class="show-methods passed suite-Migration_Suite"> (show)</a> <!-- show-methods passed suite-Migration_Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Migration_Suite" class="hide-methods failed suite-Migration_Suite"> (hide)</a> <!-- hide-methods failed suite-Migration_Suite -->
+                      <a href="#" panel-name="suite-Migration_Suite" class="show-methods failed suite-Migration_Suite"> (show)</a> <!-- show-methods failed suite-Migration_Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Migration_Suite">
+                    <div class="method-list-content failed suite-Migration_Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Migration_Suite" title="nonXml.fileModification.testSuite.MigrationFileModificationUtilTests" hash-for-method="verify_ALM_preUpgrade_AddNewFile_BaseVersion(Linux)">verify_ALM_preUpgrade_AddNewFile_BaseVersion(Linux)</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Migration_Suite" title="nonXml.fileComparision.testSuite.MigrationUtilFileComTests" hash-for-method="verify_ALM_UnchangedFileComaprision_properties(Linux)">verify_ALM_UnchangedFileComaprision_properties(Linux)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Migration_Suite -->
+                    </div> <!-- method-list-content failed suite-Migration_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,28 +117,36 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Migration_Suite" class="panel Migration_Suite">
-          <div class="suite-Migration_Suite-class-passed">
+          <div class="suite-Migration_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">nonXml.fileModification.testSuite.MigrationFileModificationUtilTests</span>
+              <img src="failed.png"/>
+              <span class="class-name">nonXml.fileComparision.testSuite.MigrationUtilFileComTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verify_ALM_preUpgrade_AddNewFile_BaseVersion(Linux)">
-                  </a> <!-- verify_ALM_preUpgrade_AddNewFile_BaseVersion(Linux) -->
-                  <span class="method-name">verify_ALM_preUpgrade_AddNewFile_BaseVersion</span>
+                  <a name="verify_ALM_UnchangedFileComaprision_properties(Linux)">
+                  </a> <!-- verify_ALM_UnchangedFileComaprision_properties(Linux) -->
+                  <span class="method-name">verify_ALM_UnchangedFileComaprision_properties</span>
                   <span class="parameters">(Linux)</span>
+                  <div class="stack-trace">java.lang.AssertionError: The Files are NOT equal
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertFalse(Assert.java:64)
+	at nonXml.fileComparision.postUpgrade.util.PostUpgradeUtil.unchangedPropComparisonLinux(PostUpgradeUtil.java:749)
+	at nonXml.fileComparision.testSuite.MigrationUtilFileComTests.verify_ALM_UnchangedFileComaprision_properties(MigrationUtilFileComTests.java:133)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
                   <em>
-(ConfigUtility Merge feature - Adding a new file in Base version but that file not present incurrent build then after migration that newly added file should be present unde the specific directory)                  </em>
+(To compare any unchanged properties file on base and upgraded folder, all content should be same)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Migration_Suite-class-passed -->
+          </div> <!-- suite-Migration_Suite-class-failed -->
         </div> <!-- panel Migration_Suite -->
         <div panel-name="test-xml-Migration_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\patas07\Desktop\MyData\GIT Code\ca.migration\src\main\resources\testng_preUpgradeFile.xml</span>
+            <span class="header-content">C:\Users\patas07\Desktop\MyData\GIT Code\ca.migration\src\main\resources\testng_FileComparison.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -148,7 +156,7 @@
   &lt;parameter name=&quot;OS&quot; value=&quot;Linux&quot;/&gt;
   &lt;test name=&quot;Migration Window Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;nonXml.fileModification.testSuite.MigrationFileModificationUtilTests&quot;/&gt;
+      &lt;class name=&quot;nonXml.fileComparision.testSuite.MigrationUtilFileComTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Migration Window Test --&gt;
 &lt;/suite&gt; &lt;!-- Migration Suite --&gt;
@@ -173,10 +181,10 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">preUpgrade</span>
+              <span class="test-group-name">BAT</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">verify_ALM_preUpgrade_AddNewFile_BaseVersion</span>
+                <span class="method-in-group-name">verify_ALM_UnchangedFileComaprision_properties</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -198,9 +206,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verify_ALM_preUpgrade_AddNewFile_BaseVersion')
-data.setCell(0, 2, 'nonXml.fileModification.testSuite.MigrationFileModificationUtilTests')
-data.setCell(0, 3, 1028);
+data.setCell(0, 1, 'verify_ALM_UnchangedFileComaprision_properties')
+data.setCell(0, 2, 'nonXml.fileComparision.testSuite.MigrationUtilFileComTests')
+data.setCell(0, 3, 1056);
 window.suiteTableData['Migration_Suite']= { tableData: data, tableDiv: 'times-div-Migration_Suite'}
 return data;
 }
@@ -220,29 +228,31 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Migration_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">9 ignored methods</span>
+            <span class="header-content">10 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">nonXml.fileModification.testSuite.MigrationFileModificationUtilTests</span>
+              <span class="ignored-class-name">nonXml.fileComparision.testSuite.MigrationUtilFileComTests</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">verify_ALM_preUpgrade_BaseCV_CurrentCommentDV</span>
+                <span class="ignored-method-name">verify_ALM_FileComaprision_properties_BaseDPDV_CurrentNULL_Migration_NULL</span>
                 <br/>
-                <span class="ignored-method-name">verify_ALM_preUpgrade_BaseAddNewCV_CurrentNull</span>
+                <span class="ignored-method-name">verify_ALM_FileComaprision_properties_Base_Current_Migration_DefaultValue</span>
                 <br/>
-                <span class="ignored-method-name">verify_ALM_preUpgrade_BaseCV_CurrentDVNDV</span>
+                <span class="ignored-method-name">verify_ALM_FileComaprision_properties_BaseAddNewCV_CurrentNULL_Migration_AddNewCV</span>
                 <br/>
-                <span class="ignored-method-name">verify_ALM_preUpgrade_BaseHPCV_CurrentNULL</span>
+                <span class="ignored-method-name">verify_ALM_FileComaprision_properties_BaseCommentCV_CurrentDV_Migration_CommentCV</span>
                 <br/>
-                <span class="ignored-method-name">verify_ALM_preUpgrade_BaseNULL_CurrentNDV</span>
+                <span class="ignored-method-name">verify_ALM_FileComaprision_properties_BaseComment1DV_CurrentComment2DV_Migration_Comment2DV</span>
                 <br/>
-                <span class="ignored-method-name">verify_ALM_preUpgrade_BaseCommentLine1DV_CurrentCommentLine2DV</span>
+                <span class="ignored-method-name">verify_ALM_FileComaprision_properties_BaseCV_CurrentCommentDV_Migration_CommentCV</span>
                 <br/>
-                <span class="ignored-method-name">verify_ALM_preUpgrade_BaseDV_CurrentNDV</span>
+                <span class="ignored-method-name">verify_ALM_FileComaprision_properties_BaseCV_CurrentDVNDV_Migration_CV</span>
                 <br/>
-                <span class="ignored-method-name">verify_ALM_preUpgrade_BaseCommentCV_CurrentDV</span>
+                <span class="ignored-method-name">verify_ALM_FileComaprision_properties_BaseHPCV_CurrentNULL_Migration_HPCV</span>
                 <br/>
-                <span class="ignored-method-name">verify_ALM_preUpgrade_BaseDPDV_CurrentNULL</span>
+                <span class="ignored-method-name">verify_ALM_FileComaprision_properties_BaseDV_CurrentNDV_Migration_NDV</span>
+                <br/>
+                <span class="ignored-method-name">verify_ALM_FileComaprision_properties_BaseNULL_CurrentNDV_Migration_NDV</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -254,9 +264,11 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">nonXml.fileModification.testSuite.MigrationFileModificationUtilTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">nonXml.fileComparision.testSuite.MigrationUtilFileComTests</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">verify_ALM_preUpgrade_AddNewFile_BaseVersion(Linux)</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verify_ALM_UnchangedFileComaprision_properties(Linux)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->

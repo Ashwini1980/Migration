@@ -6,6 +6,7 @@ import org.codehaus.plexus.util.Os;
 import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import nonXml.common.LinuxUtils;
@@ -22,13 +23,17 @@ public class MigrationFileExistenceUtilTests {
 	boolean isWindows = Os.isFamily(Os.FAMILY_WINDOWS);
 	boolean isUnix = Os.isFamily(Os.FAMILY_UNIX);
 	
+	private static String OSW = "Windows";
+	private static String OSL = "Linux";
+	
+	@Parameters ("OS")
 	@Test (groups = { "BAT" }, enabled = true, description = "ConfigUtility Merge feature - Verify migration for file depreciated properties files")	
 	
-	public void verify_ALM_Depreciated_properties_Files() {
+	public void verify_ALM_Depreciated_properties_Files(String OS) {
 		
 		//If OS other than Windows/Linux, fail it
 				
-		if (isWindows == true || isUnix == true ) {
+		if (OS.equalsIgnoreCase(OSW) || OS.equalsIgnoreCase(OSL) ) {
 			
 			String [] listOfFiles = FileVerification.strDepriciated_Prop_Files.trim().split(",");		
 		 	
@@ -41,9 +46,9 @@ public class MigrationFileExistenceUtilTests {
 	    	if (!listOfFiles[0].isEmpty() && listOfFiles.length > 0) {
 	    	for (int i=0; i<listOfFiles.length; i++) {    		
 	    		
-	    		if (isWindows) {
+	    		if (OS.equalsIgnoreCase(OSW)) {
 	    			
-	    			PreCheckFiles.preCheckFiles(isWindows);
+	    			PreCheckFiles.preCheckFiles(OSW);
 	    	    	   
 	    	    	try{	    	
 	    	   		
@@ -83,9 +88,9 @@ public class MigrationFileExistenceUtilTests {
 	    	    		}
 	    	    		LOGGER.info("Test Case execution ended for depreciated properties file test.");
 	    			
-	    		} 	else if (!isWindows) {
+	    		} 	else if (OS.equalsIgnoreCase(OSL)) {
 	    			
-	    	    		PreCheckFiles.preCheckFiles(!isWindows);   
+	    	    		PreCheckFiles.preCheckFiles(OSL);   
 	    	    		
 	    	    		//Connect to Linux Server 
 	    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
@@ -162,12 +167,12 @@ public class MigrationFileExistenceUtilTests {
    
 	}
 
-
+	@Parameters ("OS")
 	@Test (groups = { "BAT" }, enabled = true, description = "ConfigUtility Merge feature - Verify migration for file Additonal properties files")	
 	
-	public void verify_ALM_Addtional_properties_Files() {	
+	public void verify_ALM_Addtional_properties_Files(String OS) {	
 		
-		if (isWindows == true || isUnix == true) {
+		if (OS.equalsIgnoreCase(OSW) || OS.equalsIgnoreCase(OSL)) {
 			
 			String [] listOfFiles = FileVerification.strNew_Prop_Files.trim().split(",");	
 			System.out.println("User ented: "+listOfFiles.length);		
@@ -181,9 +186,9 @@ public class MigrationFileExistenceUtilTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {    		
 	    		
-	    			if (isWindows) {
+	    			if (OS.equalsIgnoreCase(OSW)) {
 	    			
-	    				PreCheckFiles.preCheckFiles(isWindows);
+	    				PreCheckFiles.preCheckFiles(OSW);
 	    	    	   
 	    				try{	    	
 	    	   		
@@ -223,9 +228,9 @@ public class MigrationFileExistenceUtilTests {
 	    	    		}
 	    	    		LOGGER.info("Test Case execution ended for Additional properties file test.");
 	    			
-	    		} 	else if (!isWindows) {
+	    		} 	else if (OS.equalsIgnoreCase(OSL)) {
 	    			
-	    	    		PreCheckFiles.preCheckFiles(!isWindows);   
+	    	    		PreCheckFiles.preCheckFiles(OSL);   
 	    	    		
 	    	    		//Connect to Server 
 	    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
@@ -301,12 +306,12 @@ public class MigrationFileExistenceUtilTests {
 		
 	}
 
-
+	@Parameters ("OS")
 	@Test (groups = { "BAT" }, enabled = true, description = "ConfigUtility Merge feature - Verify migration for file Unchanged properties files")	
 	
-	public void verify_ALM_Unchanged_properties_Files() {	
+	public void verify_ALM_Unchanged_properties_Files(String OS) {	
 		
-		if (isWindows == true || isUnix == true) {
+		if (OS.equalsIgnoreCase(OSW) || OS.equalsIgnoreCase(OSL)) {
 			
 			String [] listOfFiles = FileVerification.strUnchanged_Prop_Files.trim().split(",");	
 			System.out.println("User entered: "+listOfFiles.length);		
@@ -321,9 +326,9 @@ public class MigrationFileExistenceUtilTests {
 	    		
 	    		for (int i=0; i<listOfFiles.length; i++) {    		
 	    		
-	    			if (isWindows) {
+	    			if (OS.equalsIgnoreCase(OSW)) {
 	    			
-	    				PreCheckFiles.preCheckFiles(isWindows);
+	    				PreCheckFiles.preCheckFiles(OSW);
 	    	    	   
 	    				try{	    	
 	    	   		
@@ -363,9 +368,9 @@ public class MigrationFileExistenceUtilTests {
 	    	    		}
 	    	    		LOGGER.info("Test Case execution ended for Unchanged properties file test.");
 	    			
-	    		} 	else if (!isWindows) {
+	    		} 	else if (OS.equalsIgnoreCase(OSL)) {
 	    			
-	    	    		PreCheckFiles.preCheckFiles(!isWindows);   
+	    	    		PreCheckFiles.preCheckFiles(OSL);   
 	    	    		//Connect to Server 
 	    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
 	    	    		
