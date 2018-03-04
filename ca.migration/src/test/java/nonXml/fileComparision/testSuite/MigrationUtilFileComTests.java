@@ -163,7 +163,7 @@ public class MigrationUtilFileComTests {
 	  }
       
       @Parameters ("OS")
-	  @Test(groups = { "BAT" }, enabled = true, description ="If on Base and Current version have default property value then after migration, it should have Deafult Value.")
+	  @Test(groups = { "BAT" }, enabled = false, description ="If on Base and Current version have default property value then after migration, it should have Deafult Value.")
 	  public void verify_ALM_FileComaprision_properties_Base_Current_Migration_DefaultValue(String OS) {
 		  
 			String [] listOfFiles = FileComparison.strChanged_File_Name_Base_Current_Migration_DefaultValue.trim().split(",");		
@@ -241,6 +241,65 @@ public class MigrationUtilFileComTests {
 	    		} else if (OS.equalsIgnoreCase(OSL)) {
 	    			
 	    			PreCheckFiles.preCheckFiles(OSL);
+	    			
+	    			//Connect to Linux Server 
+    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
+	    			
+	    			try {
+	    				
+	    	   		    LOGGER.info("Verify the file " +listOfFiles[i]+" is present in the base EM home directory");
+	    	   		    String base_loc = Utils.getFileLocationbasedonFileNameLinux(listOfFiles[i], Utils.getBase_em_home());
+	    	   		    
+	    	   		    String base_value = base_loc+"/"+listOfFiles[i];
+	    	   		    System.out.println("Base File is: "+base_value);
+	    	   		    
+	    	   		 if(!base_value.contains(Utils.getBase_em_home())){
+	    	    		   result = false;	
+	    	    		   LOGGER.info("File DOES NOT exist in the Base build, hence nothing to compare...");
+	    	    		   Assert.assertTrue("Default property value file test", result.equals(false)); 
+	    	    		   
+	    	    	    } else {
+	    	    	    	
+	    	    	    	LOGGER.info("File exists in the Base build, hence test case step Passed.");
+	    	   	    	    LOGGER.info("Verify the " +listOfFiles[i]+" is present either in the upgrade/fresh config path or not.");	    	   	    	    
+	    	   	    	    
+	    	   	    	    String upgrade_loc = Utils.getFileLocationbasedonFileNameLinux (listOfFiles[i], Utils.getUpgrade_em_home());   
+	    	   	    	    String upgrade_value = upgrade_loc+"/"+listOfFiles[i];	
+	    	   	    	    LOGGER.info("Upgrade File is: "+upgrade_value);
+	    	   	    	    
+	    	   	    	    String fresh_loc = Utils.getFileLocationbasedonFileNameLinux (listOfFiles[i], Utils.getFresh_em_home());   
+	    	   	    	    String fresh_value = fresh_loc+"/"+listOfFiles[i];	
+	    	   	    	    LOGGER.info("Fresh File is: "+fresh_value);	    	   	    	    
+	    	   	    	    
+	    	   	    	 if(!upgrade_value.contains(Utils.getUpgrade_em_home()) && !fresh_value.contains(Utils.getFresh_em_home())){
+	    	   	    		 
+		    	    		 result = false;	
+		    	    		 LOGGER.info("File DOES NOT exist either in the Upgraded/Fresh build, hence nothing to compare...");
+		    	    		 Assert.assertTrue("Default property value file test", result.equals(false));     	   	    		 
+	    	   	    		 
+	    	   	    	 } else {
+	    	   	    		 
+	    	   	    		LOGGER.info("File exists in both the upgraded/fresh build, hence going to compare the value...");
+	    	   	    		result = postUpgradeUtil.isDefaultValues(FileComparison.strChanged_Prop_Name_Base_Current_Migration_DefaultValue, base_value, upgrade_value, fresh_value);
+	    	   	    		Assert.assertTrue("Default property value file test", result.equals(true));    	   	    		
+	    	   	    		    	   	    		 
+	    	   	    	 }      	    
+	    	   	    	    
+	    	    	    	
+	    	    	    }
+	    	   		    
+	    				
+	    			} catch (Exception e) {
+	    				Assert.assertTrue(testcaseId + " failed because of the Exception "+e,false);   
+	    			}  finally {
+    	    			
+    	    			LOGGER.info("Closing the LINUX/UNIX connection");
+    	    			LinuxUtils.closeConnection();
+    	    			
+    	    		}
+	    			
+	    			
+	    			
 	    			
 	    		}
 	    }
@@ -327,6 +386,69 @@ public class MigrationUtilFileComTests {
 	    			} catch (Exception e) {
 	    				Assert.assertTrue(testcaseId + " failed because of the Exception "+e,false);   
 	    			}
+	    			
+	    			
+	    		} else if (OS.equalsIgnoreCase(OSL)) {
+	    			
+	    			PreCheckFiles.preCheckFiles(OSL);
+	    			
+	    			//Connect to Linux Server 
+    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
+	    			
+	    			try {
+	    				
+	    	   		    LOGGER.info("Verify the file " +listOfFiles[i]+" is present in the base EM home directory");
+	    	   		    String base_loc = Utils.getFileLocationbasedonFileNameLinux(listOfFiles[i], Utils.getBase_em_home());
+	    	   		    
+	    	   		    String base_value = base_loc+"/"+listOfFiles[i];
+	    	   		    System.out.println("Base File is: "+base_value);
+	    	   		    
+	    	   		 if(!base_value.contains(Utils.getBase_em_home())){
+	    	    		   result = false;	
+	    	    		   LOGGER.info("File DOES NOT exist in the Base build, hence nothing to compare...");
+	    	    		   Assert.assertTrue("Default property value file test", result.equals(false)); 
+	    	    		   
+	    	    	    } else {
+	    	    	    	
+	    	    	    	LOGGER.info("File exists in the Base build, hence test case step Passed.");
+	    	   	    	    LOGGER.info("Verify the " +listOfFiles[i]+" is present either in the upgrade/fresh config path or not.");	    	   	    	    
+	    	   	    	    
+	    	   	    	    String upgrade_loc = Utils.getFileLocationbasedonFileNameLinux (listOfFiles[i], Utils.getUpgrade_em_home());   
+	    	   	    	    String upgrade_value = upgrade_loc+"/"+listOfFiles[i];	
+	    	   	    	    LOGGER.info("Upgrade File is: "+upgrade_value);
+	    	   	    	    
+	    	   	    	    String fresh_loc = Utils.getFileLocationbasedonFileNameLinux (listOfFiles[i], Utils.getFresh_em_home());   
+	    	   	    	    String fresh_value = fresh_loc+"/"+listOfFiles[i];	
+	    	   	    	    LOGGER.info("Fresh File is: "+fresh_value);	    	   	    	    
+	    	   	    	    
+	    	   	    	 if(!upgrade_value.contains(Utils.getUpgrade_em_home()) && !fresh_value.contains(Utils.getFresh_em_home())){
+	    	   	    		 
+		    	    		 result = false;	
+		    	    		 LOGGER.info("File DOES NOT exist either in the Upgraded/Fresh build, hence nothing to compare...");
+		    	    		 Assert.assertTrue("Default property value file test", result.equals(false));     	   	    		 
+	    	   	    		 
+	    	   	    	 } else {
+	    	   	    		 
+	    	   	    		LOGGER.info("File exists in both the upgraded/fresh build, hence going to compare the value...");
+	    	   	    		result = postUpgradeUtil.isBaseCVCurrentDVUpgradeCV(FileComparison.strChanged_Prop_Name_BaseCV_CurrentDVNDV_Migration_CV, base_value, upgrade_value, fresh_value);
+	    	   	    		Assert.assertTrue("Default property value file test", result.equals(true));    	   	    		
+	    	   	    		    	   	    		 
+	    	   	    	 }      	    
+	    	   	    	    
+	    	    	    	
+	    	    	    }
+	    	   		    
+	    				
+	    			} catch (Exception e) {
+	    				Assert.assertTrue(testcaseId + " failed because of the Exception "+e,false);   
+	    			}  finally {
+    	    			
+    	    			LOGGER.info("Closing the LINUX/UNIX connection");
+    	    			LinuxUtils.closeConnection();
+    	    			
+    	    		}
+	    			
+	    			
 	    			
 	    			
 	    		}
@@ -416,6 +538,67 @@ public class MigrationUtilFileComTests {
 	    			}
 	    			
 	    			
+	    		} else if (OS.equalsIgnoreCase(OSL)) {
+	    			
+	    			PreCheckFiles.preCheckFiles(OSL);
+	    			
+	    			//Connect to Linux Server 
+    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
+	    			
+	    			try {
+	    				
+	    	   		    LOGGER.info("Verify the file " +listOfFiles[i]+" is present in the base EM home directory");
+	    	   		    String base_loc = Utils.getFileLocationbasedonFileNameLinux(listOfFiles[i], Utils.getBase_em_home());
+	    	   		    
+	    	   		    String base_value = base_loc+"/"+listOfFiles[i];
+	    	   		    System.out.println("Base File is: "+base_value);
+	    	   		    
+	    	   		 if(!base_value.contains(Utils.getBase_em_home())){
+	    	    		   result = false;	
+	    	    		   LOGGER.info("File DOES NOT exist in the Base build, hence nothing to compare...");
+	    	    		   Assert.assertTrue("Default property value file test", result.equals(false)); 
+	    	    		   
+	    	    	    } else {
+	    	    	    	
+	    	    	    	LOGGER.info("File exists in the Base build, hence test case step Passed.");
+	    	   	    	    LOGGER.info("Verify the " +listOfFiles[i]+" is present either in the upgrade/fresh config path or not.");	    	   	    	    
+	    	   	    	    
+	    	   	    	    String upgrade_loc = Utils.getFileLocationbasedonFileNameLinux (listOfFiles[i], Utils.getUpgrade_em_home());   
+	    	   	    	    String upgrade_value = upgrade_loc+"/"+listOfFiles[i];	
+	    	   	    	    LOGGER.info("Upgrade File is: "+upgrade_value);
+	    	   	    	    
+	    	   	    	    String fresh_loc = Utils.getFileLocationbasedonFileNameLinux (listOfFiles[i], Utils.getFresh_em_home());   
+	    	   	    	    String fresh_value = fresh_loc+"/"+listOfFiles[i];	
+	    	   	    	    LOGGER.info("Fresh File is: "+fresh_value);	    	   	    	    
+	    	   	    	    
+	    	   	    	 if(!upgrade_value.contains(Utils.getUpgrade_em_home()) && !fresh_value.contains(Utils.getFresh_em_home())){
+	    	   	    		 
+		    	    		 result = false;	
+		    	    		 LOGGER.info("File DOES NOT exist either in the Upgraded/Fresh build, hence nothing to compare...");
+		    	    		 Assert.assertTrue("Default property value file test", result.equals(false));     	   	    		 
+	    	   	    		 
+	    	   	    	 } else {
+	    	   	    		 
+	    	   	    		LOGGER.info("File exists in both the upgraded/fresh build, hence going to compare the value...");
+	    	   	    		result = postUpgradeUtil.isBaseDVCurrentNDVUpgradeNDV(FileComparison.strChanged_Prop_Name_BaseDV_CurrentNDV_Migration_NDV, 
+	    	   	    				base_value, upgrade_value, fresh_value);
+	    	   	    		Assert.assertTrue("Default property value file test", result.equals(true));    	   	    		
+	    	   	    		    	   	    		 
+	    	   	    	 }      	    
+	    	   	    	    
+	    	    	    	
+	    	    	    }
+	    	   		    
+	    				
+	    			} catch (Exception e) {
+	    				Assert.assertTrue(testcaseId + " failed because of the Exception "+e,false);   
+	    			}  finally {
+    	    			
+    	    			LOGGER.info("Closing the LINUX/UNIX connection");
+    	    			LinuxUtils.closeConnection();
+    	    			
+    	    		}
+	    			
 	    		}
 	    }
 	    	} else {
@@ -501,6 +684,66 @@ public class MigrationUtilFileComTests {
 	    			}
 	    			
 	    			
+	    		} else if (OS.equalsIgnoreCase(OSL)) {
+	    			
+	    			PreCheckFiles.preCheckFiles(OSL);
+	    			
+	    			//Connect to Linux Server 
+    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
+	    			
+	    			try {
+	    				
+	    	   		    LOGGER.info("Verify the file " +listOfFiles[i]+" is present in the base EM home directory");
+	    	   		    String base_loc = Utils.getFileLocationbasedonFileNameLinux(listOfFiles[i], Utils.getBase_em_home());
+	    	   		    
+	    	   		    String base_value = base_loc+"/"+listOfFiles[i];
+	    	   		    System.out.println("Base File is: "+base_value);
+	    	   		    
+	    	   		 if(!base_value.contains(Utils.getBase_em_home())){
+	    	    		   result = false;	
+	    	    		   LOGGER.info("File DOES NOT exist in the Base build, hence nothing to compare...");
+	    	    		   Assert.assertTrue("Default property value file test", result.equals(false)); 
+	    	    		   
+	    	    	    } else {
+	    	    	    	
+	    	    	    	LOGGER.info("File exists in the Base build, hence test case step Passed.");
+	    	   	    	    LOGGER.info("Verify the " +listOfFiles[i]+" is present either in the upgrade/fresh config path or not.");	    	   	    	    
+	    	   	    	    
+	    	   	    	    String upgrade_loc = Utils.getFileLocationbasedonFileNameLinux (listOfFiles[i], Utils.getUpgrade_em_home());   
+	    	   	    	    String upgrade_value = upgrade_loc+"/"+listOfFiles[i];	
+	    	   	    	    LOGGER.info("Upgrade File is: "+upgrade_value);
+	    	   	    	    
+	    	   	    	    String fresh_loc = Utils.getFileLocationbasedonFileNameLinux (listOfFiles[i], Utils.getFresh_em_home());   
+	    	   	    	    String fresh_value = fresh_loc+"/"+listOfFiles[i];	
+	    	   	    	    LOGGER.info("Fresh File is: "+fresh_value);	    	   	    	    
+	    	   	    	    
+	    	   	    	 if(!upgrade_value.contains(Utils.getUpgrade_em_home()) && !fresh_value.contains(Utils.getFresh_em_home())){
+	    	   	    		 
+		    	    		 result = false;	
+		    	    		 LOGGER.info("File DOES NOT exist either in the Upgraded/Fresh build, hence nothing to compare...");
+		    	    		 Assert.assertTrue("Default property value file test", result.equals(false));     	   	    		 
+	    	   	    		 
+	    	   	    	 } else {
+	    	   	    		 
+	    	   	    		LOGGER.info("File exists in both the upgraded/fresh build, hence going to compare the value...");
+	    	   	    		result = postUpgradeUtil.isBaseNullCurrentNDVUpgradeNDV(FileComparison.strChanged_Prop_Name_BaseNULL_CurrentNDV_Migration_NDV, 
+	    	   	    				base_value, upgrade_value, fresh_value);
+	    	   	    		Assert.assertTrue("Default property value file test", result.equals(true));    	   	    		
+	    	   	    		    	   	    		 
+	    	   	    	 }      	    
+	    	   	    	    
+	    	    	    	
+	    	    	    }
+	    	   		    
+	    				
+	    			} catch (Exception e) {
+	    				Assert.assertTrue(testcaseId + " failed because of the Exception "+e,false);   
+	    			}  finally {
+    	    			
+    	    			LOGGER.info("Closing the LINUX/UNIX connection");
+    	    			LinuxUtils.closeConnection();
+    	    			
+    	    		}
 	    		}
 	    }
 	    	} else {
@@ -584,6 +827,69 @@ public class MigrationUtilFileComTests {
 	    			} catch (Exception e) {
 	    				Assert.assertTrue(testcaseId + " failed because of the Exception "+e,false);   
 	    			}
+	    			
+	    			
+	    		} else if (OS.equalsIgnoreCase(OSL)) {
+	    			
+	    			PreCheckFiles.preCheckFiles(OSL);
+	    			
+	    			//Connect to Linux Server 
+    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
+	    			
+	    			try {
+	    				
+	    	   		    LOGGER.info("Verify the file " +listOfFiles[i]+" is present in the base EM home directory");
+	    	   		    String base_loc = Utils.getFileLocationbasedonFileNameLinux(listOfFiles[i], Utils.getBase_em_home());
+	    	   		    
+	    	   		    String base_value = base_loc+"/"+listOfFiles[i];
+	    	   		    System.out.println("Base File is: "+base_value);
+	    	   		    
+	    	   		 if(!base_value.contains(Utils.getBase_em_home())){
+	    	    		   result = false;	
+	    	    		   LOGGER.info("File DOES NOT exist in the Base build, hence nothing to compare...");
+	    	    		   Assert.assertTrue("Default property value file test", result.equals(false)); 
+	    	    		   
+	    	    	    } else {
+	    	    	    	
+	    	    	    	LOGGER.info("File exists in the Base build, hence test case step Passed.");
+	    	   	    	    LOGGER.info("Verify the " +listOfFiles[i]+" is present either in the upgrade/fresh config path or not.");	    	   	    	    
+	    	   	    	    
+	    	   	    	    String upgrade_loc = Utils.getFileLocationbasedonFileNameLinux (listOfFiles[i], Utils.getUpgrade_em_home());   
+	    	   	    	    String upgrade_value = upgrade_loc+"/"+listOfFiles[i];	
+	    	   	    	    LOGGER.info("Upgrade File is: "+upgrade_value);
+	    	   	    	    
+	    	   	    	    String fresh_loc = Utils.getFileLocationbasedonFileNameLinux (listOfFiles[i], Utils.getFresh_em_home());   
+	    	   	    	    String fresh_value = fresh_loc+"/"+listOfFiles[i];	
+	    	   	    	    LOGGER.info("Fresh File is: "+fresh_value);	    	   	    	    
+	    	   	    	    
+	    	   	    	 if(!upgrade_value.contains(Utils.getUpgrade_em_home()) && !fresh_value.contains(Utils.getFresh_em_home())){
+	    	   	    		 
+		    	    		 result = false;	
+		    	    		 LOGGER.info("File DOES NOT exist either in the Upgraded/Fresh build, hence nothing to compare...");
+		    	    		 Assert.assertTrue("Default property value file test", result.equals(false));     	   	    		 
+	    	   	    		 
+	    	   	    	 } else {
+	    	   	    		 
+	    	   	    		LOGGER.info("File exists in both the upgraded/fresh build, hence going to compare the value...");
+	    	   	    		result = postUpgradeUtil.isBaseAddNewCVCurrentNullUpgradeAddNewCV(FileComparison.strChanged_Prop_Name_BaseAddNewCV_CurrentNULL_Migration_CV, 
+	    	   	    				base_value, upgrade_value, fresh_value);
+	    	   	    		Assert.assertTrue("Default property value file test", result.equals(true));    	   	    		
+	    	   	    		    	   	    		 
+	    	   	    	 }      	    
+	    	   	    	    
+	    	    	    	
+	    	    	    }
+	    	   		    
+	    				
+	    			} catch (Exception e) {
+	    				Assert.assertTrue(testcaseId + " failed because of the Exception "+e,false);   
+	    			}  finally {
+    	    			
+    	    			LOGGER.info("Closing the LINUX/UNIX connection");
+    	    			LinuxUtils.closeConnection();
+    	    			
+    	    		}
+	    			
 	    			
 	    			
 	    		}
@@ -671,6 +977,69 @@ public class MigrationUtilFileComTests {
 	    			}
 	    			
 	    			
+	    		} else if (OS.equalsIgnoreCase(OSL)) {
+	    			
+	    			PreCheckFiles.preCheckFiles(OSL);
+	    			
+	    			//Connect to Linux Server 
+    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
+	    			
+	    			try {
+	    				
+	    	   		    LOGGER.info("Verify the file " +listOfFiles[i]+" is present in the base EM home directory");
+	    	   		    String base_loc = Utils.getFileLocationbasedonFileNameLinux(listOfFiles[i], Utils.getBase_em_home());
+	    	   		    
+	    	   		    String base_value = base_loc+"/"+listOfFiles[i];
+	    	   		    System.out.println("Base File is: "+base_value);
+	    	   		    
+	    	   		 if(!base_value.contains(Utils.getBase_em_home())){
+	    	    		   result = false;	
+	    	    		   LOGGER.info("File DOES NOT exist in the Base build, hence nothing to compare...");
+	    	    		   Assert.assertTrue("Default property value file test", result.equals(false)); 
+	    	    		   
+	    	    	    } else {
+	    	    	    	
+	    	    	    	LOGGER.info("File exists in the Base build, hence test case step Passed.");
+	    	   	    	    LOGGER.info("Verify the " +listOfFiles[i]+" is present either in the upgrade/fresh config path or not.");	    	   	    	    
+	    	   	    	    
+	    	   	    	    String upgrade_loc = Utils.getFileLocationbasedonFileNameLinux (listOfFiles[i], Utils.getUpgrade_em_home());   
+	    	   	    	    String upgrade_value = upgrade_loc+"/"+listOfFiles[i];	
+	    	   	    	    LOGGER.info("Upgrade File is: "+upgrade_value);
+	    	   	    	    
+	    	   	    	    String fresh_loc = Utils.getFileLocationbasedonFileNameLinux (listOfFiles[i], Utils.getFresh_em_home());   
+	    	   	    	    String fresh_value = fresh_loc+"/"+listOfFiles[i];	
+	    	   	    	    LOGGER.info("Fresh File is: "+fresh_value);	    	   	    	    
+	    	   	    	    
+	    	   	    	 if(!upgrade_value.contains(Utils.getUpgrade_em_home()) && !fresh_value.contains(Utils.getFresh_em_home())){
+	    	   	    		 
+		    	    		 result = false;	
+		    	    		 LOGGER.info("File DOES NOT exist either in the Upgraded/Fresh build, hence nothing to compare...");
+		    	    		 Assert.assertTrue("Default property value file test", result.equals(false));     	   	    		 
+	    	   	    		 
+	    	   	    	 } else {
+	    	   	    		 
+	    	   	    		LOGGER.info("File exists in both the upgraded/fresh build, hence going to compare the value...");
+	    	   	    		result = postUpgradeUtil.isBaseCommentCVCurrentDVUpgradeCommentCV(FileComparison.strChanged_Prop_Name_BaseCommentCV_CurrentDV_Migration_CommentCV, 
+	    	   	    				base_value, upgrade_value, fresh_value);
+	    	   	    		Assert.assertTrue("Default property value file test", result.equals(true));    	   	    		
+	    	   	    		    	   	    		 
+	    	   	    	 }      	    
+	    	   	    	    
+	    	    	    	
+	    	    	    }
+	    	   		    
+	    				
+	    			} catch (Exception e) {
+	    				Assert.assertTrue(testcaseId + " failed because of the Exception "+e,false);   
+	    			}  finally {
+    	    			
+    	    			LOGGER.info("Closing the LINUX/UNIX connection");
+    	    			LinuxUtils.closeConnection();
+    	    			
+    	    		}
+	    			
+	    			
+	    			
 	    		}
 	    }
 	    	} else {
@@ -756,6 +1125,69 @@ public class MigrationUtilFileComTests {
 	    			}
 	    			
 	    			
+	    		} else if (OS.equalsIgnoreCase(OSL)) {	    			
+	    			
+	    			PreCheckFiles.preCheckFiles(OSL);
+	    			
+	    			//Connect to Linux Server 
+    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
+	    			
+	    			try {
+	    				
+	    	   		    LOGGER.info("Verify the file " +listOfFiles[i]+" is present in the base EM home directory");
+	    	   		    String base_loc = Utils.getFileLocationbasedonFileNameLinux(listOfFiles[i], Utils.getBase_em_home());
+	    	   		    
+	    	   		    String base_value = base_loc+"/"+listOfFiles[i];
+	    	   		    System.out.println("Base File is: "+base_value);
+	    	   		    
+	    	   		 if(!base_value.contains(Utils.getBase_em_home())){
+	    	    		   result = false;	
+	    	    		   LOGGER.info("File DOES NOT exist in the Base build, hence nothing to compare...");
+	    	    		   Assert.assertTrue("Default property value file test", result.equals(false)); 
+	    	    		   
+	    	    	    } else {
+	    	    	    	
+	    	    	    	LOGGER.info("File exists in the Base build, hence test case step Passed.");
+	    	   	    	    LOGGER.info("Verify the " +listOfFiles[i]+" is present either in the upgrade/fresh config path or not.");	    	   	    	    
+	    	   	    	    
+	    	   	    	    String upgrade_loc = Utils.getFileLocationbasedonFileNameLinux (listOfFiles[i], Utils.getUpgrade_em_home());   
+	    	   	    	    String upgrade_value = upgrade_loc+"/"+listOfFiles[i];	
+	    	   	    	    LOGGER.info("Upgrade File is: "+upgrade_value);
+	    	   	    	    
+	    	   	    	    String fresh_loc = Utils.getFileLocationbasedonFileNameLinux (listOfFiles[i], Utils.getFresh_em_home());   
+	    	   	    	    String fresh_value = fresh_loc+"/"+listOfFiles[i];	
+	    	   	    	    LOGGER.info("Fresh File is: "+fresh_value);	    	   	    	    
+	    	   	    	    
+	    	   	    	 if(!upgrade_value.contains(Utils.getUpgrade_em_home()) && !fresh_value.contains(Utils.getFresh_em_home())){
+	    	   	    		 
+		    	    		 result = false;	
+		    	    		 LOGGER.info("File DOES NOT exist either in the Upgraded/Fresh build, hence nothing to compare...");
+		    	    		 Assert.assertTrue("Default property value file test", result.equals(false));     	   	    		 
+	    	   	    		 
+	    	   	    	 } else {
+	    	   	    		 
+	    	   	    		LOGGER.info("File exists in both the upgraded/fresh build, hence going to compare the value...");
+	    	   	    		result = postUpgradeUtil.isBaseCVCurrentCommentDVUpgradeCV(FileComparison.strChanged_Prop_Name_BaseCV_CurrentCommentDV_Migration_CV, 
+	    	   	    				base_value, upgrade_value, fresh_value);
+	    	   	    		Assert.assertTrue("Default property value file test", result.equals(true));    	   	    		
+	    	   	    		    	   	    		 
+	    	   	    	 }      	    
+	    	   	    	    
+	    	    	    	
+	    	    	    }
+	    	   		    
+	    				
+	    			} catch (Exception e) {
+	    				Assert.assertTrue(testcaseId + " failed because of the Exception "+e,false);   
+	    			}  finally {
+    	    			
+    	    			LOGGER.info("Closing the LINUX/UNIX connection");
+    	    			LinuxUtils.closeConnection();
+    	    			
+    	    		}
+	    			
+	    			
+	    			
 	    		}
 	    }
 	    	} else {
@@ -767,7 +1199,7 @@ public class MigrationUtilFileComTests {
 	  }
       
       @Parameters ("OS")
-	  @Test(groups = { "BAT" }, enabled = false, description = "If base has Comment1 DV,  Current has Comment2 DV then after migration, it should be Commen2 DV")
+	  @Test(groups = { "BAT" }, enabled = true, description = "If base has Comment1 DV,  Current has Comment2 DV then after migration, it should be Commen2 DV")
 	  public void verify_ALM_FileComaprision_properties_BaseComment1DV_CurrentComment2DV_Migration_Comment2DV(String OS) {
 		  
 			String [] listOfFiles = FileComparison.strChanged_File_Name_BaseCommentLine1DV_CurrentCommentLine2DV_Migration_CommentLine2DV.trim().split(",");		
@@ -831,6 +1263,71 @@ public class MigrationUtilFileComTests {
 	    			} catch (Exception e) {
 	    				Assert.assertTrue(testcaseId + " failed because of the Exception "+e,false);   
 	    			}
+	    			
+	    			
+	    		} else if (OS.equalsIgnoreCase(OSL)) {
+	    			
+	    			PreCheckFiles.preCheckFiles(OSL);
+	    			
+	    			//Connect to Linux Server 
+    	    		LinuxUtils.connectToLinux(EnvironmentVariables.strLinux_UserName, EnvironmentVariables.strLinux_Password, EnvironmentVariables.strLinux_Host);
+	    			
+	    			try {
+	    				
+	    	   		    LOGGER.info("Verify the file " +listOfFiles[i]+" is present in the base EM home directory");
+	    	   		    String base_loc = Utils.getFileLocationbasedonFileNameLinux(listOfFiles[i], Utils.getBase_em_home());
+	    	   		    
+	    	   		    String base_value = base_loc+"/"+listOfFiles[i];
+	    	   		    System.out.println("Base File is: "+base_value);
+	    	   		    
+	    	   		 if(!base_value.contains(Utils.getBase_em_home())){
+	    	    		   result = false;	
+	    	    		   LOGGER.info("File DOES NOT exist in the Base build, hence nothing to compare...");
+	    	    		   Assert.assertTrue("Default property value file test", result.equals(false)); 
+	    	    		   
+	    	    	    } else {
+	    	    	    	
+	    	    	    	LOGGER.info("File exists in the Base build, hence test case step Passed.");
+	    	   	    	    LOGGER.info("Verify the " +listOfFiles[i]+" is present either in the upgrade/fresh config path or not.");	    	   	    	    
+	    	   	    	    
+	    	   	    	    String upgrade_loc = Utils.getFileLocationbasedonFileNameLinux (listOfFiles[i], Utils.getUpgrade_em_home());   
+	    	   	    	    String upgrade_value = upgrade_loc+"/"+listOfFiles[i];	
+	    	   	    	    LOGGER.info("Upgrade File is: "+upgrade_value);
+	    	   	    	    
+	    	   	    	    String fresh_loc = Utils.getFileLocationbasedonFileNameLinux (listOfFiles[i], Utils.getFresh_em_home());   
+	    	   	    	    String fresh_value = fresh_loc+"/"+listOfFiles[i];	
+	    	   	    	    LOGGER.info("Fresh File is: "+fresh_value);	    	   	    	    
+	    	   	    	    
+	    	   	    	 if(!upgrade_value.contains(Utils.getUpgrade_em_home()) && !fresh_value.contains(Utils.getFresh_em_home())){
+	    	   	    		 
+		    	    		 result = false;	
+		    	    		 LOGGER.info("File DOES NOT exist either in the Upgraded/Fresh build, hence nothing to compare...");
+		    	    		 Assert.assertTrue("Default property value file test", result.equals(false));     	   	    		 
+	    	   	    		 
+	    	   	    	 } else {
+	    	   	    		 
+	    	   	    		LOGGER.info("File exists in both the upgraded/fresh build, hence going to compare the value...");
+	    	   	    		result = postUpgradeUtil.isBaseCVCurrentCommentDVUpgradeCV(FileComparison.strChanged_Prop_Name_BaseCV_CurrentCommentDV_Migration_CV, 
+	    	   	    				base_value, upgrade_value, fresh_value);
+	    	   	    		Assert.assertTrue("Default property value file test", result.equals(true));    	   	    		
+	    	   	    		    	   	    		 
+	    	   	    	 }      	    
+	    	   	    	    
+	    	    	    	
+	    	    	    }
+	    	   		    
+	    				
+	    			} catch (Exception e) {
+	    				Assert.assertTrue(testcaseId + " failed because of the Exception "+e,false);   
+	    			}  finally {
+    	    			
+    	    			LOGGER.info("Closing the LINUX/UNIX connection");
+    	    			LinuxUtils.closeConnection();
+    	    			
+    	    		}
+	    			
+	    			//Tomorrow validate here
+	    			
 	    			
 	    			
 	    		}

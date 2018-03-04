@@ -38,7 +38,7 @@ public class PostUpgradeUtil {
 	    BufferedReader br2 = null;
 	    static Path path = null;
 	    static List <String> lines = null;
-	    static ArrayList <String> al, al1 = null;
+	    static ArrayList <String> al, al1, al2, al3 = null;
 	    
 	//Compare 2 files and find out the difference which includes comments 	    
 	public boolean unchangedPropComparison (File baseFile, File upgradeFile) {
@@ -760,5 +760,229 @@ public class PostUpgradeUtil {
 		LOGGER.info("Comparison result is : "+blResult);
 		return blResult;
 	}
+	
+	
+	public boolean isDefaultValues (String key, String baseFile, String upgradeFile, String freshFile) {
+		
+		boolean blResult = false;
+		
+		String bCommand = "grep -i "+key+"= "+baseFile+" | cut -d '=' -f2 ";
+		String uCommand = "grep -i "+key+"= "+upgradeFile+" | cut -d '=' -f2 ";
+		String fCommand = "grep -i "+key+"= "+freshFile+" | cut -d '=' -f2 ";
+		
+		al = LinuxUtils.getResult(bCommand);
+		al1 = LinuxUtils.getResult(uCommand);
+		al2 = LinuxUtils.getResult(fCommand);
+
+		if (al.get(0).equalsIgnoreCase(al1.get(0)) && al.get(0).equalsIgnoreCase(al2.get(0))) {
+			blResult = true;
+			LOGGER.info("The default value of Key "+key+" is same in all the versions (base/upgrade/fresh");
+			Assert.assertTrue("Deafult property value Test", blResult);
+			
+		} else {
+			
+			LOGGER.info("The default value of Key "+key+" is different either in base/upgrade/fresh versions");
+			Assert.assertTrue("Deafult property value Test", blResult);
+		}				
+
+		return blResult;
+	}
+	
+	public boolean isBaseCVCurrentDVUpgradeCV (String key, String baseFile, String upgradeFile, String freshFile) {
+		
+		boolean blResult = false;
+		
+		String bCommand = "grep -i "+key+"= "+baseFile+" | cut -d '=' -f2 ";
+		String uCommand = "grep -i "+key+"= "+upgradeFile+" | cut -d '=' -f2 ";
+		String fCommand = "grep -i "+key+"= "+freshFile+" | cut -d '=' -f2 ";
+		
+		al = LinuxUtils.getResult(bCommand);
+		al1 = LinuxUtils.getResult(uCommand);
+		al2 = LinuxUtils.getResult(fCommand);
+		
+		LOGGER.info("The Base value is: "+al.get(0));
+		LOGGER.info("The Fresh value is: "+al2.get(0));
+		LOGGER.info("The upgrade value is: "+al1.get(0));
+
+		if (!al.get(0).equalsIgnoreCase(al2.get(0)) && al.get(0).equalsIgnoreCase(al1.get(0))) {
+			blResult = true;
+			LOGGER.info("The default value of Key "+key+" is same in base and upgrade version but not in Fresh Version");
+			Assert.assertTrue("Deafult property value Test", blResult);
+			
+		} else {
+			
+			LOGGER.info("The default value of Key "+key+" is same/different in all the versions");
+			Assert.assertTrue("Deafult property value Test", blResult);
+		}				
+
+		return blResult;
+	}
+	
+	public boolean isBaseDVCurrentNDVUpgradeNDV (String key, String baseFile, String upgradeFile, String freshFile) {
+		
+		boolean blResult = false;
+		
+		String bCommand = "grep -i "+key+"= "+baseFile+" | cut -d '=' -f2 ";
+		String uCommand = "grep -i "+key+"= "+upgradeFile+" | cut -d '=' -f2 ";
+		String fCommand = "grep -i "+key+"= "+freshFile+" | cut -d '=' -f2 ";
+		
+		al = LinuxUtils.getResult(bCommand);
+		al1 = LinuxUtils.getResult(uCommand);
+		al2 = LinuxUtils.getResult(fCommand);
+		
+		LOGGER.info("The Base value is: "+al.get(0));
+		LOGGER.info("The Fresh value is: "+al2.get(0));
+		LOGGER.info("The upgrade value is: "+al1.get(0));
+
+		if (!al.get(0).equalsIgnoreCase(al2.get(0)) && al2.get(0).equalsIgnoreCase(al1.get(0))) {
+			blResult = true;
+			LOGGER.info("The default value of Key "+key+" is same in fresh and upgrade version but not in base Version");
+			Assert.assertTrue("Deafult property value Test", blResult);
+			
+		} else {
+			
+			LOGGER.info("The default value of Key "+key+" is same/different in all the versions");
+			Assert.assertTrue("Deafult property value Test", blResult);
+		}				
+
+		return blResult;
+	}
+	
+	public boolean isBaseNullCurrentNDVUpgradeNDV (String key, String baseFile, String upgradeFile, String freshFile) {
+		
+		boolean blResult = false;
+		
+		String bCommand = "grep -i "+key+"= "+baseFile+" | cut -d '=' -f2 ";
+		String uCommand = "grep -i "+key+"= "+upgradeFile+" | cut -d '=' -f2 ";
+		String fCommand = "grep -i "+key+"= "+freshFile+" | cut -d '=' -f2 ";
+		
+		al = LinuxUtils.getResult(bCommand);
+		al1 = LinuxUtils.getResult(uCommand);
+		al2 = LinuxUtils.getResult(fCommand);
+		
+		LOGGER.info("The Base size is: "+al.size());
+		LOGGER.info("The Fresh value is: "+al2.get(0));
+		LOGGER.info("The upgrade value is: "+al1.get(0));
+
+		if (al.size() == 0 && al2.get(0).equalsIgnoreCase(al1.get(0))) {
+			blResult = true;
+			LOGGER.info("The default value of Key "+key+" is same in fresh and upgrade version but not in base Version");
+			Assert.assertTrue("Deafult property value Test", blResult);
+			
+		} else {
+			
+			LOGGER.info("The default value of Key "+key+" is same/different in all the versions");
+			Assert.assertTrue("Deafult property value Test", blResult);
+		}				
+
+		return blResult;
+	}
+	
+	public boolean isBaseAddNewCVCurrentNullUpgradeAddNewCV (String key, String baseFile, String upgradeFile, String freshFile) {
+		
+		boolean blResult = false;
+		
+		String bCommand = "grep -i "+key+"= "+baseFile+" | cut -d '=' -f2 ";
+		String uCommand = "grep -i "+key+"= "+upgradeFile+" | cut -d '=' -f2 ";
+		String fCommand = "grep -i "+key+"= "+freshFile+" | cut -d '=' -f2 ";
+		
+		al = LinuxUtils.getResult(bCommand);		
+		al2 = LinuxUtils.getResult(fCommand);
+		
+		LOGGER.info("The Base value is: "+al.get(0));
+		LOGGER.info("The Fresh value size is: "+al2.size());		
+		
+		//Validate whether key is present in the upgraded file or not
+		String strPresent = "grep -i "+key+"= "+upgradeFile+"";
+		al3 = LinuxUtils.getResult(strPresent);
+		System.out.println("Size is "+al3.size());
+		
+		if (al3.size() == 0) {		
+			
+			LOGGER.info("The key "+key+ " is not present in the upgrade diectory");
+			Assert.assertTrue(false);
+			
+		} else {
+			al1 = LinuxUtils.getResult(uCommand);
+			LOGGER.info("The upgrade value is: "+al1.get(0));
+			
+			if (al2.size() == 0 && al.get(0).equalsIgnoreCase(al1.get(0))) {
+				blResult = true;
+				LOGGER.info("The default value of Key "+key+" is same in fresh and upgrade version but not in base Version");
+				Assert.assertTrue("Deafult property value Test", blResult);
+				
+			} else {
+				
+				LOGGER.info("The default value of Key "+key+" is same/different in all the versions");
+				Assert.assertTrue("Deafult property value Test", blResult);
+			}
+			
+		}
+				
+
+		return blResult;
+	}
+	
+	public boolean isBaseCommentCVCurrentDVUpgradeCommentCV (String key, String baseFile, String upgradeFile, String freshFile) {
+		
+		boolean blResult = false;
+		
+		String bCommand = "grep -i "+key+"= "+baseFile+"";
+		String uCommand = "grep -i "+key+"= "+upgradeFile+"";
+		String fCommand = "grep -i "+key+"= "+freshFile+"";
+
+		al = LinuxUtils.getResult(bCommand);
+		al1 = LinuxUtils.getResult(uCommand);
+		al2 = LinuxUtils.getResult(fCommand);
+		
+		LOGGER.info("The Base value is: "+al.get(0));
+		LOGGER.info("The Fresh value is: "+al2.get(0));
+		LOGGER.info("The upgrade value is: "+al1.get(0));
+
+		if (!al.get(0).equalsIgnoreCase(al2.get(0)) && al.get(0).equalsIgnoreCase(al1.get(0))) {
+			blResult = true;
+			LOGGER.info("The commented value of Key "+key+" is same in base and upgrade version but not in current Version");
+			Assert.assertTrue("commented property value Test", blResult);
+			
+		} else {
+			
+			LOGGER.info("The commented value of Key "+key+" is same/different in all the versions");
+			Assert.assertTrue("commented property value Test", blResult);
+		}				
+
+		return blResult;
+	}
+	
+	public boolean isBaseCVCurrentCommentDVUpgradeCV (String key, String baseFile, String upgradeFile, String freshFile) {
+		
+		boolean blResult = false;
+		
+		String bCommand = "grep -i "+key+"= "+baseFile+"";
+		String uCommand = "grep -i "+key+"= "+upgradeFile+"";
+		String fCommand = "grep -i "+key+"= "+freshFile+"";
+
+		al = LinuxUtils.getResult(bCommand);
+		al1 = LinuxUtils.getResult(uCommand);
+		al2 = LinuxUtils.getResult(fCommand);
+		
+		LOGGER.info("The Base value is: "+al.get(0));
+		LOGGER.info("The Fresh value is: "+al2.get(0));
+		LOGGER.info("The upgrade value is: "+al1.get(0));
+
+		if (!al.get(0).equalsIgnoreCase(al2.get(0)) && al.get(0).equalsIgnoreCase(al1.get(0))) {
+			blResult = true;
+			LOGGER.info("The commented value of Key "+key+" is same in base and upgrade version but not in current Version");
+			Assert.assertTrue("commented property value Test", blResult);
+			
+		} else {
+			
+			LOGGER.info("The commented value of Key "+key+" is same/different in all the versions");
+			Assert.assertTrue("commented property value Test", blResult);
+		}				
+
+		return blResult;
+	}
+	
+	
 	
 }

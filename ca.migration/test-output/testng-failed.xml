@@ -6,7 +6,7 @@
     <classes>
       <class name="nonXml.fileComparision.testSuite.MigrationUtilFileComTests">
         <methods>
-          <include name="verify_ALM_UnchangedFileComaprision_properties" invocation-numbers="0"/>
+          <include name="verify_ALM_FileComaprision_properties_BaseCV_CurrentCommentDV_Migration_CommentCV" invocation-numbers="0"/>
         </methods>
       </class> <!-- nonXml.fileComparision.testSuite.MigrationUtilFileComTests -->
     </classes>
