@@ -43,7 +43,7 @@ public class MigrationFileModificationUtilTests {
     //tested working fine
 
     @Parameters ("OS")
-	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - Add a new Property into base file"
+	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - Add a new Property into base file"
 			+ "that property not present in Current directory, hence after migration it should be present in upgraded folder")	
 	
 	public void verify_ALM_preUpgrade_BaseAddNewCV_CurrentNull(String OS) {
@@ -151,7 +151,7 @@ public class MigrationFileModificationUtilTests {
 	//tested working fine
 	
     @Parameters ("OS")
-	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - update an existing property into base file"
+	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - update an existing property into base file"
 			+ "that property present in Current directory as default value, hence after migration it should have customized value.")	
 	
 	public void verify_ALM_preUpgrade_BaseCV_CurrentDVNDV(String OS) {
@@ -258,7 +258,7 @@ public class MigrationFileModificationUtilTests {
 	
 	//This test case is only for testing purpose, in real environment we do not need to run this test case.
 
-	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - Default property in base version and in the current version that "
+	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - Default property in base version and in the current version that "
 			+ "property should have new default value then after migration it should have the new default value.")	
 	
 	public void verify_ALM_preUpgrade_BaseDV_CurrentNDV() {
@@ -332,7 +332,7 @@ public class MigrationFileModificationUtilTests {
 	
 	//This test case is only for testing purpose, in real environment we do not need to run this test case.
 
-	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - One property in base version is not present but in the current version that "
+	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - One property in base version is not present but in the current version that "
 			+ "property should be added and have new default value then after migration it should have the new default value.")	
 	
 	public void verify_ALM_preUpgrade_BaseNULL_CurrentNDV() {
@@ -407,7 +407,7 @@ public class MigrationFileModificationUtilTests {
 	//tested working fine
 	
 	@Parameters ("OS")
-	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - One property in base version is commented but in the current version that "
+	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - One property in base version is commented but in the current version that "
 			+ "property should has default value after migration that property should have commented.")	
 	
 	public void verify_ALM_preUpgrade_BaseCommentCV_CurrentDV(String OS) {
@@ -515,7 +515,7 @@ public class MigrationFileModificationUtilTests {
 	//tested working fine.
 	
 	@Parameters ("OS")
-	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - One property in base version is Customized but in the current version that "
+	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - One property in base version is Customized but in the current version that "
 			+ "property is commented after migration that property should have Customized value.")	
 	
 	public void verify_ALM_preUpgrade_BaseCV_CurrentCommentDV(String OS) {
@@ -624,7 +624,7 @@ public class MigrationFileModificationUtilTests {
 	//tested working fine
 	
 	@Parameters ("OS")
-	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - One property in base version is hidden property but in the current version that "
+	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - One property in base version is hidden property but in the current version that "
 			+ "property is not present after migration that property should have HPCV.")	
 	
 	public void verify_ALM_preUpgrade_BaseHPCV_CurrentNULL(String OS) {
@@ -733,7 +733,7 @@ public class MigrationFileModificationUtilTests {
 	//tested working fine
 	
 	@Parameters ("OS")
-	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - One property in base version is depreciated property but in the current version that "
+	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - One property in base version is depreciated property but in the current version that "
 			+ "property is not present after migration that property should not be present.")	
 	
 	public void verify_ALM_preUpgrade_BaseDPDV_CurrentNULL(String OS) {
@@ -842,7 +842,7 @@ public class MigrationFileModificationUtilTests {
 
 	//TESTED working fine
 	@Parameters ("OS")
-	@Test (groups = { "preUpgrade" }, enabled = false, description = "ConfigUtility Merge feature - One property in base "
+	@Test (groups = { "preUpgrade" }, enabled = true, description = "ConfigUtility Merge feature - One property in base "
 			+ "version is default property and above that add one commentline say comment1 and but in the current version above the same property "
 			+ "property, add another comment say Comment2 after migration comment2 should be populdated above that property.")	
 	

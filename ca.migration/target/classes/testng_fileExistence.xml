@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Migration Suite">
 <!-- Note: ENTER OS name either Windows or Linux. -->
-   <!-- parameter name="OS" value="Windows" /-->
+   <parameter name="OS" value="Linux" />
    <test name="Migration Window Test">
    
       <classes>
