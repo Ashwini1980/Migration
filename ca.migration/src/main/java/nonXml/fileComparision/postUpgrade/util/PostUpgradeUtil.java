@@ -908,7 +908,7 @@ public class PostUpgradeUtil {
 			
 			if (al2.size() == 0 && al.get(0).equalsIgnoreCase(al1.get(0))) {
 				blResult = true;
-				LOGGER.info("The default value of Key "+key+" is same in fresh and upgrade version but not in base Version");
+				LOGGER.info("The default value of Key "+key+" is same in base and upgrade version but not in fresh Version");
 				Assert.assertTrue("Deafult property value Test", blResult);
 				
 			} else {
@@ -983,6 +983,67 @@ public class PostUpgradeUtil {
 		return blResult;
 	}
 	
+	public boolean isBaseComment1DVCurrentComment2DVUpgradeComment2DV (String key, String baseFile, String upgradeFile, String freshFile) {
+		
+		boolean blResult = false;
+		
+		String bCommand = "gawk 'NF > 0' "+baseFile+" | grep -C1 "+key+"=";
+		String uCommand = "gawk 'NF > 0' "+upgradeFile+" | grep -C1 "+key+"=";
+		String fCommand = "gawk 'NF > 0' "+freshFile+" | grep -C1 "+key+"=";
+		
+		al = LinuxUtils.getResult(bCommand);
+		al1 = LinuxUtils.getResult(uCommand);
+		al2 = LinuxUtils.getResult(fCommand);
+		
+		LOGGER.info("The Base value is: "+al.get(0));
+		LOGGER.info("The Fresh value is: "+al2.get(0));
+		LOGGER.info("The upgrade value is: "+al1.get(0));
+
+		if (!al.get(0).equalsIgnoreCase(al2.get(0)) && al2.get(0).equalsIgnoreCase(al1.get(0))) {
+			blResult = true;
+			LOGGER.info("The commented value of Key "+key+" is same in fresh and upgrade version but not in base Version");
+			Assert.assertTrue("commented property value Test", blResult);
+			
+		} else {
+			
+			LOGGER.info("The commented value of Key "+key+" is same/different in all the versions");
+			Assert.assertTrue("commented property value Test", blResult);
+		}				
+
+		return blResult;
+	}
 	
+	public boolean isBaseDPDVCurrentNullUpgradeNull (String key, String baseFile, String upgradeFile, String freshFile) {
+		
+		boolean blResult = false;
+		
+		String bCommand = "grep -i "+key+"= "+baseFile+" | cut -d '=' -f2 ";
 	
+		al = LinuxUtils.getResult(bCommand);		
+		LOGGER.info("The Base value is: "+al.get(0));
+				
+		//Validate whether key is present in the upgraded file or not
+		String strPresentU = "grep -i "+key+"= "+upgradeFile+"";
+		al2 = LinuxUtils.getResult(strPresentU);
+		
+		String strPresentF = "grep -i "+key+"= "+freshFile+"";
+		al3 = LinuxUtils.getResult(strPresentF);
+		
+		if (!(al3.size() == 0) && !(al2.size() == 0)) {		
+			blResult = true;			
+			LOGGER.info("The key "+key+ " is aleady present in either upgrade/fresh diectory but it should not be...");
+			Assert.assertFalse(blResult);
+			
+		} else {
+			
+			blResult = true;			
+			LOGGER.info("The key "+key+ " is only present in Base diectory as expected...");
+			Assert.assertTrue(blResult);
+		
+
+		}
+				
+
+		return blResult;
+	}
 }
